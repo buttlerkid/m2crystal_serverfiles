@@ -1,0 +1,42 @@
+spider_dungeon={["start"]=0,base_setting= function ()return { 
+[ "map_index" ] = 217 , 
+[ "base_coords" ] = { 512 , 5632 } , 
+[ "out_coords" ] = { 217 , 691 , 6108 } , 
+[ "level_min" ] = 60 , 
+[ "level_max" ] = 74 , 
+[ "passage_ticket" ] = 30324 , 
+} 
+end ,dungeon_setting= function ()return { 
+[ "time_complete" ] = 3600 , 
+[ "egg_complete" ] = 900 , 
+[ "egg_vnum" ] = 2095 , 
+[ "egg_spawn_count" ] = 4 , 
+[ "baron_vnum" ] = 2094 , 
+[ "baron_coords" ] = { 177 , 477 } , 
+[ "second_egg_position" ] = { { 392 , 573 } , { 390 , 584 } , { 383 , 596 } , { 351 , 562 } , { 351 , 583 } , { 342 , 599 } } , 
+[ "barones_vnum" ] = 2092 , 
+[ "barones_coords" ] = { 366 , 585 } , 
+[ "dungeon_floor2" ] = { 880 , 6144 } , 
+} 
+end ,GetFloorXY= function (floorNumber)local array = { 
+[ 1 ] = { [ "x" ] = 512 , [ "y" ] = 5632 } , 
+[ 2 ] = { [ "x" ] = 881 , [ "y" ] = 6148 } , 
+} 
+return array [ floorNumber ] 
+end ,isInDungeon= function ()local data = spider_dungeon . base_setting ( ) ; 
+local playerMapIndex = pc . get_map_index ( ) ; 
+local dungeonMapIndex = data [ "map_index" ] ; 
+return ( pc . in_dungeon ( ) and ( playerMapIndex >= dungeonMapIndex * 10000 ) and ( playerMapIndex < ( dungeonMapIndex + 1 ) * 10000 ) ) ; 
+end ,ResetDungeonData= function ()d . setf ( "dungeon_status" , 0 ) 
+d . setf ( "spider_finished" , 0 ) 
+d . setf ( "first_egg_count" , 0 ) 
+d . setf ( "second_egg_count" , 0 ) 
+d . setf ( "dungeon_status" , 0 ) 
+end ,ClearDungeon= function (revivedBoolean)if ( pc . in_dungeon ( ) ) then 
+d . clear_regen ( ) ; 
+d . kill_all ( ) ; 
+if ( revivedBoolean ) then 
+d . kill_all ( ) ; 
+end 
+end 
+end }

@@ -1,0 +1,70 @@
+if ( spider_dungeon . isInDungeon ( ) ) then local dungeon_data = spider_dungeon . dungeon_setting ( ) ; 
+local data = spider_dungeon . base_setting ( ) ; 
+local npcRace = npc . get_race ( ) ; 
+if ( npcRace == dungeon_data [ "egg_vnum" ] ) then 
+if ( d . getf ( "dungeon_status" ) < 2 ) then 
+d . setf ( "first_egg_count" , d . getf ( "first_egg_count" ) + 1 ) ; 
+if ( d . getf ( "first_egg_count" ) > ( dungeon_data [ "egg_spawn_count" ] - 1 ) ) then 
+d . spawn_mob ( dungeon_data [ "baron_vnum" ] , dungeon_data [ "baron_coords" ] [ 1 ] , dungeon_data [ "baron_coords" ] [ 2 ] ) ; 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( 22001 , mob_name ( 2094 ) ) ; 
+clear_server_timer ( "spider_dungeon_egg_time_fail" , d . get_map_index ( ) ) ; 
+else 
+d . notice ( 22002 , dungeon_data [ "egg_spawn_count" ] - d . getf ( "first_egg_count" ) ) 
+end 
+else 
+d . setf ( "second_egg_count" , d . getf ( "second_egg_count" ) + 1 ) ; 
+if ( d . getf ( "second_egg_count" ) > ( table . getn ( dungeon_data [ "second_egg_position" ] ) - 1 ) ) then 
+d . spawn_mob ( dungeon_data [ "barones_vnum" ] , dungeon_data [ "barones_coords" ] [ 1 ] , dungeon_data [ "barones_coords" ] [ 2 ] ) ; 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( 22003 , mob_name ( 2092 ) ) 
+else 
+d . notice ( 22002 , table . getn ( dungeon_data [ "second_egg_position" ] ) - d . getf ( "second_egg_count" ) ) 
+end 
+end 
+end 
+if ( npcRace == dungeon_data [ "baron_vnum" ] ) then 
+server_timer ( "spider_baroness_advance" , 7 , d . get_map_index ( ) ) ; 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( 22004 ) 
+end 
+if ( npcRace == dungeon_data [ "barones_vnum" ] ) then 
+d . notice ( 20016 ) 
+clear_server_timer ( "spiderDungeon_time_out" , d . get_map_index ( ) ) ; 
+server_timer ( "spiderDungeon_time_out" , 60 , d . get_map_index ( ) ) ; 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( 22010 ) 
+if game . check_event ( 6 ) == true then 
+local pct = number ( 1 , 3 ) 
+if pct == 1 then 
+game . drop_item ( data [ "passage_ticket" ] , 1 ) 
+end 
+end 
+dungeon_duration = get_time ( ) - d . getf ( "dungeon_duration" ) 
+sec = math . mod ( dungeon_duration , 60 ) 
+min = ( dungeon_duration - sec ) / 60 
+d . setf ( "spider_finished" , 1 ) 
+local killerVID = pc . get_vid ( ) 
+local pids = { party . get_member_pids ( ) } 
+local groupNames = "" 
+local time_passed = ( get_global_time ( ) - d . getf ( "dungeon_entered" ) ) 
+if party . is_party ( ) then 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+local test = pc . is_near_vid ( killerVID , 400 ) 
+if test == true then 
+groupNames = groupNames .. pc . get_name ( ) .. "," 
+end 
+q . end_other_pc_block ( ) 
+end 
+notice_all ( 22005 , pc . get_name ( ) , min , sec ) 
+party . setf_with_questname_plus ( "dungeons_finished." .. tostring ( data [ "map_index" ] ) ) 
+else 
+groupNames = "" 
+curCount = pc . getf ( "dungeons_finished" , tostring ( data [ "map_index" ] ) ) 
+pc . setf ( "dungeons_finished" , tostring ( data [ "map_index" ] ) , curCount + 1 ) 
+notice_all ( 22006 , pc . get_name ( ) , curCount + 1 , min , sec ) 
+end 
+spider_dungeon . ClearDungeon ( true ) ; 
+end 
+ return end 

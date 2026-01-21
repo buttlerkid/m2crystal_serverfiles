@@ -1,0 +1,54 @@
+say_title ( item_name ( item . vnum ) ) 
+say ( "" ) 
+currentDuration = pc . getf ( "system" , "autopickup" ) 
+remainTime = currentDuration - get_global_time ( ) 
+if currentDuration > get_global_time ( ) then 
+say ( locale_quest ( 148 ) ) 
+say ( locale_quest ( 40300 ) ) 
+say ( "" ) 
+if remainTime > 3.1536e+07 then 
+say_reward ( locale_quest ( 40301 ) ) 
+else 
+say ( locale_quest ( 40302 ) ) 
+say_reward ( time_duration ( remainTime ) ) 
+end 
+if pc . is_gm ( ) then 
+say_title ( "GM - Option" ) 
+local s = select ( "Disable autopickup" , "Nothing" ) 
+if s == 1 then 
+say ( "------------" ) 
+say ( "GM - OPTION" ) 
+say ( "" ) 
+pc . setf ( "system" , "autopickup" , 0 ) 
+say ( "Autopickup was deleted on your character." ) 
+say ( "Rewarp to see the changes." ) 
+end 
+end 
+else 
+duration = item . get_value ( 0 ) 
+if duration == 1 then 
+say ( locale_quest ( 40303 ) ) 
+else 
+say ( locale_quest ( 40304 ) ) 
+say_reward ( time_duration ( duration ) .. " ?" ) 
+end 
+local s = select ( locale_quest ( 12558 ) , locale_quest ( 12559 ) ) 
+if s == 2 then 
+return 
+end 
+say_title ( item_name ( item . vnum ) ) 
+say ( "" ) 
+pc . remove_item ( item . vnum , 1 ) 
+if duration == 1 then 
+pc . setf ( "system" , "autopickup" , get_global_time ( ) + 60 * 60 * 24 * 365 * 10 ) 
+else 
+pc . setf ( "system" , "autopickup" , get_global_time ( ) + duration ) 
+end 
+pc . enable_autopickup ( duration ) 
+if duration == 1 then 
+say ( locale_quest ( 40305 ) ) 
+else 
+say ( locale_quest ( 40306 ) ) 
+say_reward ( time_duration ( duration ) ) 
+end 
+end 

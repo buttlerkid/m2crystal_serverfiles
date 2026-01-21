@@ -1,0 +1,6 @@
+if ( d . select ( get_server_timer_arg ( ) ) ) then 
+d . zodiac_notice_clear ( ) 
+d . notice ( 11503 ) 
+d . setf ( "dungeon_finished" , 1 ) 
+d . exit_all ( ) ; 
+end 

@@ -1,0 +1,16 @@
+local index = get_server_timer_arg ( ) 
+if d . select ( index ) then 
+if d . getf ( "DungeonBlock" ) == 1 then 
+d . setf ( "DungeonBlock" , 0 ) 
+d . notice ( "Dungeon completed successfully! You will be expelled out." ) 
+d . setf ( "IsOn" , 0 ) 
+d . setf ( "step" , 0 ) 
+d . setf ( "stones" , 0 ) 
+d . setf ( "level" , 0 ) 
+d . setf ( "real_time" , 0 ) 
+d . setqf2 ( "dragonlair" , "cooldown" , get_global_time ( ) + 60 * 60 ) 
+clear_server_timer ( "beran_full_timer" , index ) 
+clear_server_timer ( "beran_1" , index ) 
+d . global_warp_all_to_base ( 1800 * 100 , 12199 * 100 , index , 60 ) 
+end 
+end 

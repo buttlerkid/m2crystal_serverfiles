@@ -1,0 +1,16 @@
+quest select_skill begin
+	state start begin
+		when login or levelup with pc.get_level() >= 5 and pc.get_skill_group() == 0 begin
+			command ("selectskill_open");
+			send_letter(locale_quest(8077))
+		end
+		
+		when button or info begin
+			if pc.get_level() >= 5 and pc.get_skill_group() == 0 then
+				command ("selectskill_open");
+			else
+				clear_letter()
+			end
+		end
+	end
+end

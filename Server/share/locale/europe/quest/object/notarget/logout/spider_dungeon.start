@@ -1,0 +1,9 @@
+if spider_dungeon . isInDungeon ( ) then local dungeon_data = spider_dungeon . dungeon_setting ( ) ; 
+if d . getf ( "dungeon_enter" ) == 1 then 
+if game . check_event ( 5 ) == true then 
+pc . setf ( "dungeon_cooldown" , "spider_dungeon" , get_global_time ( ) + 2700 ) 
+else 
+pc . setf ( "dungeon_cooldown" , "spider_dungeon" , get_global_time ( ) + 3600 ) 
+end 
+end 
+ return end 

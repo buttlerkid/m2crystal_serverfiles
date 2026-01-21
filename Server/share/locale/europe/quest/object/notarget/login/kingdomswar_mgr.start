@@ -1,0 +1,17 @@
+if not pc . is_gm ( ) then if pc . get_map_index ( ) == kingdoms_war . get_map_index ( ) then 
+if game . get_event_flag ( kingdoms_war . get_stat_flagname ( ) ) == kingdoms_war . get_stat_flag_end ( ) then 
+warp_to_village ( ) 
+else 
+local min_lv = game . get_event_flag ( kingdoms_war . get_minlv_flagname ( ) ) 
+local max_lv = game . get_event_flag ( kingdoms_war . get_maxlv_flagname ( ) ) 
+if min_lv > 0 and min_lv > pc . get_level ( ) or max_lv > 0 and max_lv < pc . get_level ( ) then 
+warp_to_village ( ) 
+else 
+pc . setqf ( "is_enough" , 0 ) 
+kingdoms_war . register ( ) 
+end 
+end 
+elseif pc . getqf ( "is_enough" ) == 1 and game . get_event_flag ( kingdoms_war . get_stat_flagname ( ) ) == kingdoms_war . get_stat_flag_end ( ) then 
+pc . setqf ( "is_enough" , 0 ) 
+end 
+ return end 

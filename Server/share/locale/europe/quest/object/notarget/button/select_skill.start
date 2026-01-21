@@ -1,0 +1,5 @@
+if pc . get_level ( ) >= 5 and pc . get_skill_group ( ) == 0 then 
+command ( "selectskill_open" ) ; 
+else 
+clear_letter ( ) 
+end 

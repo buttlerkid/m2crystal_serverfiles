@@ -1,0 +1,17 @@
+local index = get_server_timer_arg ( ) 
+if d . select ( index ) then 
+if d . getf ( "first_regen" ) == 1 then 
+d . setf ( "start_time" , get_global_time ( ) ) 
+d . setf ( "first_regen" , 0 ) 
+d . spawn_mob ( 8034 , 188 , 178 ) 
+d . spawn_mob ( 8034 , 177 , 178 ) 
+d . spawn_mob ( 8034 , 177 , 168 ) 
+d . spawn_mob ( 8034 , 188 , 168 ) 
+d . notice ( "Destroy all metines." ) 
+server_timer ( "beran_full_timer" , 60 * 30 , index ) 
+d . setf ( "real_time" , get_global_time ( ) + 60 * 30 ) 
+d . regen_file ( "data/dungeon/dragonlair/skia_boss.txt" ) 
+d . setf ( "stones" , 0 ) 
+d . setf ( "step" , 0 ) 
+end 
+end 

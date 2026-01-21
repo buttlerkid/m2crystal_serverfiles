@@ -1,0 +1,12 @@
+if snow_dungeon . is_snowd ( pc . get_map_index ( ) ) and d . getf ( "level" ) == 10 then snow_dungeon . level_clear ( ) 
+d . notice ( 8214 ) 
+d . notice ( 8215 ) 
+server_timer ( "snow_dungeon_end_timer" , 60 , d . get_map_index ( ) ) 
+if party . is_party ( ) then 
+party . setf ( "snow_dungeon_boss_kill_count" , 1 ) 
+end 
+d . increase_completed ( 6191 ) 
+d . set_fastest ( 6191 , get_global_time ( ) - d . getf ( "start_time" ) ) 
+d . update_info ( ) 
+pc . give_progress_mission_battle_pass ( 5 ) 
+ return end 

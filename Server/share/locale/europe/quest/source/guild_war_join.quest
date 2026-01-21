@@ -1,0 +1,53 @@
+quest guild_war_join begin
+	state start begin
+		function in_dungeon(idx)
+			local dungeon_idx = {
+				71, -- 거미 던전 2층
+				72, -- 천의 동굴
+				73, -- 천의 동굴 2층
+				104, -- 거미 던전
+				208, -- 천의 동굴 (용방)
+				215, -- 아귀동굴
+				217, -- 거미 던전 3층
+			}
+			for _, value in ipairs(dungeon_idx) do
+				if value == idx then
+					return true
+				end
+			end
+
+			-- 모든 private 맵으론 워프 불가능
+			if idx > 10000 then
+				return true
+			end
+
+			return false
+		end
+
+		when letter with not guild_war_join.in_dungeon(pc.get_map_index()) begin
+			local e = guild.get_any_war()
+			if e != 0 and pc.get_war_map() == 0 then
+				setskin(NOWINDOW)
+				send_letter(locale_quest(2617))
+				--makequestbutton(locale_quest(2617))
+			end
+		end
+
+		when button or info with not guild_war_join.in_dungeon(pc.get_map_index()) begin
+			local e = guild.get_any_war()
+			if e == 0 then
+				say(locale_quest(2621))
+			else
+				say(locale_quest(1911), pc.get_name())
+				local s = select(locale_quest(2625), locale_quest(2600))
+				if s == 1 then
+					guild.war_enter(e)
+				else
+					setskin(NOWINDOW)
+					send_letter(locale_quest(2617))
+					--makequestbutton(locale_quest(2617))
+				end
+			end
+		end
+	end
+end

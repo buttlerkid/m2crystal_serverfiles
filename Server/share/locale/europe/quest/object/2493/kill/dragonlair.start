@@ -1,0 +1,7 @@
+if pc . get_map_index ( ) >= 2.08e+06 and pc . get_map_index ( ) <= 2.08999e+06 then d . increase_completed ( 2493 ) 
+d . set_fastest ( 2493 , get_global_time ( ) - d . getf ( "start_time" ) ) 
+d . update_info ( ) 
+pc . give_progress_mission_battle_pass ( 5 ) 
+game . set_reward ( 12 ) 
+server_timer ( "beran_dead_timer" , 1 , d . get_map_index ( ) ) 
+ return end 

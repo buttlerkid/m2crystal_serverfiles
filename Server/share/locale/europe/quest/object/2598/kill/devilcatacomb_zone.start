@@ -1,0 +1,5 @@
+server_timer ( "floor7_eli_check_timer_1" , 5 , d . get_map_index ( ) ) 
+d . increase_completed ( 2598 ) 
+d . set_fastest ( 2598 , get_global_time ( ) - d . getf ( "start_time" ) ) 
+d . update_info ( ) 
+pc . give_progress_mission_battle_pass ( 5 ) 

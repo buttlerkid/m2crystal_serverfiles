@@ -1,0 +1,39 @@
+quest tp_kingdom begin
+	state start begin
+		when login begin
+			cmdchat("kingdoms_tp "..q.getcurrentquestindex())
+		end
+		when button or info begin
+			if pc.get_map_index() != kingdoms_war.get_map_index() then
+				say(events_mgr_text[100][6])
+				say("")
+				local menu = select(events_mgr_text[100][7], events_mgr_text[100][2])
+				if menu == 2 then
+					return
+				elseif menu == 1 then
+					say_title(mob_name(11001))
+					say("")
+					if pc.getqf("is_enough") == 0 then
+						local min_lv = game.get_event_flag(kingdoms_war.get_minlv_flagname())
+						local max_lv = game.get_event_flag(kingdoms_war.get_maxlv_flagname())
+						if min_lv > 0 and min_lv > pc.get_level() then
+							say(string.format(events_mgr_text[100][13], min_lv))
+							return
+						elseif max_lv > 0 and max_lv < pc.get_level() then
+							say(string.format(events_mgr_text[100][14], max_lv))
+							return
+						end
+						
+						say(events_mgr_text[100][9])
+						wait()
+						local empire = pc.get_empire()
+						local warp_xy = {[1] = {794100, 988200}, [2] = {799900, 970000}, [3] = {782600, 973100}}
+						pc.warp(warp_xy[empire][1], warp_xy[empire][2])
+					else
+						say(events_mgr_text[100][8])
+					end
+				end
+			end
+		end
+	end
+end

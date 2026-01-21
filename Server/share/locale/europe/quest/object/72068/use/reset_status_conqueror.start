@@ -1,0 +1,33 @@
+local name = { 
+locale_quest ( 80310 ) , 
+locale_quest ( 80360 ) , 
+locale_quest ( 80370 ) , 
+locale_quest ( 80380 ) 
+} 
+local idx = item . get_vnum ( ) - 72068 
+local func = { 
+pc . get_cht , 
+pc . get_cimmun , 
+pc . get_cst , 
+pc . get_cmove } 
+if func [ idx + 1 ] ( ) == 1 then 
+say_title ( locale_quest ( 80040 ) ) 
+say ( name [ idx + 1 ] .. locale_quest ( 80390 ) ) 
+say ( name [ idx + 1 ] .. locale_quest ( 80400 ) ) 
+return 
+end 
+say_title ( locale_quest ( 80040 ) ) 
+say ( name [ idx + 1 ] .. locale_quest ( 80410 ) ) 
+say ( locale_quest ( 80420 ) ) 
+say ( locale_quest ( 80430 ) ) 
+local s = select ( locale_quest ( 80320 ) , locale_quest ( 80330 ) ) 
+if s == 1 then 
+if pc . conqueror_reset_status ( idx ) == true then 
+say_title ( locale_quest ( 80040 ) ) 
+say ( locale_quest ( 80340 ) ) 
+pc . remove_item ( item . get_vnum ( ) ) 
+else 
+say_title ( locale_quest ( 80040 ) ) 
+say ( locale_quest ( 80350 ) ) 
+end 
+end 

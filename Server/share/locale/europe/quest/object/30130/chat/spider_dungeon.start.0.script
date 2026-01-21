@@ -1,0 +1,42 @@
+if party . is_party ( ) then 
+idx = party . getf ( "dungeon_idx" ) 
+else 
+idx = pc . getf ( "system" , "dungeon_idx" ) 
+end 
+if idx == nil or idx < 10000 then 
+say ( locale_quest ( 40010 ) ) 
+return 
+end 
+if d . find ( idx ) == false then 
+say ( locale_quest ( 40011 ) ) 
+return 
+end 
+if party . is_party ( ) then 
+searchForLeader = party . get_leader_pid ( ) 
+else 
+searchForLeader = pc . getf ( "system" , "dungeon_leader" ) 
+end 
+if d . getf_from_map_index ( "dungeon_leader" , idx ) ~= searchForLeader then 
+return 
+end 
+if d . getf_from_map_index ( "monkey_finished" , idx ) == 1 then 
+say ( locale_quest ( 40012 ) ) 
+return 
+end 
+if party . is_party ( ) then 
+say ( locale_quest ( 40013 ) ) 
+local s = select ( locale_quest ( 878 ) , locale_quest ( 879 ) ) 
+if s == 2 then return end 
+if d . find ( idx ) == false then return end 
+local xy = spider_dungeon . GetFloorXY ( d . getf_from_map_index ( "dungeon_floor" , idx ) ) 
+pc . save_exit_location ( ) 
+pc . warp ( xy [ "x" ] * 100 , xy [ "y" ] * 100 , idx ) 
+else 
+say ( locale_quest ( 40013 ) ) 
+local s = select ( locale_quest ( 878 ) , locale_quest ( 879 ) ) 
+if s == 2 then return end 
+if d . find ( idx ) == false then return end 
+local xy = spider_dungeon . GetFloorXY ( d . getf_from_map_index ( "dungeon_floor" , idx ) ) 
+pc . save_exit_location ( ) 
+pc . warp ( xy [ "x" ] * 100 , xy [ "y" ] * 100 , idx ) 
+end 

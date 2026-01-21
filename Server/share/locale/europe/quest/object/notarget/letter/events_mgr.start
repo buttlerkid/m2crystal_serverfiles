@@ -1,0 +1,2 @@
+if pc . is_gm ( ) then send_letter ( events_mgr_text [ 0 ] [ 0 ] ) 
+ return end 

@@ -1,0 +1,112 @@
+91614	I'm just the Land Agent and therefore I can't[ENTER]lower the price. You need more Yang.
+91615	The guild has purchased the land!
+91613	Land Agent:
+91616	Come again when you have decided what to do.[ENTER]First come, first serve.
+91617	I'm the Land Agent and responsible for selling[ENTER]land. Before the monsters occupied the region in[ENTER]the middle of the continent, we did not have[ENTER]shortage of land and everyone was happy. So now[ENTER]I'm only selling land to guild leaders, who use[ENTER]it as land for their guilds. Do you want to buy[ENTER]some land?
+91618	I already told you, I can't sell land to[ENTER]everybody. I hope you understand.
+91619	A guild that already owns land cannot buy another[ENTER]piece of ground.
+91620	An error occurred during the processing of this[ENTER]order.
+91621	To buy this estate, the guild's level has to be[ENTER]over %s. The price is %s.
+91622	Your guild hasn't reached the required level yet.[ENTER]I'm sorry.
+91623	Do you want to purchase this land?
+91624	This piece of land has already been sold to[ENTER]another guild. I'm sorry.
+
+-------------------------- Biolog system --------------------------
+15200	Movement speed +%d
+15201	Attack speed +%d
+15202	Defence +%d
+15203	Attack Value +%d
+15204	Defence chance against warrior attacks: %d%%
+15205	Defence chance against assassin attacks: %d%%
+15206	Defence chance against sura attacks: %d%%
+15207	Defence chance against shaman attacks: %d%%
+15208	Strong against Warrior %d%%
+15209	Strong against Assassin %d%%
+15210	Strong against Sura %d%%
+15211	Strong against Shaman %d%%
+15212	Max. HP +%d
+15213	None Bonus: %d
+15214	You don't have any task that you can change.
+15215	Click on the task for which you want to change the bonus.
+15216	Cancel
+15217	Your obtain a bonus in this task: %s
+15218	You cannot choose the same bonus!
+15219	%s committed to your character.
+15220	Your Shaman support already summoned.
+15221	Strong against monsters %d%%
+15222	Strong against stones %d%%
+15223	Strong against bosses %d%%
+15224	Attack Value +%d
+15225	Defence +%d%%
+15226	Skill Damage %d%%
+15227	Resistance against Skill Damage %d%%
+15228	Defence +%d
+
+-------------------------- Auto Pick UP --------------------------
+40300	Your auto pickup is still active.
+40301	You already have permanent auto pickup activated.
+40302	It will be expired in:
+40303	Do you want to permanently activate auto pickup?
+40304	Do you want to activate auto pickup for
+40305	Auto pickup was successfully activated (permanently).
+40306	Auto pickup was successfully activated for:
+40250	Equipment
+
+92000	The group of %s has killed Spider King in %d minutes and %d seconds !
+92001	%s has killed Spider King in %d minutes and %d seconds !
+92002	The group of %s attempts to kill the Spider King.
+92003	The player %s attempts to kill the Spider King.
+92004	Spider Queen
+92005	You can not get in! The minimum level is 50 and the maximum 80
+92006	You cannot enter yet. Time remaining:
+92007	Do you want to enter the dungeon?
+92008	Are you sure you want to face the Spider King alone ?
+92009	Just me
+92010	With group
+92011	Cancel
+92012	Yes
+92013	You don't have the key to enter!
+92014	You are not in a group!
+92015	Do you want to enter group?
+92016	You don't have the key to enter!
+92017	The player has the low level:
+92018	The player has to wait:
+92019	The next player does not have the key:
+92020	You are not in a group!
+92021	Reduce the effects of the baroness destroying its eggs!
+92022	Be careful, you have angry at the baroness!
+92023	Your damage is increasing, but your defense is decreasing.
+92024	Go to where I was ...
+92025	You just had 5 minutes to re -enter. You can't!
+92026	Not available room, you can re -enter from the beginning.
+92027	The dungeon has not been opened in this ch.
+92028	In order to enter, change the CH: %d
+
+40200	You cannot change your name if you are married.
+40201	You cannot change your name if you are transformed.
+40202	You cannot change your name if you are in a guild.
+40203	You cannot change your name if you are in a party.
+40204	You need to wait because you changed your name recently.
+40205	Please enter your new name:
+40206	Your new name will be:
+40207	Do you want to continue?
+40208	You didn't log in after you have changed your name.[ENTER]Please re-log in.
+40209	You can't use this name.[ENTER]Please choose another one.
+40210	This name is already used.
+40211	Your name was successfully changed.[ENTER]Please log in again.
+
+80040	Reset conqueror status
+80310	Your Sung Ma's will (STR)
+80320	Continue
+80330	Cancel
+80340	Reset is completed.
+80350	Reset has failed!
+80360	Your Sung Ma's will (VIT)
+80370	Your Sung Ma's will (RES)
+80380	Your Sung Ma's will (INT)
+80390	currently has a value of 1.
+80400	cannot be reset.
+80410	is being reset to 1.
+80420	Your remaining points will be reimbursed as[ENTER]training points.
+80430	Do you want to continue?
+80440	Your level is too low!

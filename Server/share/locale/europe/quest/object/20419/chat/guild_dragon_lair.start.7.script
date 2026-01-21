@@ -1,0 +1,8 @@
+if guild_dragonlair . get_stage ( ) > 0 then 
+say ( locale_quest ( 1829 ) ) 
+say ( locale_quest ( 1830 ) ) 
+end 
+say ( locale_quest ( 1832 ) ) 
+if select ( locale_quest ( 1847 ) , locale_quest ( 1846 ) ) == 1 then 
+guild_dragonlair . exit ( ) 
+end 

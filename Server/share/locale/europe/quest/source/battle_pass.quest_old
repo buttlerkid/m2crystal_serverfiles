@@ -1,0 +1,50 @@
+quest battle_pass begin
+	state start begin
+		when 31091.use begin
+			say_title("Battle pass:")
+			say("")
+			
+			if pc.is_battlepass_active() then
+				say("Your battle pass is already active.")
+				say("Your battle pass season: " .. pc.get_battlepass_id())
+				
+				if pc.is_gm() then
+					say("")
+					say("GM Option:")
+					local gm = select("OK", "Disable it")
+					if gm == 2 then
+						pc.disable_battlepass()
+						say("battle pass disabled")
+					end
+				end
+				
+			elseif game.is_battlepass_expired(item.get_value(0)) then
+			
+				say("This season has ended.")
+				say("")
+				return
+				
+			else
+				
+				if pc.getf("system", "battle_pass_expire") >= get_global_time() then
+					say("You can activate battle pass only once per season!")
+					return
+				end
+			
+				say("Do you wish to activate the battle pass?")
+				say("")
+				say("If you already finished some missions,")
+				say("Make sure you have enough space in inventory.")
+				say("You will receive rewards for them.")
+				say("")
+				
+				local s = select("Yes, activate it", "No")
+				if s == 1 then
+					say("Your battle pass was activated.")
+					pc.enable_battlepass(item.get_value(0))
+					pc.remove_item(31091, 1)
+				end
+			end
+		end
+	end
+end

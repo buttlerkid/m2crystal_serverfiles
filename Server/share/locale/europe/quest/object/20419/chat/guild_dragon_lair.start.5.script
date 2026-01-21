@@ -1,0 +1,8 @@
+say ( locale_quest ( 1823 ) ) 
+if select ( locale_quest ( 1847 ) , locale_quest ( 1846 ) ) == 1 then 
+if guild_dragonlair . get_stage ( ) > 0 then 
+say ( locale_quest ( 1822 ) ) 
+return 
+end 
+guild_dragonlair . start ( ) 
+end 

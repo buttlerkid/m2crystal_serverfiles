@@ -1,0 +1,9 @@
+if ( monkey_dungeon . isInDungeon ( ) ) and d . getf ( "monkey_level" ) == 4 then local dungeon_data = monkey_dungeon . dungeon_setting ( ) ; 
+pc . remove_item ( dungeon_data [ "zin_zan_map_key" ] , 1 ) 
+d . notice ( 19016 ) 
+local pct = number ( 1 , 4 ) 
+if pct == 1 then 
+game . drop_item ( dungeon_data [ "zin_zan_key" ] , 1 ) 
+d . setf ( "monkey_key2_completed" , 2 ) 
+end 
+ return end 

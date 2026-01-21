@@ -1,0 +1,65 @@
+quest shop_decoration begin
+	state start begin
+	
+		function CalculateUnlockedDeco()
+			local valShopSkin = 0
+			local valShopBanner = 0
+			
+			for i=0,7,1 do
+				theFlag = pc.getqf("shop_skin_"..tostring(i))
+				if theFlag > get_global_time() or theFlag == 111 then
+					newVal = 2 ^ i
+					valShopSkin = valShopSkin + newVal
+				end
+			end
+
+			for i=0,4,1 do
+				theFlag = pc.getqf("shop_banner_"..tostring(i))
+				if theFlag > get_global_time() or theFlag == 111 then
+					newVal = 2 ^ i
+					valShopBanner = valShopBanner + newVal
+				end
+			end
+
+			pc.send_unlock_shopdeco(valShopSkin, valShopBanner)
+		end
+
+		-- SKINS with limited time:
+		when 71221.use begin
+			duration = item.get_value(0)
+			text_duration = time_duration(duration)
+			
+			say_title("Shop Decoration: Skin")
+			say("")
+
+			say("Do you want to activate:")
+			say_reward(item.get_name() .. " for " .. text_duration .. "?")
+			say("")
+			local s = select("Yes", "No")
+			if s == 1 then
+				say_title("Shop Decoration: Skin")
+				say("")
+				pc.setqf("shop_skin_0", get_global_time() + duration)
+				pc.setqf("shop_skin_1", get_global_time() + duration)
+				pc.setqf("shop_skin_2", get_global_time() + duration)
+				pc.setqf("shop_skin_3", get_global_time() + duration)
+				pc.setqf("shop_skin_4", get_global_time() + duration)
+				pc.setqf("shop_skin_5", get_global_time() + duration)
+				pc.setqf("shop_skin_6", get_global_time() + duration)
+				pc.setqf("shop_skin_7", get_global_time() + duration)
+				pc.setqf("shop_banner_0", get_global_time() + duration)
+				pc.setqf("shop_banner_1", get_global_time() + duration)
+				pc.setqf("shop_banner_2", get_global_time() + duration)
+				pc.setqf("shop_banner_3", get_global_time() + duration)
+				pc.setqf("shop_banner_4", get_global_time() + duration)
+				say_reward(item.get_name() .. " was activated for " .. text_duration .. ".")
+				pc.remove_item(item.vnum, 1)
+				shop_decoration.CalculateUnlockedDeco()
+			end
+		end
+
+		when login begin
+			shop_decoration.CalculateUnlockedDeco()
+		end
+	end
+end

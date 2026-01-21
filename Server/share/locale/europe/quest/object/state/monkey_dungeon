@@ -1,0 +1,56 @@
+monkey_dungeon={["start"]=0,base_setting= function ()return { 
+[ "map_index" ] = 109 , 
+[ "base_coords" ] = { 1882 , 7725 } , 
+[ "out_coords" ] = { 63 , 2878 , 5412 } , 
+[ "level_min" ] = 30 , 
+[ "level_max" ] = 50 , 
+[ "passage_ticket" ] = 71095 , 
+} 
+end ,dungeon_setting= function ()return { 
+[ "time_complete" ] = 900 , 
+[ "monkey_tooth" ] = 30137 , 
+[ "monkey_stone_1" ] = 8210 , 
+[ "monkey_stone_2" ] = 8035 , 
+[ "monkey_stone_pos_1" ] = { 612 , 544 } , 
+[ "monkey_stone_pos_2" ] = { 629 , 543 } , 
+[ "monkey_stone_pos_3" ] = { 653 , 542 } , 
+[ "monkey_stone_pos_4" ] = { 631 , 559 } , 
+[ "monkey_rock" ] = 5161 , 
+[ "monkey_rock_pos" ] = { 629 , 539 } , 
+[ "monkey_walking" ] = 5162 , 
+[ "monkey_walking_pos" ] = { 629 , 511 } , 
+[ "monkey_lord" ] = 5163 , 
+[ "monkey_lord_pos" ] = { 628 , 489 } , 
+[ "zin_zan_map_key" ] = 300101 , 
+[ "zin_zan_key" ] = 300102 , 
+} 
+end ,GetFloorXY= function (floorNumber)local array = { 
+[ 1 ] = { [ "x" ] = 1882 , [ "y" ] = 7725 } , 
+} 
+return array [ floorNumber ] 
+end ,isInDungeon= function ()local data = monkey_dungeon . base_setting ( ) ; 
+local playerMapIndex = pc . get_map_index ( ) ; 
+local dungeonMapIndex = data [ "map_index" ] ; 
+return ( pc . in_dungeon ( ) and ( playerMapIndex >= dungeonMapIndex * 10000 ) and ( playerMapIndex < ( dungeonMapIndex + 1 ) * 10000 ) ) ; 
+end ,ResetDungeonData= function ()d . setf ( "pillard_count" , 0 ) ; 
+d . setf ( "monkey_level" , 0 ) ; 
+d . setf ( "monkey_key_completed" , 0 ) ; 
+d . setf ( "monkey_stone1_count" , 0 ) ; 
+d . setf ( "monkey_stone2_count" , 0 ) ; 
+d . setf ( "monkey_finished" , 0 ) ; 
+d . setf ( "monkey_key2_completed" , 0 ) ; 
+clear_server_timer ( "monkeyDungeon_secondLevel" , d_index ) 
+clear_server_timer ( "monkeyDungeon_secondLevel_2" , d_index ) 
+clear_server_timer ( "monkeyDungeon_Level_3" , d_index ) 
+clear_server_timer ( "monkeyDungeon_Level_4" , d_index ) 
+clear_server_timer ( "monkeyDungeon_Level_5" , d_index ) 
+clear_server_timer ( "monkeyDungeon_Level_6" , d_index ) 
+clear_server_timer ( "monkeyDungeon_Level_7" , d_index ) 
+end ,ClearDungeon= function (revivedBoolean)if ( pc . in_dungeon ( ) ) then 
+d . clear_regen ( ) ; 
+d . kill_all ( ) ; 
+if ( revivedBoolean ) then 
+d . kill_all ( ) ; 
+end 
+end 
+end }

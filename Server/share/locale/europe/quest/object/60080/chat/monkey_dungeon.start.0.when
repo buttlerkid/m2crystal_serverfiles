@@ -1,0 +1,1 @@
+return pc . getf ( "dungeon_cooldown" , "monkey_dungeon" ) >= get_global_time ( ) and pc . is_gm ( )

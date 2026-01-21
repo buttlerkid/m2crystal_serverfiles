@@ -1,0 +1,77 @@
+define KILL_METIN_POINT 13
+define KILL_BOSS_POINT 25
+define KILL_MOBS_POINT 1
+define FISH_POINT 320
+define MINING_POINT	200
+define MAX_POINT 9000
+
+-- define KILL_METIN_POINT 1
+-- define KILL_BOSS_POINT 1
+-- define KILL_MOBS_POINT 1
+-- define MAX_POINT 5
+
+quest captcha begin
+	state start begin
+	
+		--GM test
+		--when 9003.chat."GM: Show captcha" with pc.is_gm() begin
+		--	if pc.getqf("captcha_show") == 1 then
+		--		say("its already shown")
+		--		return
+		--	end
+		--	setskin(NOWINDOW)
+		--	cmdchat(string.format("ShowCaptcha %d", 120))
+		--	pc.setqf("captcha_show", 1)
+		--end
+		--GM test
+		
+
+		when login begin
+			cmdchat("Captcha_index "..q.getcurrentquestindex())
+			
+			if pc.getqf("captcha_show") == 1 then
+			
+				local not_finished = pc.getqf("captcha_not_finished")
+				if not_finished == 1 then
+					setskin(NOWINDOW)
+					cmdchat(string.format("ShowCaptcha %d", 60))
+				elseif not_finished == 2 then
+					setskin(NOWINDOW)
+					cmdchat(string.format("ShowCaptcha %d", 30))
+				else
+					setskin(NOWINDOW)
+					cmdchat(string.format("ShowCaptcha %d", 120))
+				end
+			end
+		end
+		
+		when kill begin
+			--IGNORE IN DUNGEON
+			if pc.get_map_index() > 10000 then
+				return
+			end
+			--IGNORE IN DUNGEON
+			
+			if npc.is_metin() then
+				pc.setqf("points", pc.getqf("points") + KILL_METIN_POINT)
+			elseif npc.is_boss() then
+				pc.setqf("points", pc.getqf("points") + KILL_BOSS_POINT)
+			else
+				pc.setqf("points", pc.getqf("points") + KILL_MOBS_POINT)
+			end
+			if pc.getqf("points") >= MAX_POINT and pc.getqf("captcha_show") == 0 then
+				setskin(NOWINDOW)
+				cmdchat(string.format("ShowCaptcha %d", 120))
+				pc.setqf("captcha_show", 1)
+			end
+		end
+		
+		when button begin	
+			syschat("Captcha OK.")			
+			pc.setqf("points", 0)
+			pc.setqf("captcha_show", 0)		
+			pc.setqf("captcha_not_finished", 0)			
+			pc.setqf("captcha_failed", 0)			
+		end		
+	end
+end

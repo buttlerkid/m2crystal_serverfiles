@@ -1,0 +1,3 @@
+local dungeon_data = monkey_dungeon . dungeon_setting ( ) ; 
+pc . setf ( "dungeon_cooldown" , "monkey_dungeon" , get_global_time ( ) - dungeon_data [ "time_complete" ] ) 
+say ( "Your waiting time has been removed with sucess!" ) 

@@ -1,0 +1,130 @@
+local data = spider_dungeon . base_setting ( ) ; 
+local dungeon_data = spider_dungeon . dungeon_setting ( ) ; 
+local EntranceCoords = data [ "base_coords" ] ; 
+say_title ( string . format ( "%s:[ENTER]" , mob_name ( npc . get_race ( ) ) ) ) 
+if pc . get_locale ( ) == 1 or pc . get_locale ( ) == 9 then say ( locale_quest ( 22009 ) ) end 
+say_reward ( locale_quest ( 40000 ) ) 
+local x = select ( locale_quest ( 2699 ) , locale_quest ( 2702 ) ) 
+if x == 1 then 
+if ( party . is_party ( ) ) then 
+local pids = { party . get_member_pids ( ) } 
+local noTicketMembers = { } 
+local ticketCheck = true 
+local infoTable = { [ "minimumLevel" ] = { } , [ "maximumLevel" ] = { } } ; 
+local partyIds = { party . get_member_pids ( ) } ; 
+local keyNeeded = data [ "passage_ticket" ] 
+if ( not party . is_leader ( ) ) then 
+say_title ( string . format ( "%s:[ENTER]" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( locale_quest ( 40001 ) ) 
+return ; 
+end 
+for i , pid in next , partyIds , nil begin 
+q . begin_other_pc_block ( pid ) 
+local playerLevel = pc . get_level ( ) ; 
+if ( playerLevel < data [ "level_min" ] ) then 
+table . insert ( infoTable [ "minimumLevel" ] , { pc . get_name ( ) , playerLevel } ) ; 
+end 
+if ( playerLevel > data [ "level_max" ] ) then 
+table . insert ( infoTable [ "maximumLevel" ] , { pc . get_name ( ) , playerLevel } ) ; 
+end 
+q . end_other_pc_block ( ) 
+end 
+if ( table . getn ( infoTable [ "minimumLevel" ] ) > 0 ) then 
+say_title ( string . format ( "%s:[ENTER]" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( locale_quest ( 40002 ) ) 
+for index , value in ipairs ( infoTable [ "minimumLevel" ] ) begin 
+say ( string . format ( "%s - %d" , value [ 1 ] , value [ 2 ] ) ) 
+end return ; 
+end 
+if ( table . getn ( infoTable [ "maximumLevel" ] ) > 0 ) then 
+say_title ( string . format ( "%s:[ENTER]" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( locale_quest ( 40002 ) ) 
+for index , value in ipairs ( infoTable [ "maximumLevel" ] ) begin 
+say ( string . format ( "%s - %d" , value [ 1 ] , value [ 2 ] ) ) 
+end return ; 
+end 
+if ( not party . check_dungeon_player ( ) ) then 
+say_title ( mob_name ( npc . get_race ( ) ) ) 
+say ( locale_quest ( 40003 ) ) 
+return ; 
+end 
+if ( party . is_map_member_flag_lt2 ( "dungeon_cooldown.spider_dungeon" , get_global_time ( ) ) ) == false then 
+say_title ( string . format ( "%s:" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( locale_quest ( 40015 ) ) 
+return ; 
+end 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+local canPass = false 
+local keyNeeded = data [ "passage_ticket" ] ; 
+if ( pc . count_item ( keyNeeded ) >= 1 ) then 
+canPass = true 
+end 
+if not canPass then 
+table . insert ( noTicketMembers , pc . get_name ( ) ) 
+ticketCheck = false 
+end 
+q . end_other_pc_block ( ) 
+end 
+if not ticketCheck then 
+say_title ( mob_name ( npc . get_race ( ) ) ) 
+say ( string . format ( locale_quest ( 40004 ) , item_name ( keyNeeded ) ) ) ; 
+say_item_vnum ( data [ "passage_ticket" ] ) ; 
+say ( locale_quest ( 40005 ) ) 
+for i , name in next , noTicketMembers , nil begin 
+say ( color ( 1 , 1 , 0 ) , "-" .. " " .. name ) 
+end return 
+end 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+pc . remove_item ( keyNeeded , 1 ) ; 
+q . end_other_pc_block ( ) 
+end 
+d . new_jump_party ( data [ "map_index" ] , EntranceCoords [ 1 ] , EntranceCoords [ 2 ] ) ; 
+server_timer ( "spiderDungeon_time_out" , data [ "time_complete" ] , d . get_map_index ( ) ) ; 
+d . setf ( "dungeon_enter" , 1 ) 
+d . setf ( "dungeon_entered" , get_global_time ( ) ) 
+d . setf ( "dungeon_duration" , get_time ( ) ) 
+d . setf ( "dungeon_leader" , party . get_leader_pid ( ) ) 
+d . setf ( "dungeon_floor" , 1 ) 
+party . setf ( "dungeon_idx" , d . get_map_index ( ) ) 
+d . setf ( "dungeon_first_login" , 1 ) 
+spider_dungeon . ResetDungeonData ( ) 
+d . setf ( "dungeon_time_remaining" , get_global_time ( ) + dungeon_data [ "time_complete" ] ) 
+else 
+time_remaining = time_duration ( pc . getf ( "dungeon_cooldown" , "spider_dungeon" ) - get_time ( ) ) 
+if pc . getf ( "dungeon_cooldown" , "spider_dungeon" ) >= get_global_time ( ) then 
+say_title ( string . format ( "%s:[ENTER]" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( locale_quest ( 40014 ) , time_remaining ) 
+return 
+end 
+local playerLevel = pc . get_level ( ) 
+if ( playerLevel < data [ "level_min" ] ) then 
+say ( string . format ( locale_quest ( 40006 ) , data [ "level_min" ] ) ) 
+return ; 
+end 
+if ( playerLevel > data [ "level_max" ] ) then 
+say ( string . format ( locale_quest ( 40007 ) , data [ "level_max" ] ) ) 
+return ; 
+end 
+local keyNeeded = data [ string . format ( "passage_ticket" ) ] ; 
+if ( pc . count_item ( keyNeeded ) < 1 ) then 
+say ( string . format ( locale_quest ( 40004 ) , item_name ( keyNeeded ) ) ) 
+say_item_vnum ( data [ "passage_ticket" ] ) ; 
+return ; 
+end 
+d . new_jump ( data [ "map_index" ] , EntranceCoords [ 1 ] * 100 , EntranceCoords [ 2 ] * 100 ) ; 
+server_timer ( "spiderDungeon_time_out" , data [ "time_complete" ] , d . get_map_index ( ) ) ; 
+d . setf ( "dungeon_enter" , 1 ) 
+d . setf ( "dungeon_entered" , get_global_time ( ) ) 
+d . setf ( "dungeon_duration" , get_time ( ) ) 
+d . setf ( "dungeon_floor" , 1 ) 
+d . setf ( "dungeon_leader" , pc . get_player_id ( ) ) 
+pc . setf ( "system" , "dungeon_leader" , pc . get_player_id ( ) ) 
+pc . setf ( "system" , "dungeon_idx" , d . get_map_index ( ) ) 
+d . setf ( "dungeon_first_login" , 1 ) 
+pc . remove_item ( keyNeeded , 1 ) ; 
+spider_dungeon . ResetDungeonData ( ) 
+d . setf ( "dungeon_time_remaining" , get_global_time ( ) + dungeon_data [ "time_complete" ] ) 
+end 
+end 

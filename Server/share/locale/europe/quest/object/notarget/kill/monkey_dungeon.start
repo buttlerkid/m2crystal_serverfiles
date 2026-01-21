@@ -1,0 +1,89 @@
+if ( monkey_dungeon . isInDungeon ( ) ) then local dungeon_data = monkey_dungeon . dungeon_setting ( ) ; 
+local data = monkey_dungeon . base_setting ( ) ; 
+local npcRace = npc . get_race ( ) ; 
+if d . getf ( "monkey_level" ) == 1 and d . getf ( "monkey_key_completed" ) == 1 and 1 == number ( 1 , 300 ) then 
+game . drop_item ( dungeon_data [ "monkey_tooth" ] , 1 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( 19001 , item_name ( 300100 ) ) 
+d . setf ( "monkey_key_completed" , 2 ) 
+elseif d . getf ( "monkey_level" ) == 2 then 
+if ( npcRace == dungeon_data [ "monkey_stone_1" ] ) then 
+local count = d . getf ( "monkey_stone1_count" ) + 1 
+d . setf ( "monkey_stone1_count" , count ) 
+if count >= 4 then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( 19004 ) 
+d . setf ( "monkey_level" , 3 ) 
+server_timer ( "monkeyDungeon_Level_3" , 5 , d . get_map_index ( ) ) ; 
+monkey_dungeon . ClearDungeon ( true ) ; 
+end 
+end 
+elseif d . getf ( "monkey_level" ) == 3 then 
+if ( npcRace == dungeon_data [ "monkey_rock" ] ) then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( 19005 ) 
+d . setf ( "monkey_level" , 4 ) 
+server_timer ( "monkeyDungeon_Level_4" , 5 , d . get_map_index ( ) ) ; 
+monkey_dungeon . ClearDungeon ( true ) ; 
+end 
+elseif d . getf ( "monkey_level" ) == 4 and d . getf ( "monkey_key2_completed" ) == 1 and 1 == number ( 1 , 100 ) then 
+game . drop_item ( dungeon_data [ "zin_zan_map_key" ] , 1 ) 
+elseif d . getf ( "monkey_level" ) == 6 then 
+if ( npcRace == dungeon_data [ "monkey_walking" ] ) then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( 19006 ) 
+d . setf ( "monkey_level" , 7 ) 
+server_timer ( "monkeyDungeon_Level_7" , 5 , d . get_map_index ( ) ) ; 
+monkey_dungeon . ClearDungeon ( true ) ; 
+end 
+elseif d . getf ( "monkey_level" ) == 7 then 
+if ( npcRace == dungeon_data [ "monkey_lord" ] ) then 
+d . notice ( 20016 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( 19011 ) 
+clear_server_timer ( "monkeyDungeon_time_out" , d . get_map_index ( ) ) ; 
+server_timer ( "monkeyDungeon_time_out" , 60 , d . get_map_index ( ) ) ; 
+if game . check_event ( 6 ) == true then 
+local pct = number ( 1 , 3 ) 
+if pct == 1 then 
+game . drop_item ( data [ "passage_ticket" ] , 1 ) 
+end 
+end 
+dungeon_duration = get_time ( ) - d . getf ( "dungeon_duration" ) 
+sec = math . mod ( dungeon_duration , 60 ) 
+min = ( dungeon_duration - sec ) / 60 
+d . setf ( "monkey_finished" , 1 ) 
+local killerVID = pc . get_vid ( ) 
+local pids = { party . get_member_pids ( ) } 
+local groupNames = "" 
+local time_passed = ( get_global_time ( ) - d . getf ( "dungeon_entered" ) ) 
+if party . is_party ( ) and d . getf ( "guild_id" ) <= 0 then 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+local test = pc . is_near_vid ( killerVID , 400 ) 
+if test == true then 
+groupNames = groupNames .. pc . get_name ( ) .. "," 
+end 
+q . end_other_pc_block ( ) 
+end 
+notice_all ( 19012 , pc . get_name ( ) , min , sec ) 
+party . setf_with_questname_plus ( "dungeons_finished." .. tostring ( data [ "map_index" ] ) ) 
+elseif d . getf ( "guild_id" ) > 0 then 
+local guildPids = { guild . get_member_pids ( pc . get_map_index ( ) ) } ; 
+for i , pid in next , guildPids , nil begin 
+q . begin_other_pc_block ( pid ) 
+groupNames = groupNames .. pc . get_name ( ) .. "," 
+q . end_other_pc_block ( ) 
+end 
+notice_all ( 19057 , guild . name ( pc . get_guild ( ) ) , min , sec ) 
+guild . set_quest_flag_plus ( pc . get_map_index ( ) , "dungeons_finished." .. tostring ( data [ "map_index" ] ) ) 
+else 
+groupNames = "" 
+curCount = pc . getf ( "dungeons_finished" , tostring ( data [ "map_index" ] ) ) 
+pc . setf ( "dungeons_finished" , tostring ( data [ "map_index" ] ) , curCount + 1 ) 
+notice_all ( 19013 , pc . get_name ( ) , curCount + 1 , min , sec ) 
+end 
+monkey_dungeon . ClearDungeon ( true ) ; 
+end 
+end 
+ return end 

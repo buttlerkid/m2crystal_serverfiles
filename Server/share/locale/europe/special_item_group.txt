@@ -1,0 +1,1707 @@
+#
+# This file is part of "special_item_group.txt" and has
+# been broken down into groups that contain special
+# item attributes (rings).
+#
+# When we finish editing this file we must merge it
+# again into the file "special_item_group.txt"
+#
+# We have separated groups of items into other files
+# so the main "special_item_group.txt" does not get
+# huge and confusing to edit.
+#
+
+Group	스폐셜
+{
+	Vnum	10050
+	type	special
+	1	71148	100000	1
+	2	71149	100001	1
+	3	71158	100002	1
+	4	71135	100003	1
+	5	71136	100004	1
+	6	71143	100005	1
+	7	71145	100006	1
+	8	71188	100007	1
+	9	71199	100008	1
+	10	71202	100009	1
+	11	72054	100010	1
+	12	76030	100011	1
+	13	76047	100011	1
+	14	72062	100012	1
+	15	72062	100012	1
+}
+
+Group	속성
+{
+	Vnum	100000
+	type	ATTR
+	1	66	30	-- APPLY_MALL_EXPBONUS
+	2	78	20	-- APPLY_RESIST_WARRIOR
+	3	79	20	-- APPLY_RESIST_ASSASSIN
+	4	95	20	-- APPLY_RESIST_WOLFMAN
+	5	63	30	-- APPLY_ATT_BONUS_TO_MONSTER
+	6	69	10	-- APPLY_MAX_HP_PCT
+	7	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성2
+{
+	Vnum	100001
+	type	ATTR
+	1	66	30	-- APPLY_MALL_EXPBONUS
+	2	80	20	-- APPLY_RESIST_SURA
+	3	81	20	-- APPLY_RESIST_SHAMAN
+	4	95	20	-- APPLY_RESIST_WOLFMAN
+	5	63	30	-- APPLY_ATT_BONUS_TO_MONSTER
+	6	69	10	-- APPLY_MAX_HP_PCT
+	7	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성3
+{
+	Vnum	100002
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	64	30	-- APPLY_MALL_ATTBONUS
+	3	7	20	-- APPLY_ATT_SPEED
+	4	9	20	-- APPLY_CAST_SPEED
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성4
+{
+	Vnum	100003
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	7	20	-- APPLY_ATT_SPEED
+	3	9	20	-- APPLY_CAST_SPEED
+	4	64	30	-- APPLY_MALL_ATTBONUS
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+	7	84	5	-- APPLY_COSTUME_ATTR_BONUS
+}
+
+Group	속성5
+{
+	Vnum	100004
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	64	30	-- APPLY_MALL_ATTBONUS
+	3	7	20	-- APPLY_ATT_SPEED
+	4	9	20	-- APPLY_CAST_SPEED
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성6
+{
+	Vnum	100005
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	7	20	-- APPLY_ATT_SPEED
+	3	9	20	-- APPLY_CAST_SPEED
+	4	63	30	-- APPLY_ATT_BONUS_TO_MONSTER
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성7
+{
+	Vnum	100006
+	type	ATTR
+	1	66	30	-- APPLY_MALL_EXPBONUS
+	2	7	10	-- APPLY_ATT_SPEED
+	3	9	10	-- APPLY_CAST_SPEED
+	4	69	5	-- APPLY_MAX_HP_PCT
+	5	70	5	-- APPLY_MAX_SP_PCT
+	6	63	10	-- APPLY_ATT_BONUS_TO_MONSTER
+}
+
+Group	속성8
+{
+	Vnum	100007
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	55	30	-- APPLY_MAGIC_ATT_GRADE
+	3	7	20	-- APPLY_ATT_SPEED
+	4	9	20	-- APPLY_CAST_SPEED
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성9
+{
+	Vnum	100008
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	7	20	-- APPLY_ATT_SPEED
+	3	9	20	-- APPLY_CAST_SPEED
+	4	63	10	-- APPLY_ATT_BONUS_TO_MONSTER
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성10
+{
+	Vnum	100009
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	7	20	-- APPLY_ATT_SPEED
+	3	9	20	-- APPLY_CAST_SPEED
+	4	63	10	-- APPLY_ATT_BONUS_TO_MONSTER
+	5	64	30	-- APPLY_MALL_ATTBONUS
+	6	55	30	-- APPLY_MAGIC_ATT_GRADE
+}
+
+Group	속성11
+{
+	Vnum	100010
+	type	ATTR
+	1	64	30	-- APPLY_MALL_ATTBONUS
+	2	55	30	-- APPLY_MAGIC_ATT_GRADE
+	3	7	20	-- APPLY_ATT_SPEED
+	4	9	20	-- APPLY_CAST_SPEED
+	5	115	10	-- APPLY_RESIST_HUMAN
+	6	73	10	-- APPLY_SKILL_DEFEND_BONUS
+}
+
+Group	속성12
+{
+	Vnum	100011
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	7	20	-- APPLY_ATT_SPEED
+	3	9	20	-- APPLY_CAST_SPEED
+	4	63	10	-- APPLY_ATT_BONUS_TO_MONSTER
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성13
+{
+	Vnum	100012
+	type	ATTR
+	1	66	200	-- APPLY_MALL_EXPBONUS
+}
+
+Group	이동반지
+{
+	Vnum	10031
+	Type	Quest
+	1	70058	1	1 -- Teleportation Ring
+	2	76042	1	1 -- Teleportation Ring
+}
+
+Group	TicketGroup
+{
+	Vnum	10033
+	1	70007	1	1
+	2	71095	1	1
+	3	71174	1	1
+	4	71175	1	1
+	5	76019	1	1
+}
+
+###############################################################################
+# Reference: https://it-wiki.metin2.gameforge.com/index.php/Baule_di_Idra
+Group	HydraChest
+{
+	Vnum	54705 -- Chief Orc's Box
+	1	55410	1	100 -- Nessie Egg
+	2	25041	1	100 -- Magic Stone
+	3	72051	1	100 -- Scroll - M. Ice Witch
+	4	72052	1	100 -- Scroll - General Yonghan
+	5	50926	200	100 -- Glimmerstone
+	6	76019	1	100 -- Passage Ticket
+	7	76031	1	100 -- Protein Snack
+	8	72058	3	100 -- Spirit Stone Bundle
+	9	71001	2	100 -- Exorcism Scroll
+	10	70303	1	100 -- Hydran Ring
+	11	30251	5	100 -- Malevolence Jewel
+	12	30252	5	100 -- Wisdom Jewel
+	13	30167	5	100 -- Red Ghost Tree Branch
+	14	30168	5	100 -- Leaders' Notes
+	15	71142	1	100 -- Royal Tiger (white)
+	16	27992	1	100 -- White Pearl
+	17	27993	1	100 -- Blue Pearl
+	18	27994	1	100 -- Blood-Red Pearl
+	19	72301	1	100 -- Blessing Scroll
+	20	76028	1	100 -- Stone Handbook
+	21	55400	1	100 -- Mystery Box
+	22	72727	1	100 -- Moon Elixir (S)
+	23	76021	1	100 -- Sun Elixir (S)
+	24	85003	1	100 -- Lord Sash (noble)
+	25	39029	1	100 -- Reinforce Item
+	26	38060	1	100 -- Bag of Emotions
+	27	100700	1	100 -- Flame of the Dragon (B)
+}
+
+Group	BeginChest
+{
+	Vnum	50187 -- Begginer chest
+	Type	Pct
+	1	39039	1	100	100 -- Sun Elixir (L)
+	2	39042	1	100	100 -- Moon Elixir (L)
+	3	72702	1	100	100 -- Wind Shoes+ (tradeable)
+	4	70058	1	100	100 -- Teleportation Ring
+	5	70038	1	100	100 -- Bravery Cape
+	6	71124	1	100	100 -- Mount
+}
+
+Group	CorDraconisR
+{
+	Vnum	50252
+	1	110000	1	1
+	2	120000	1	1
+	3	130000	1	1
+	4	140000	1	1
+	5	150000	1	1
+	6	160000  1	1
+
+}
+
+Group	Oberork-Truhe
+{	
+	Vnum	50070
+	1	3140	1	30	30						-- Magnetische Klinge+0
+	2	3141	1	16	30						-- Magnetische Klinge+1
+	3	1110	1	30	30						-- Blitzmesser+0
+	4	1111	1	16	30						-- Blitzmesser+1
+	5	2130	1	30	30						-- Aprikosen-Bogen+0
+	6	2131	1	16	30						-- Aprikosen-Bogen+1
+	7	7140	1	30	30						-- Erlösungsfächer+0
+	8	7141	1	16	30						-- Erlösungsfächer+1
+	9	5100	1	30	30						-- Himmel--Erde-Glocke+0
+	10	5101	1	16	30						-- Himmel--Erde-Glocke+1
+	11	160	1	30	30							-- Nymphenschwert+0
+	12	161	1	16	30							-- Nymphenschwert+1
+	13	240	1	30	30							-- Exorzismusschwert+0
+	14	241	1	16	30							-- Exorzismusschwert+1
+	15	11671	1	30	30						-- Geistermaskenpanzer+1
+	16	11672	1	5	30						-- Geistermaskenpanzer+2
+	17	11271	1	30	30						-- Gold-Plattenpanzer+1
+	18	11272	1	5	30						-- Gold-Plattenpanzer+2
+	19	11471	1	30	30						-- Mörderwindanzug+1
+	20	11472	1	5	30						-- Mörderwindanzug+2
+	21	11871	1	30	30						-- Oranges Katzenkleid+1
+	22	11872	1	5	30						-- Oranges Katzenkleid+2
+	23	16161	1	30	30						-- Kristallhalskette+1
+	24	16162	1	16	30						-- Kristallhalskette+2
+	25	16163	1	7	30						-- Kristallhalskette+3
+	26	17161	1	30	30						-- Kristallohrringe+1
+	27	17162	1	16	30						-- Kristallohrringe+2
+	28	17162	1	7	30						-- Kristallohrringe+3
+	29	14161	1	30	30						-- Kristallarmband+1
+	30	14162	1	16	30						-- Kristallarmband+2
+	31	14163	1	7	30						-- Kristallarmband+3
+	32	70012	1	25							-- Träne der Göttin
+	33	70038	25	25							-- Tapferkeitsumhang
+	34	25040	1	30							-- Segenschriftrolle
+	35	70048	1	25							-- Flüchtlingsumhang
+	36	70037	1	30							-- Buch des Vergessens
+	37	70014	1	30							-- Bluttablette
+	38	70043	1	25							-- Diebeshandschuh(2h)
+	39	70006	1	25							-- Sprachenring(1h)
+	40	27112	10	30							-- Grüner Trank(G)	
+	41	70005	1	20							-- Erfahrungsring(1h)
+}
+
+Group	Truhe_der_Koenigsspinne
+{
+	Vnum	50073
+	1	3142	1	30	30						-- Magnetische Klinge+2
+	2	3143	1	16	30						-- Magnetische Klinge+3
+	3	1112	1	30	30						-- Blitzmesser+2
+	4	1113	1	16	30						-- Blitzmesser+3
+	5	2132	1	30	30						-- Aprikosen-Bogen+2
+	6	2133	1	16	30						-- Aprikosen-Bogen+3
+	7	7142	1	30	30						-- Erlösungsfächer+2
+	8	7143	1	16	30						-- Erlösungsfächer+3
+	9	5102	1	30	30						-- Himmel--Erde-Glocke+2
+	10	5103	1	16	30						-- Himmel--Erde-Glocke+3
+	11	162	1	30	30							-- Nymphenschwert+2
+	12	163	1	16	30							-- Nymphenschwert+3
+	13	242	1	30	30							-- Exorzismusschwert+2
+	14	243	1	16	30							-- Exorzismusschwert+3
+	15	11680	1	30	30						-- Seelen-Plattenpanzer+0
+	16	11681	1	6	30						-- Seelen-Plattenpanzer+1
+	17	11880	1	30	30						-- Kleidung der Baronin+0
+	18	11881	1	6	30						-- Kleidung der Baronin+1
+	19	11480	1	30	30						-- Fuchsienanzug+0
+	20	11481	1	6	30						-- Fuchsienanzug+1
+	21	11280	1	30	30						-- Drachengott-Panzer+0
+	22	11281	1	6	30						-- Drachengott-Panzer+1
+	23	16201	1	30	30						-- Himmelstränenhalskette+1
+	24	16202	1	16	30						-- Himmelstränenhalskette+2
+	25	16203	1	7	30						-- Himmelstränenhalskette+3
+	26	17201	1	30	30						-- Himmelstränenohrringe+1
+	27	17202	1	16	30						-- Himmelstränenohrringe+2
+	28	17203	1	7	30						-- Himmelstränenohrringe+3
+	29	14201	1	30	30						-- Himmelstränenarmband+1
+	30	14202	1	16	30						-- Himmelstränenarmband+2
+	31	14203	1	7	30						-- Himmelstränenarmband+3
+	32	70012	1	25							-- Träne der Göttin
+	33	70038	20	25							-- Tapferkeitsumhänge	
+	34	25040	1	30							-- Segenschriftrolle
+	35	70048	1	25							-- Flüchtlingsumhang
+	36	70037	1	30							-- Buch des Vergessens
+	37	70014	1	30							-- Bluttablette
+	38	70043	1	25							-- Diebeshandschuh(2h
+	39	27112	15	30							-- Grüner Trank(G)	
+	40	70005	1	20							-- Erfahrungsring(1h)
+}
+
+Group	Truhe_Wuestenschildkroete
+{
+	Vnum	50076
+	1	3142	1	24	30						-- Magnetische Klinge+2
+	2	3143	1	16	30						-- Magnetische Klinge+3
+	3	1112	1	24	30						-- Blitzmesser+2
+	4	1113	1	16	30						-- Blitzmesser+3
+	5	2132	1	24	30						-- Aprikosen-Bogen+2
+	6	2133	1	16	30						-- Aprikosen-Bogen+3
+	7	7142	1	24	30						-- Erlösungsfächer+2
+	8	7143	1	16	30						-- Erlösungsfächer+3
+	9	5102	1	24	30						-- Himmel--Erde-Glocke+2
+	10	5103	1	16	30						-- Himmel--Erde-Glocke+3
+	11	162	1	24	30							-- Nymphenschwert+2
+	12	163	1	16	30							-- Nymphenschwert+3
+	13	242	1	24	30							-- Exorzismusschwert+2
+	14	243	1	16	30							-- Exorzismusschwert+3
+	15	11681	1	24	30						-- Seelen-Plattenpanzer+1
+	16	11682	1	16	30						-- Seelen-Plattenpanzer+2
+	17	11881	1	24	30						-- Kleidung der Baronin+1
+	18	11882	1	16	30						-- Kleidung der Baronin+2
+	19	11481	1	24	30						-- Fuchsienanzug+1
+	20	11482	1	16	30						-- Fuchsienanzug+2
+	21	11281	1	24	30						-- Drachengott-Panzer+1
+	22	11282	1	16	30						-- Drachengott-Panzer+2
+	23	17184	1	30	30						-- Amethystohrringe+4
+	24	17185	1	18	30						-- Amethystohrringe+5
+	25	17186	1	12	30						-- Amethystohrringe+6
+	26	16184	1	30	30						-- Amethysthalskette+4
+	27	16185	1	18	30						-- Amethysthalskette+5
+	28	16186	1	12	30						-- Amethysthalskette+6
+	29	14184	1	30	30						-- Amethystarmband+4
+	30	14185	1	18	30						-- Amethystarmband+5
+	31	14186	1	12	30						-- Amethystarmband+6
+	32	70012	1	20							-- Träne der Göttin
+	33	70038	1	20							-- Tapferkeitsumhang
+	34	25040	1	30							-- Segenschriftrolle
+	35	70048	1	20							-- Flüchtlingsumhang
+	36	70037	1	30							-- Buch des Vergessens
+	37	70014	1	30							-- Bluttablette
+	38	70043	1	20							-- Diebeshandschuh(2h)	
+	39	27112	20	20							-- Grüner Trank(G)
+	40	70005	1	20							-- Erfahrungsring(1h)
+}
+
+Group	Neunschwanztruhe
+{
+	Vnum	50077
+	1	151	1	24	30							-- Geisterzahnklinge+1
+	2	152	1	16	30							-- Geisterzahnklinge+2
+	3	5091	1	24	30						-- Donnervogelglocke+1
+	4	5092	1	16	30						-- Donnervogelglocke+2
+	5	141	1	24	30							-- Schlachtschwert+1
+	6	142	1	16	30							-- Schlachtschwert+2
+	7	3131	1	24	30						-- Partisane+1
+	8	3132	1	16	30						-- Partisane+2
+	9	1101	1	24	30						-- Drachenmesser+1
+	10	1102	1	16	30						-- Drachenmesser+2
+	11	7131	1	24	30						-- Himmelsvogelfächer+1
+	12	7132	1	16	30						-- Himmelsvogelfächer+2
+	13	2141	1	24	30						-- Großgelbdrachenbogen+1
+	14	2142	1	16	30						-- Großgelbdrachenbogen+2
+	15	11682	1	24	30						-- Seelen-Plattenpanzer+2
+	16	11683	1	16	30						-- Seelen-Plattenpanzer+3
+	17	11882	1	24	30						-- Kleidung der Baronin+2
+	18	11883	1	16	30						-- Kleidung der Baronin+3
+	19	11482	1	24	30						-- Fuchsienanzug+2
+	20	11483	1	16	30						-- Fuchsienanzug+3
+	21	11282	1	24	30						-- Drachengott-Panzer+2
+	22	11283	1	16	30						-- Drachengott-Panzer+3
+	23	17204	1	30	30						-- Himmelstränenohrringe+4
+	24	17205	1	18	30						-- Himmelstränenohrringe+5
+	25	17206	1	12	30						-- Himmelstränenohrringe+6
+	26	16204	1	30	30						-- Himmelstränenhalskette+4
+	27	16205	1	18	30						-- Himmelstränenhalskette+5
+	28	16206	1	12	30						-- Himmelstränenhalskette+6
+	29	14204	1	30	30						-- Himmelstränenarmband+4
+	30	14205	1	18	30						-- Himmelstränenarmband+5
+	31	14206	1	12	30						-- Himmelstränenarmband+6
+	32	70012	1	25							-- Träne der Göttin
+	33	70038	1	25							-- Tapferkeitsumhänge
+	34	25040	1	30							-- Segenschriftrolle
+	35	70048	1	25							-- Flüchtlingsumhang
+	36	70037	1	30							-- Buch des Vergessens
+	37	70014	1	30							-- Bluttablette	
+	38	70043	1	25							-- Diebeshandschuh(2h)
+	39	27112	20	25							-- Grüner Trank(G)
+	40	70005	1	20							-- Erfahrungsring(1h)
+}
+
+Group	Flammenkoenigtruhe
+{
+	Vnum	50079
+	1	151	1	10	30							-- Geisterzahnklinge+1
+	2	152	1	25	30							-- Geisterzahnklinge+2
+	3	152	1	15	30							-- Geisterzahnklinge+3
+	4	5091	1	10	30						-- Donnervogelglocke+1
+	5	5092	1	25	30						-- Donnervogelglocke+2
+	6	5093	1	15	30						-- Donnervogelglocke+3
+	7	141	1	10	30							-- Schlachtschwert+1
+	8	142	1	25	30							-- Schlachtschwert+2
+	9	143	1	15	30							-- Schlachtschwert+3
+	10	3131	1	10	30						-- Partisane+1
+	11	3132	1	25	30						-- Partisane+2
+	12	3133	1	15	30						-- Partisane+3
+	13	1101	1	10	30						-- Drachenmesser+1
+	14	1102	1	25	30						-- Drachenmesser+2
+	15	1103	1	15	30						-- Drachenmesser+3
+	16	7131	1	10	30						-- Himmelsvogelfächer+1
+	17	7132	1	25	30						-- Himmelsvogelfächer+2
+	18	7133	1	15	30						-- Himmelsvogelfächer+3
+	19	2141	1	10	30						-- Großgelbdrachenbogen+1
+	20	2142	1	25	30						-- Großgelbdrachenbogen+2
+	21	2142	1	15	30						-- Großgelbdrachenbogen+3
+	22	11681	1	9	30						-- Seelen-Plattenpanzer+1
+	23	11682	1	24	30						-- Seelen-Plattenpanzer+2
+	24	11683	1	14	30						-- Seelen-Plattenpanzer+3
+	25	11881	1	9	30						-- Kleidung der Baronin+1
+	26	11882	1	24	30						-- Kleidung der Baronin+2
+	27	11883	1	14	30						-- Kleidung der Baronin+3
+	28	11481	1	9	30						-- Fuchsienanzug+1
+	29	11482	1	24	30						-- Fuchsienanzug+2
+	30	11483	1	14	30						-- Fuchsienanzug+3
+	31	11281	1	9	30						-- Drachengott-Panzer+1
+	32	11282	1	24	30						-- Drachengott-Panzer+2
+	33	11283	1	14	30						-- Drachengott-Panzer+3
+	34	17164	1	9	30						-- Kristallohrringe+4
+	35	17165	1	24	30						-- Kristallohrringe+5
+	36	17166	1	14	30						-- Kristallohrringe+6
+	37	16164	1	9	30						-- Kristallhalskette+4
+	38	16165	1	24	30						-- Kristallhalskette+5
+	39	16166	1	14	30						-- Kristallhalskette+6
+	40	14164	1	9	30						-- Kristallarmband+4
+	41	14165	1	24	30						-- Kristallarmband+5
+	42	14166	1	14	30						-- Kristallarmband+6
+	43	70012	1	15							-- Träne der Göttin
+	44	70038	1	15							-- Tapferkeitsumhänge
+	45	25040	1	21							-- Segenschriftrolle
+	46	70048	1	20							-- Flüchtlingsumhänge
+	47	70037	1	25							-- Buch des Vergessens
+	48	70014	1	25							-- Bluttablette
+	49	70043	1	20							-- Diebeshandschuh(2h)
+	50	27112	25	20							-- Grüner Trank(G)
+	51	70005	1	20							-- Erfahrungsring(1h)
+	52	50029	1	25							-- Ring mit Goldgehalt 750
+}
+
+Group	Truhe_des_gelben_Tigers
+{
+	Vnum	50078
+	1	152	1	22	30							-- Geisterzahnklinge+2
+	2	153	1	16	30							-- Geisterzahnklinge+3
+	3	5092	1	22	30						-- Donnervogelglocke+2
+	4	5093	1	16	30						-- Donnervogelglocke+3
+	5	142	1	22	30							-- Schlachtschwert+2
+	6	143	1	16	30							-- Schlachtschwert+3
+	7	3132	1	22	30						-- Partisane+2
+	8	3133	1	16	30						-- Partisane+3
+	9	1102	1	22	30						-- Drachenmesser+2
+	10	1103	1	16	30						-- Drachenmesser+3
+	11	7132	1	22	30						-- Himmelsvogelfächer+2
+	12	7132	1	16	30						-- Himmelsvogelfächer+3
+	13	2142	1	22	30						-- Großgelbdrachenbogen+2
+	14	2143	1	16	30						-- Großgelbdrachenbogen+3
+	15	11682	1	19	30						-- Seelen-Plattenpanzer+2
+	16	11683	1	28	30						-- Seelen-Plattenpanzer+3
+	17	11684	1	10	30						-- Seelen-Plattenpanzer+4
+	18	11882	1	19	30						-- Kleidung der Baronin+2
+	19	11883	1	28	30						-- Kleidung der Baronin+3
+	20	11884	1	10	30						-- Kleidung der Baronin+4
+	21	11482	1	19	30						-- Fuchsienanzug+2
+	22	11483	1	28	30						-- Fuchsienanzug+3
+	23	11484	1	10	30						-- Fuchsienanzug+4
+	24	11282	1	19	30						-- Drachengott-Panzer+2
+	25	11283	1	28	30						-- Drachengott-Panzer+3
+	26	11284	1	10	30						-- Drachengott-Panzer+4
+	27	17184	1	19	30						-- Amethystohrringe+4
+	28	17185	1	28	30						-- Amethystohrringe+5
+	29	17186	1	10	30						-- Amethystohrringe+6
+	30	16184	1	19	30						-- Amethysthalskette+4
+	31	16185	1	28	30						-- Amethysthalskette+5
+	32	16186	1	10	30						-- Amethysthalskette+6
+	33	14184	1	19	30						-- Amethystarmband+4
+	34	14185	1	28	30						-- Amethystarmband+5
+	35	14186	1	10	30						-- Amethystarmband+6
+	36	70012	1	20							-- Träne der Göttin
+	37	70038	1	20							-- Tapferkeitsumhänge
+	38	25040	1	25							-- Segenschriftrolle
+	39	70048	1	20							-- Flüchtlingsumhang
+	40	70037	1	25							-- Buch des Vergessens
+	41	70014	1	25							-- Bluttablette
+	42	70043	1	20							-- Diebeshandschuh(2h)
+	43	27112	30	20							-- Grüner Trank(G)
+	44	70005	1	20							-- Erfahrungsring(1h)
+	45	72003	1	11							-- Erfahrungsring(3h)
+}
+
+Group	Daemonenkoenigtruhe
+{
+	Vnum	50081
+	1	152	1	22	30							-- Geisterzahnklinge+2
+	2	153	1	16	30							-- Geisterzahnklinge+3
+	3	5092	1	22	30						-- Donnervogelglocke+2
+	4	5093	1	16	30						-- Donnervogelglocke+3
+	5	142	1	22	30							-- Schlachtschwert+2
+	6	143	1	16	30							-- Schlachtschwert+3
+	7	3132	1	22	30						-- Partisane+2
+	8	3133	1	16	30						-- Partisane+3
+	9	1102	1	22	30						-- Drachenmesser+2
+	10	1103	1	16	30						-- Drachenmesser+3
+	11	7132	1	22	30						-- Himmelsvogelfächer+2
+	12	7133	1	16	30						-- Himmelsvogelfächer+3
+	13	2142	1	22	30						-- Großgelbdrachenbogen+2
+	14	2143	1	16	30						-- Großgelbdrachenbogen+3
+	15	11682	1	19	30						-- Seelen-Plattenpanzer+2
+	16	11683	1	28	30						-- Seelen-Plattenpanzer+3
+	17	11684	1	10	30						-- Seelen-Plattenpanzer+4
+	18	11882	1	19	30						-- Kleidung der Baronin+2
+	19	11883	1	28	30						-- Kleidung der Baronin+3
+	20	11884	1	10	30						-- Kleidung der Baronin+4
+	21	11482	1	19	30						-- Fuchsienanzug+2
+	22	11483	1	28	30						-- Fuchsienanzug+3
+	23	11484	1	10	30						-- Fuchsienanzug+4
+	24	11282	1	19	30						-- Drachengott-Panzer+2
+	25	11283	1	28	30						-- Drachengott-Panzer+3
+	26	11284	1	10	30						-- Drachengott-Panzer+4
+	27	17184	1	19	30						-- Amethystohrringe+4
+	28	17185	1	28	30						-- Amethystohrringe+5
+	29	17186	1	10	30						-- Amethystohrringe+6
+	30	16184	1	19	30						-- Amethysthalskette+4
+	31	16185	1	28	30						-- Amethysthalskette+5
+	32	16186	1	10	30						-- Amethysthalskette+6
+	33	14184	1	19	30						-- Amethystarmband+4
+	34	14185	1	28	30						-- Amethystarmband+5
+	35	14186	1	10	30						-- Amethystarmband+6
+	36	70012	1	20							-- Träne der Göttin
+	37	70038	1	20							-- Tapferkeitsumhänge
+	38	25040	1	25							-- Segenschriftrolle
+	39	70048	1	20							-- Flüchtlingsumhang
+	40	70037	1	25							-- Buch des vergessens
+	41	70014	1	25							-- Bluttablette
+	42	70043	1	20							-- Diebeshandschuhe(2h)
+	43	27112	30	20							-- Grüner Trank(G)
+	44	70005	1	20							-- Erfahrungsring(1h)
+}
+
+Group	Sensenmanntruhe	
+{
+	Vnum	50082
+	1	170	1	16	30							-- Stichschwert+0
+	2	250	1	16	30							-- Dämonenklinge+0
+	3	1120	1	16	30						-- Siamesenmesser+0
+	4	2180	1	16	30						-- Blaudrachenbogen+0
+	5	3150	1	16	30						-- Halbmenschenklinge+0
+	6	7150	1	16	30						-- Ekstasefächer+0
+	7	11290	1	31	30						-- Schwarzstahl-Panzer+0
+	8	11291	1	15	30						-- Schwarzstahl-Panzer+1
+	9	11490	1	31	30						-- Schwarzwindanzug+0
+	10	11491	1	15	30						-- Schwarzwindanzug+1
+	11	11690	1	31	30						-- Magie-Plattenpanzer+0
+	12	11691	1	15	30						-- Magie-Plattenpanzer+1
+	13	11890	1	31	30						-- Schwarze Kleidung+0
+	14	11891	1	15	30						-- Schwarze Kleidung+1
+	15	152	1	22	30							-- Geisterzahnklinge+2
+	16	153	1	16	30							-- Geisterzahnklinge+3
+	17	5092	1	22	30						-- Donnervogelglocke+2
+	18	5093	1	16	30						-- Donnervogelglocke+3
+	19	142	1	22	30							-- Schlachtschwert+2
+	20	143	1	16	30							-- Schlachtschwert+3
+	21	3132	1	22	30						-- Partisane+2
+	22	3133	1	16	30						-- Partisane+3
+	23	1102	1	22	30						-- Drachenmesser+2
+	24	1103	1	16	30						-- Drachenmesser+3
+	25	7132	1	22	30						-- Himmelsvogelfächer+2
+	26	7133	1	16	30						-- Himmelsvogelfächer+3
+	27	2142	1	22	30						-- Großgelbdrachenbogen+2
+	28	2143	1	16	30						-- Großgelbdrachenbogen+3
+	29	11682	1	19	30						-- Seelen-Plattenpanzer+2
+	30	11683	1	28	30						-- Seelen-Plattenpanzer+3
+	31	11684	1	10	30						-- Seelen-Plattenpanzer+4
+	32	11882	1	19	30						-- Kleidung der Baronin+2
+	33	11883	1	28	30						-- Kleidung der Baronin+3
+	34	11884	1	10	30						-- Kleidung der Baronin+4
+	35	11482	1	19	30						-- Fuchsienanzug+2
+	36	11483	1	28	30						-- Fuchsienanzug+3
+	37	11484	1	10	30						-- Fuchsienanzug+4
+	38	11282	1	19	30						-- Drachengott-Panzer+2
+	39	11283	1	28	30						-- Drachengott-Panzer+3
+	40	11284	1	10	30						-- Drachengott-Panzer+4
+	41	180	1	4	30							-- Giftschwert+0
+	42	190	1	4	30							-- Löwenschwert+0
+	43	1130	1	4	30						-- Teufelsflügel-Chakram+0
+	44	2170	1	4	30						-- Krähenstahlbogen+0
+	45	3160	1	4	30						-- Grollschwert+0
+	46	5120	1	4	30						-- Orchideenglocke+0
+}
+
+Group	azraeltruhe
+{
+	Vnum	50186
+	1	176		1	16	30						-- Stichschwert+6
+	2	256		1	16	30						-- Dämonenklinge+6
+	3	1126	1	16	30						-- Siamesenmesser+6
+	4	2186	1	16	30						-- Blaudrachenbogen+6
+	5	3156	1	16	30						-- Halbmenschenklinge+6
+	6	7156	1	16	30						-- Ekstasefächer+6
+	7	11296	1	31	30						-- Schwarzstahl-Panzer+6
+	8	11496	1	31	30						-- Schwarzwindanzug+6
+	9	11696	1	31	30						-- Magie-Plattenpanzer+6
+	10	11890	1	31	30						-- Schwarze Kleidung+6
+	11	16206	1	16	30						-- Himmelstränenhalskette+6
+	12	17206	1	16	30						-- Himmelstränenohrringe+6
+	13	14206	1	16	30						-- Himmelstränenarmband+6
+	14	12264	1	21	30						-- Furchtmaske+4
+	15	12266	1	13	30						-- Furchtmaske+6
+	16	12534	1	21	30						-- Gehörnter Helm+4
+	17	12536	1	13	30						-- Gehörnter Helm+6
+	18	12674	1	21	30						-- Kardinalshut+4
+	19	12676	1	13	30						-- Kardinalshut+6
+	20	12284	1	21	30						-- Kriegsmeisterhelm+4
+	21	12286	1	13	30						-- Kriegsmeisterhelm+6
+	22	12544	1	21	30						-- Magischer Helm+4
+	23	12546	1	13	30						-- Magischer Helm+6
+	24	12394	1	21	30						-- Orkkapuze+4
+	25	12396	1	13	30						-- Orkkapuze+6
+	26	12684	1	21	30						-- Seelensplitterhut+4
+	27	12686	1	13	30						-- Seelensplitterhut+6
+	28	12404	1	21	30						-- Spinnenkapuze+4
+	29	12406	1	13	30						-- Spinnenkapuze+6
+	30	16223	1	16	30						-- Seelenkristallhalskette+3
+	31	17223	1	16	30						-- Seelenkristallohrringe+3
+	32	14223	1	16	30						-- Seelenkristallarmband+3
+	33	13141	1	15	30						-- Titanenschild+1
+	34	13142	1	15	30						-- Titanenschild+2
+	35	13143	1	15	30						-- Titanenschild+3
+	36	27003	20	20							-- Roter Trank(G)
+	37	27002	30	30							-- Roter Trank(M)
+	38	27006	20	20							-- Blauer Trank(G)
+	39	27005	30	30							-- Blauer Trank(M)
+}
+
+Group	Goldene_Schatztruhe
+{
+	Vnum	50006
+	1	50300	1	100							-- Fertigkeitsbuch
+	2	80008	1	10							-- Goldklumpen
+	3	50029	1	10							-- Ring mit Goldgehalt 750
+	4	70012	1	10							-- Träne der Göttin
+	5	70008	1	10							-- Weiße Flagge
+	6	70038	1	20							-- Tapferkeitsumhänge
+	7	70048	1	10							-- Flüchtlingsumhang
+	8	70051	1	10							-- Handschuh weiser Kaiser
+	9	25040	1	30							-- Segenschriftrolle
+	10	121	1	8	40							-- Zaubererschwert+1
+	11	122	1	5	40							-- Zaubererschwert+2
+	12	1081	1	8	40						-- Rippenmesser+1
+	13	1082	1	5	40						-- Rippenmesser+2
+	14	3111	1	8	40						-- Erlösungsklinge+1
+	15	3112	1	5	40						-- Erlösungsklinge+2
+	16	2111	1	8	40						-- Einhornbogen+1
+	17	2112	1	5	40						-- Einhornbogen+2
+	18	7111	1	8	40						-- Brauenfächer+1
+	19	7112	1	5	40						-- Brauenfächer+2
+	20	30023	1	10							-- Weißes Tigerfell
+	21	30045	1	10							-- Skorpionnadel
+	22	30038	1	10							-- Tigerfell
+	23	30051	1	10							-- Unbekannter Talisman
+	24	30011	1	10							-- Knäuel
+	25	30070	1	10							-- Wolfsfell	
+	26	30033	1	10							-- Zebrochenes Porzellan			
+	27	30052	1	10							-- Flagge
+	28	30070	1	10							-- Wolfsfell+
+	29	30010	1	10							-- Bärengalle
+	30	30050	1	10							-- Eiskugel
+	31	30075	1	40							-- Shuriken+
+	32	30047	1	10							-- Fluchsammlung
+	33	30028	1	10							-- Wolfskralle
+	34	30022	1	10							-- Schlangenschwanz
+	35	30053	1	10							-- Bärenfußhaut
+	36	13043	1	18							-- Schwarzer Rundschild+3
+	37	13044	1	12							-- Schwarzer Rundschild+4
+	38	13042	1	23							-- Schwarzer Rundschild+2
+}
+
+Group	Goldene_Schatztruhe+
+{
+	Vnum	50012
+	1	50404	1	20							-- Schwertaura-Buch
+	2	50417	1	20							-- Buch d. heftigen Schlags
+	3	50419	1	20							-- Buch d. starken Körpers
+	4	50431	1	20							-- Hinterhalt-Buch
+	5	50432	1	20							-- Blitzangriff-Buch
+	6	50446	1	20							-- Schussfolgenbuch
+	7	50448	1	20							-- Feuerpfeil-Buch
+	8	50463	1	20							-- Buch verzauberte Klinge
+	9	50465	1	20							-- Buch verzaub. Rüstung
+	10	50476	1	20							-- Buch d. dunklen Schlags
+	11	50492	1	20							-- Buch d. Drachenschießens
+	12	50508	1	20							-- Blitzkrallen-Buch
+	13	50509	1	20							-- Buch des Heilens
+	14	132	1	46	40							-- Halbmondschwert+2
+	15	133	1	20	40							-- Halbmondschwert+3
+	16	1092	1	46	40						-- Chakram+2
+	17	1093	1	20	40						-- Chakram+3
+	18	3122	1	46	40						-- Löwentöter+2
+	19	3123	1	20	40						-- Löwentöter+3
+	20	2122	1	46	40						-- Riesenflügelbogen+2
+	21	2123	1	20	40						-- Riesenflügelbogen+3
+	22	5082	1	46	40						-- Stahlkäferglocke+2
+	23	5083	1	20	40						-- Stahlkäferglocke+3
+	24	7122	1	46	40						-- Sonnenfächer+2
+	25	7122	1	20	40						-- Sonnenfächer+3
+	26	13202	1	150	40						-- Schwarzer Rundschild+2
+	27	13203	1	50	40						-- Schwarzer Rundschild+3
+	28	25040	1	75							-- Segenschriftrolle
+	29	80008	1	10							-- Goldklumpen
+}
+
+Group	SilberneSchatztruhe
+{
+	Vnum	50007
+	1	27001	50	43							-- Roter Trank(K)
+	2	27002	30	43							-- Roter Trank(M)
+	3	27003	20	43							-- Roter Trank(G)
+	4	27004	50	43							-- Blauer Trank(K)
+	5	27005	30	43							-- Blauer Trank(M)
+	6	27006	20	43							-- Blauer Trank(G)	
+	7	30030	1	12							-- Rostige Degenklinge
+	8	30059	1	12							-- Spinnenbeine
+	9	30056	1	12							-- Spinnennetz
+	10	30075	1	12							-- Shuriken+
+	11	30014	1	12							-- Yetifell
+	12	30083	1	12							-- Unbekannter Medizin+
+	13	30057	1	12							-- Spinnenaugen
+	14	30016	1	12							-- Dämonenedelstein
+	15	30048	1	12							-- Eisstück
+	16	30037	1	12							-- Tigerkralle
+	17	30082	1	12							-- Schlangenschwanz+
+	18	30004	1	12							-- Keilerzahn
+	19	30067	1	12							-- Schlangenhaut
+	20	50002	1	10							-- Goldring
+	21	50029	1	10							-- Ring mit Goldgehalt 750
+}
+
+Group	Silberne_Schatztruhe+				
+{					
+	Vnum	50013			
+	1	50002	1	200							-- Goldring
+	2	70012	1	57							-- Träne der Göttin
+	3	70008	1	57							-- Weiße Flagge
+	4	70038	1	57							-- Tapferkeitsumhänge
+	5	70048	1	57							-- Flüchtlingsumhang
+	6	70049	1	57							-- Lucys Ring
+	7	70050	1	57							-- Symbol d. weisen Kaisers
+	8	70051	1	57							-- Handschuh weiser Kaiser
+	9	13192	1	150							-- Fünfeckschild+2
+	10	13193	1	50							-- Fünfeckschild+3
+	11	12222	1	37	40						-- Eisenhelm+2
+	12	12223	1	38	40						-- Eisenhelm+3
+	13	12362	1	37	40						-- Kettenkapuze
+	14	12363	1	38	40						-- Kettenkapuze
+	15	12502	1	37	40						-- Verhöhnender Helm+2
+	16	12503	1	38	40						-- Verhöhnender Helm+3
+	17	12642	1	37	40						-- Phönixhut+2
+	18	12643	1	38	40						-- Phönixhut+3
+	19	30015	1	40							-- Dämonenandenken
+	20	30035	1	40							-- Gesichtscreme
+	21	30058	1	40							-- Spinnen-Eiersack
+	22	30006	1	40							-- Orkzahn
+	23	30082	1	40							-- Schlangenschwanz+
+	24	30076	1	40							-- Orkamulett+
+	25	30018	1	40							-- Rotes Haarband
+	26	30046	1	40							-- Skorpionschwanz
+	27	30021	1	40							-- Stück Edelstein
+	28	30086	1	40							-- Dämonenandenken+
+	29	30005	1	40							-- Stück  kaputte Rüstung
+	30	30072	1	40							-- Bärenfußhaut+
+	31	30080	1	40							-- Fluchsammlung+
+	32	30077	1	40							-- Orkzahn+
+	33	30069	1	40							-- Wolfskralle+
+	34	30041	1	40							-- Shuriken
+	35	30075	1	40							-- Shuriken+
+	36	25040	1	30							-- Segenschriftrolle
+}
+
+Group	Mondlicht-Schatztruhe			
+{				
+	Vnum	50011		
+	1	27001	100	70 							-- Roter Trank(K)
+	2	27002	50	50 							-- Roter Trank(M)
+	3	27003	10	30 							-- Roter Trank(G)
+	4	27004	100	70 							-- Blauer Trank(K)
+	5	27005	50	50 							-- Blauer Trank(M)
+	6	27006	10	30							-- Blauer Trank(G)
+	7	27114	10	15 							-- Violetter Trank(M)
+	8	27111	5	15 							-- Grüner Trank(M)
+	9	50311	1	50 							-- Shinsoo-Sprachen
+	10	50312	1	50 							-- Chunjo-Sprachen
+	11	50313	1	50 							-- Jinno-Sprachen
+	12	70048	1	20 							-- Flüchtlingsumhang
+	13	70102	1	20 							-- Zen-Bohne
+	14	70051	1	20 							-- Handschuh weiser Kaiser
+	15	70049	1	20 							-- Lucys Ring
+	16	70006	1	50							-- Sprachenring(1h)
+	17	25040	1	10 							-- Segenschriftrolle
+	18	70202	1	25 							-- Weißes Haarfärbemittel
+	19	70203	1	25 							-- Blondes Haarfärbemittel
+	20	70204	1	25 							-- Rotes Haarfärbemittel
+	21	70205	1	25 							-- Braunes Haarfärbemittel
+	22	70201	1	30 							-- Bleichmittel
+	23	group	426	40 							-- Monstergruppe
+	24	30053	1	10							-- Bärenfußhaut
+	25	71045	5	15							-- Durchbohrender Kampf
+	26	71044	5	15							-- Kritischer Kampf
+	27	70035	1	25							-- Magisches Kupfererz
+	28	71004	10	10							-- Medaille des Drachen
+	29	71032	1	30							-- Schriftrolle des Drachen
+	30	71020	5	20							-- Segen des Drachen
+	31	71018	5	20							-- Segen des Lebens
+	32	70024	1	40							-- Segenskugel
+}
+
+Group	Socke
+{				
+	Vnum	50010		
+	1	50300	1	8							-- Fertigkeitsbuch
+	2	70201	1	8							-- Bleichmittel
+	3	70206	1	8							-- Schwarz Haarfärbemittel
+	4	70203	1	8							-- Blondes Haarfärbemittel
+	5	70202	1	8							-- Weißes Haarfärbemittel
+	6	70204	1	8							-- Rotes Haarfärbemittel
+	7	70205	1	8							-- Braunes Haarfärbemittel
+	8	70048	1	8							-- Flüchtlingsumhang
+	9	70049	1	8							-- Lucys Ring
+	10	70050	1	8							-- Symbol d. weisen Kaisers
+	11	70051	1	8							-- Handschuh weiser Kaiser
+	12	70102	1	8							-- Zen-Bohne
+	13	70006	1	8							-- Sprachenring(1h)
+	14	70008	1	8							-- Weiße Flagge
+	15	70012	1	8							-- Träne der Göttin
+	16	70038	1	8							-- Tapferkeitsumhänge
+	17	27006	15	8							-- Blauer Trank(G)
+	18	27003	15	8							-- Roter Trank(G)
+	19	27005	30	8							-- Blauer Trank(M)
+	20	27002	30	8							-- Roter Trank(M)
+	21	25040	1	8							-- Segenschriftrolle
+	22	50029	1	8							-- Ring mit Goldgehalt 750
+	23	30072	1	8							-- Bärenfußhaut+
+	24	80003	1	8							-- Silberbarren(50.000Yang)
+	25	80004	1	8							-- Silberbarren(100.000Yang)
+}
+
+Group	Kuerbis
+{					
+	Vnum	50095			
+	1	27001	100	70							-- Roter Trank(K)
+	2	27002	50	50							-- Roter Trank(M)
+	3	27003	10	30							-- Roter Trank(G)
+	4	27004	100	70							-- Blauer Trank(K)
+	5	27005	50	50							-- Blauer Trank(M)
+	6	27006	10	30							-- Blauer Trank(G)
+	7	70102	1	20							-- Zen-Bohne	
+	8	25040	1	10							-- Segenschriftrolle
+	9	50300	1	30							-- Fertigkeitsbuch
+	10	80003	1	8							-- Silberbarren(50.000Yang)
+	11	80004	1	8							-- Silberbarren(100.000Yang)
+}
+
+Group	Geldtasche
+{					
+	Vnum	50023			
+	1	50513	1	1							-- Seelenstein
+	2	70024	1	1							-- Segenskugel	
+	3	25040	1	1							-- Segenschriftrolle
+	4	70035	1	1							-- Magisches Kupfererz
+	5	70027	1	1							-- Notiz des Schmieds
+	6	71084	1	1							-- Gegenstand verzaubern
+	7	71085	1	1							-- Gegenstand verstärken
+	8	70102	1	1							-- Zen-Bohne
+}
+
+Group	Schokolade
+{					
+	Vnum	50025			
+	1	50300	1	25							-- Fertigkeitsbuch 
+	2	70102	1	30 							-- Zen-Bohne
+	3	25040	1	15							-- Segenschriftrolle 
+	4	80003	1	5 							-- Silberbarren(50.000Yang)
+	5	80004	1	8							-- Silberbarren(100.000Yang)
+	6	27003	5	10 							-- Roter Trank(G)
+	7	27006	5	15 							-- Blauer Trank(G)
+	8	27002	5	25 							-- Roter Trank(M)
+	9	27005	5	40 							-- Blauer Trank(M)
+	10	27001	5	20							-- Roter Trank(K)
+	11	27004	5	20							-- Blauer Trank(K)
+	12	28030	1	5							-- Stein des Durchbruchs+0
+	13	28130	1	7							-- Stein des Durchbruchs+1
+	14	28230	1	3							-- Stein des Durchbruchs+2
+	15	28031	1	5							-- Stein des Todesstoß+0
+	16	28131	1	7							-- Stein des Todesstoß+1
+	17	28231	1	3							-- Stein des Todesstoß+2
+	18	28032	1	5							-- Stein der Wiederkehr+0
+	19	28132	1	7							-- Stein der Wiederkehr+1
+	20	28232	1	3							-- Stein der Wiederkehr+2
+	21	28033	1	5							-- Stein gegen Krieger+0
+	22	28133	1	7							-- Stein gegen Krieger+1
+	23	28233	1	3							-- Stein gegen Krieger+2
+	24	28034	1	5							-- Stein gegen Ninja+0
+	25	28134	1	7							-- Stein gegen Ninja+1
+	26	28234	1	3							-- Stein gegen Ninja+2
+	27	28035	1	5							-- Stein gegen Sura+0
+	28	28135	1	7							-- Stein gegen Sura+1
+	29	28235	1	3							-- Stein gegen Sura+2
+	30	28036	1	5							-- Stein gegen Schamanen+0
+	31	28136	1	7							-- Stein gegen Schamanen+1
+	32	28236	1	3							-- Stein gegen Schamanen+2
+	33	28037	1	5							-- Stein der Monster+0
+	34	28137	1	7							-- Stein der Monster+1
+	35	28237	1	3							-- Stein der Monster+2
+	36	28038	1	5							-- Stein des Ausweichens+0
+	37	28138	1	7							-- Stein des Ausweichens+1
+	38	28238	1	3							-- Stein des Ausweichens+2
+	39	28039	1	5							-- Stein des Duckens+0
+	40	28139	1	7							-- Stein des Duckens+1
+	41	28239	1	3							-- Stein des Duckens+2
+	42	28040	1	5							-- Stein der Magie+0
+	43	28140	1	7							-- Stein der Magie+1
+	44	28240	1	3							-- Stein der Magie+2
+	45	28041	1	5							-- Stein der Lebenskraft+0
+	46	28141	1	7							-- Stein der Lebenskraft+1
+	47	28241	1	3							-- Stein der Lebenskraft+2
+	48	28042	1	5							-- Stein des Schutzes+0
+	49	28142	1	7							-- Stein des Schutzes+1
+	50	28242	1	3							-- Stein des Schutzes+2
+	51	28043	1	5							-- Stein der Hast+0
+	52	28143	1	7							-- Stein der Hast+1
+	53	28243	1	3							-- Stein der Hast+2
+}
+
+Group	Rote_Rose
+{					
+	Vnum	50024			
+	1	50300	1	25							-- Fertigkeitsbuch 
+	2	70102	1	30 							-- Zen-Bohne
+	3	25040	1	15							-- Segenschriftrolle 
+	4	80003	1	5 							-- Silberbarren(50.000Yang)
+	5	80004	1	8							-- Silberbarren(100.000Yang)
+	6	27003	5	10 							-- Roter Trank(G)
+	7	27006	5	15 							-- Blauer Trank(G)
+	8	27002	5	25 							-- Roter Trank(M)
+	9	27005	5	40 							-- Blauer Trank(M)
+	10	27001	5	20							-- Roter Trank(K)
+	11	27004	5	20							-- Blauer Trank(K)
+	12	28030	1	5							-- Stein des Durchbruchs+0
+	13	28130	1	7							-- Stein des Durchbruchs+1
+	14	28230	1	3							-- Stein des Durchbruchs+2
+	15	28031	1	5							-- Stein des Todesstoß+0
+	16	28131	1	7							-- Stein des Todesstoß+1
+	17	28231	1	3							-- Stein des Todesstoß+2
+	18	28032	1	5							-- Stein der Wiederkehr+0
+	19	28132	1	7							-- Stein der Wiederkehr+1
+	20	28232	1	3							-- Stein der Wiederkehr+2
+	21	28033	1	5							-- Stein gegen Krieger+0
+	22	28133	1	7							-- Stein gegen Krieger+1
+	23	28233	1	3							-- Stein gegen Krieger+2
+	24	28034	1	5							-- Stein gegen Ninja+0
+	25	28134	1	7							-- Stein gegen Ninja+1
+	26	28234	1	3							-- Stein gegen Ninja+2
+	27	28035	1	5							-- Stein gegen Sura+0
+	28	28135	1	7							-- Stein gegen Sura+1
+	29	28235	1	3							-- Stein gegen Sura+2
+	30	28036	1	5							-- Stein gegen Schamanen+0
+	31	28136	1	7							-- Stein gegen Schamanen+1
+	32	28236	1	3							-- Stein gegen Schamanen+2
+	33	28037	1	5							-- Stein der Monster+0
+	34	28137	1	7							-- Stein der Monster+1
+	35	28237	1	3							-- Stein der Monster+2
+	36	28038	1	5							-- Stein des Ausweichens+0
+	37	28138	1	7							-- Stein des Ausweichens+1
+	38	28238	1	3							-- Stein des Ausweichens+2
+	39	28039	1	5							-- Stein des Duckens+0
+	40	28139	1	7							-- Stein des Duckens+1
+	41	28239	1	3							-- Stein des Duckens+2
+	42	28040	1	5							-- Stein der Magie+0
+	43	28140	1	7							-- Stein der Magie+1
+	44	28240	1	3							-- Stein der Magie+2
+	45	28041	1	5							-- Stein der Lebenskraft+0
+	46	28141	1	7							-- Stein der Lebenskraft+1
+	47	28241	1	3							-- Stein der Lebenskraft+2
+	48	28042	1	5							-- Stein des Schutzes+0
+	49	28142	1	7							-- Stein des Schutzes+1
+	50	28242	1	3							-- Stein des Schutzes+2
+	51	28043	1	5							-- Stein der Hast+0
+	52	28143	1	7							-- Stein der Hast+1
+	53	28243	1	3							-- Stein der Hast+2
+}
+
+Group	Bonbon
+{					
+	Vnum	50032			
+	1	50300	1	25							-- Fertigkeitsbuch 
+	2	70102	1	30 							-- Zen-Bohne
+	3	25040	1	15							-- Segenschriftrolle 
+	4	80003	1	5 							-- Silberbarren(50.000Yang)
+	5	80004	1	8							-- Silberbarren(100.000Yang)
+	6	27003	5	10 							-- Roter Trank(G)
+	7	27006	5	15 							-- Blauer Trank(G)
+	8	27002	5	25 							-- Roter Trank(M)
+	9	27005	5	40 							-- Blauer Trank(M)
+	10	27001	5	20							-- Roter Trank(K)
+	11	27004	5	20							-- Blauer Trank(K)
+	12	28030	1	5							-- Stein des Durchbruchs+0
+	13	28130	1	7							-- Stein des Durchbruchs+1
+	14	28230	1	3							-- Stein des Durchbruchs+2
+	15	28031	1	5							-- Stein des Todesstoß+0
+	16	28131	1	7							-- Stein des Todesstoß+1
+	17	28231	1	3							-- Stein des Todesstoß+2
+	18	28032	1	5							-- Stein der Wiederkehr+0
+	19	28132	1	7							-- Stein der Wiederkehr+1
+	20	28232	1	3							-- Stein der Wiederkehr+2
+	21	28033	1	5							-- Stein gegen Krieger+0
+	22	28133	1	7							-- Stein gegen Krieger+1
+	23	28233	1	3							-- Stein gegen Krieger+2
+	24	28034	1	5							-- Stein gegen Ninja+0
+	25	28134	1	7							-- Stein gegen Ninja+1
+	26	28234	1	3							-- Stein gegen Ninja+2
+	27	28035	1	5							-- Stein gegen Sura+0
+	28	28135	1	7							-- Stein gegen Sura+1
+	29	28235	1	3							-- Stein gegen Sura+2
+	30	28036	1	5							-- Stein gegen Schamanen+0
+	31	28136	1	7							-- Stein gegen Schamanen+1
+	32	28236	1	3							-- Stein gegen Schamanen+2
+	33	28037	1	5							-- Stein der Monster+0
+	34	28137	1	7							-- Stein der Monster+1
+	35	28237	1	3							-- Stein der Monster+2
+	36	28038	1	5							-- Stein des Ausweichens+0
+	37	28138	1	7							-- Stein des Ausweichens+1
+	38	28238	1	3							-- Stein des Ausweichens+2
+	39	28039	1	5							-- Stein des Duckens+0
+	40	28139	1	7							-- Stein des Duckens+1
+	41	28239	1	3							-- Stein des Duckens+2
+	42	28040	1	5							-- Stein der Magie+0
+	43	28140	1	7							-- Stein der Magie+1
+	44	28240	1	3							-- Stein der Magie+2
+	45	28041	1	5							-- Stein der Lebenskraft+0
+	46	28141	1	7							-- Stein der Lebenskraft+1
+	47	28241	1	3							-- Stein der Lebenskraft+2
+	48	28042	1	5							-- Stein des Schutzes+0
+	49	28142	1	7							-- Stein des Schutzes+1
+	50	28242	1	3							-- Stein des Schutzes+2
+	51	28043	1	5							-- Stein der Hast+0
+	52	28143	1	7							-- Stein der Hast+1
+	53	28243	1	3							-- Stein der Hast+2
+}
+
+Group	Geheimnisvolle_Truhe
+{					
+	Vnum	50033		
+	1	50300	1	10							-- Fertigkeitsbuch
+	2	70102	1	20 							-- Zen-Bohne
+	3	group	8501	30						-- Monstergruppe
+	4	group	8502	30						-- Monstergruppe
+	5	group	8503	30						-- Monstergruppe
+	6	group	8504	30						-- Monstergruppe
+	7	group	8505	30						-- Monstergruppe
+	8	group	8506	40						-- Monstergruppe
+	9	group	8507	40						-- Monstergruppe
+	10	group	8508	30						-- Monstergruppe
+	11	group	8509	30						-- Monstergruppe
+	12	group	8510	30						-- Monstergruppe
+	13	group	8511	30						-- Monstergruppe
+}
+
+Group	Geschenk_(gelb)
+{					
+	Vnum	50035			
+	1	50300	1	15							-- Fertigkeitbuch 	
+	2	71032	1	5							-- Schriftrolle des Drachen
+	3	70003	1	15							-- Buch des Anführers(2h)
+	4	50008	1	20							-- Goldener Schlüssel
+	5	50108	10	30							-- Feuerwerkskreisel	
+	6	50100	50	50							-- Feuerwerk
+	7	50101	50	50							-- Feuerwerk
+	8	50102	50	50							-- Feuerwerk
+	9	50103	50	50							-- Feuerwerk
+	10	50104	50	51							-- Feuerwerk
+	11	50105	50	51							-- Feuerwerk
+	12	11280	1	3	30						-- Drachengott-Panzer+0
+	13	11880	1	3	30						-- Kleidung der Baronin+0
+	14	11480	1	3	30						-- Fuchsienanzug+0
+	15	11680	1	3	30						-- Seelenplattenpanzer+0
+	16	71004	10	10							-- Medaille des Drachen
+	17	50029	1	25							-- Ring mit Goldgehalt 750
+	18	71018	10	20							-- Segen des Lebens
+	19	80004	1	8							-- Silberbarren(100.000Yang)
+	20	71019	10	20							-- Segen der Magie
+	21	90012	2	12							-- Sperrholz
+	22	90011	2	12							-- Stamm
+	23	90010	2	15							-- Fundamentstein
+}
+
+Group	Geschenk_(violett)
+{					
+	Vnum	50036		
+	1	50300	1	15							-- Fertigkeitbuch 	
+	2	71032	1	5							-- Schriftrolle des Drachen
+	3	70003	1	15							-- Buch des Anführers(2h)
+	4	50008	1	20							-- Goldener Schlüssel
+	5	50108	10	30							-- Feuerwerkskreisel	
+	6	50100	50	50							-- Feuerwerk
+	7	50101	50	50							-- Feuerwerk
+	8	50102	50	50							-- Feuerwerk
+	9	50103	50	50							-- Feuerwerk
+	10	50104	50	51							-- Feuerwerk
+	11	50105	50	51							-- Feuerwerk
+	12	11280	1	3	30						-- Drachengott-Panzer+0
+	13	11880	1	3	30						-- Kleidung der Baronin+0
+	14	11480	1	3	30						-- Fuchsienanzug+0
+	15	11680	1	3	30						-- Seelenplattenpanzer+0
+	16	71004	10	10							-- Medaille des Drachen
+	17	50029	1	25							-- Ring mit Goldgehalt 750
+	18	71018	10	20							-- Segen des Lebens
+	19	80004	1	8							-- Silberbarren(100.000Yang)
+	20	71019	10	20							-- Segen der Magie
+	21	90012	2	12							-- Sperrholz
+	22	90011	2	12							-- Stamm
+	23	90010	2	15							-- Fundamentstein
+}
+
+Group	Sechseckige_Schatztruhe
+{				
+	Vnum	50037		
+	1	27001	100	100 						-- Roter Trank(K)
+	2	27002	50	70 							-- Roter Trank(M)
+	3	27003	10	50 							-- Roter Trank(G)
+	4	27004	100	75 							-- Blauer Trank(K)
+	5	27005	50	55 							-- Blauer Trank(M)
+	6	27006	10	35 							-- Blauer Trank(G)
+	7	70048	1	20 							-- Flüchtlingsumhang
+	8	70102	1	9 							-- Zen-Bohne
+	9	70051	1	20 							-- Handschuh weiser Kaiser
+	10	70049	1	35 							-- Lucys Ring
+	11	25040	1	1 							-- Segenschriftrolle
+	12	30045	1	26							-- Skorpionnadel
+	13	30051	1	26							-- Unbekannter Talisman
+	14	30038	1	26							-- Tigerfell
+	15	30070	1	26							-- Wolfsfell+
+	16	30023	1	26							-- Weißes Tigerfell
+	17	30033	1	26							-- Zerbrochenes Porzellan
+	18	30011	1	26							-- Knäuel
+	19	30082	1	26							-- Schlangenschwanz+
+	20	30035	1	26							-- Gesichtscreme
+	21	30010	1	26							-- Bärengalle
+	22	30055	1	26							-- Skorpionschere
+	23	30006	1	26							-- Orkzahn
+	24	30003	1	26							-- Schweinenase
+	25	30017	1	26							-- Schmückende Haarnadel
+	26	30077	1	26							-- Orkzahn+
+	27	30039	1	26							-- Stück Gewebe
+	28	70043	1	25							-- Diebeshandschuh(2h)
+	29	80003	1	10 							-- Silberbarren(50.000Yang)
+	30	80004	1	10							-- Silberbarren(100.000Yang)
+	31	30014	1	26							-- Yeti Fell
+}
+
+Group	Bronzene_Siegerurkunde
+{				
+	Vnum	50038		
+	1	70003	1	30							-- Buch des Anführers(2h)
+	2	71034	10	35							-- Trank des Angriffs +15
+	3	71004	10	35							-- Medaille des Drachen
+}				
+
+Group	Silberne_Siegerurkunde
+{				
+	Vnum	50039		
+	1	25040	1	10							-- Segenschriftrolle
+	2	71044	10	45							-- Kritischer Kampf
+	3	70045	10	45							-- Durchbohrender Kampf
+}
+
+Group	Goldene_Siegerurkunde
+{				
+	Vnum	50040		
+	1	70003	1	50							-- Buch des Anführers(2h)
+	2	70039	1	30							-- Schmiede-Handbuch
+	3	70035	1	20							-- Magisches Kupfererz
+}
+
+Group	Ruf-Rolle_Oberork			
+{				
+	Vnum	71036		
+	1	mob	691	100								-- Oberork(Boss)
+}
+
+Group	Ruf-Rolle_Anfuehrer			
+{				
+	Vnum	71037		
+	1	mob	791	100								-- Dunkler Anführer(Boss)
+}
+
+Group	Ruf-Rolle_Koenigsspinne			
+{				
+	Vnum	71038		
+	1	mob	2091	100							-- Königinnenspinne(Boss)
+}
+
+Group	Ruf-Rolle_Schildkroete			
+{				
+	Vnum	71039		
+	1	mob	2191	100							-- Große Wüstenschildkröte(Boss)
+}
+
+Group	Ruf-Rolle_Flammenkoenig			
+{				
+	Vnum	71040		
+	1	mob	2206	100							-- Flammenkönig(Boss)
+}
+
+Group	Ruf-Rolle_Neunschwanz			
+{				
+	Vnum	71041			
+	1	mob	1901	100							-- Neunschwanz
+}
+
+Group	Ruf-Rolle_Daemonenkoenig				
+{					
+	Vnum	71042			
+	1	mob	1092	100							-- Dämonenkönig
+}
+
+Group	Ruf-Rolle_Tigergeist				
+{					
+	Vnum	71043			
+	1	mob	1304	100							-- Gelber Tigergeist
+}
+
+Group	Stein_der_Fossilholzader			
+{				
+	Vnum	71057		
+	1	mob	20049	100							-- Fossilholzader-Stein
+}
+
+Group	Stein_der_Kupferader			
+{				
+	Vnum	71058		
+	1	mob	20050	100							-- Kupferader-Stein
+}		
+
+Group	Stein_der_Silberader			
+{				
+	Vnum	71059		
+	1	mob	20051	100							-- Silberader-Stein
+}
+
+Group	Stein_der_Goldader			
+{				
+	Vnum	71060		
+	1	mob	20052	100							-- Goldader-Stein
+}
+
+Group	Stein_der_Jadeader			
+{				
+	Vnum	71061		
+	1	mob	20053	100							-- Jadeader-Stein
+}
+
+Group	Stein_der_Ebenholzader			
+{				
+	Vnum	71062		
+	1	mob	20054	100							-- Ebenholzader-Stein
+}
+
+Group	Stein_des_Muschelstapels			
+{				
+	Vnum	71063		
+	1	mob	20055	100							-- Muschelstapel-Stein
+}
+
+Group	Stein_der_Weißgoldader			
+{				
+	Vnum	71064		
+	1	mob	20056	100							-- Weißgoldader-Stein
+}
+
+Group	Stein_der_Kristallader				
+{					
+	Vnum	71065			
+	1	mob	20057	100							-- Kristallader-Stein
+}
+
+Group	Stein_der_Quarzader				
+{					
+	Vnum	71066			
+	1	mob	20058	100							-- Quarzader-Stein
+}
+
+Group	Stein_der_Himmelsader				
+{					
+	Vnum	71067			
+	1	mob	20059	100							-- Himmelsader-Stein
+}
+
+Group	Metinstein_(leicht)				
+{					
+	Vnum	71080			
+	1	mob	8001	10							-- Metin des Kummers(Lv.5)
+	2	mob	8002	10							-- Metin des Kampfs(Lv.10)
+	3	mob	8003	10							-- Metin der Schlacht(Lv.15)
+	4	mob	8004	10							-- Metin der Gier(Lv.20)
+	5	mob	8005	10							-- Metin der Schwärze(Lv.25)
+}
+
+Group	Metinstein_(normal)				
+{				
+	Vnum	71081		
+	1	mob	8006	10							-- Metin der Dunkelheit(Lv.30)
+	2	mob	8007	10							-- Metin der Eifersucht(Lv.35)
+	3	mob	8008	10							-- Metin der Seele(Lv.40)
+	4	mob	8009	10							-- Metin des Schattens(Lv.45)
+	5	mob	8010	10							-- Metin der Härte(Lv.50)
+}
+
+Group	Metinstein_(schwer)			
+{				
+	Vnum	71082		
+	1	mob	8011	10							-- Metin des Teufels(Lv.55)
+	2	mob	8012	10							-- Metin des Sturzes(Lv.60)
+	3	mob	8013	10							-- Metin des Todes(Lv.65)
+	4	mob	8014	10							-- Metin des Mordes(Lv.70)
+}
+
+Group	Glueckstasche				
+{					
+	Vnum	30098			
+	1	25040	1	70							-- Segenschriftrolle	
+	2	70024	1	20							-- Segenskugel	
+	3	70027	1	10							-- Notiz des Schmieds
+}
+
+Group	Gluecksboerse			
+{				
+	Vnum	30097		
+	1	72709	1	33							-- Tigerknochenohrring
+	2	72710	1	33							-- Drachenknochenohrring
+	3	72711	1	33							-- Tigerknochenarmband
+	4	72712	1	33							-- Drachenknochenarmband
+	5	72701	1	33							-- Windschuhe(30 Geschwindigkeit)
+	6	144	1	20								-- Schlachtschwert+4
+	7	3154	1	20							-- Halbmenschenklinge+4
+	8	7144	1	20							-- Erlösungsfächer+4
+	9	1104	1	20							-- Drachenmesser+4
+	10	2144	1	20							-- Großgelbdrachenbogen+4
+	11	11294	1	25							-- Schwarzstahl-Panzer+4
+	12	70027	1	33							-- Notiz des Schmieds
+	13	70026	5	33							-- Unsichtbarkeitsspiegel
+	14	70024	1	38							-- Segenskugel
+	15	25040	1	270							-- Segenschriftrolle
+	16	11694	1	20							-- Magie-Plattenpanzer+4
+	17	11894	1	20							-- Schwarze Kleidung+4
+	18	11494	1	20							-- Schwarzwindanzug+4
+}
+
+Group	Roter_Ebenholzkasten			
+{				
+	Vnum	50109		
+	1	50300	1	15							-- Fertigkeitsbuch 
+	2	70102	1	10 							-- Zen-Bohne
+	3	25040	1	5 							-- Segenschriftrolle
+	4	71044	5	35 							-- Kritischer Kampf
+	5	71045	5	30							-- Durchbohrender Kampf
+	6	72003	1	5 							-- Erfahrungsring(3h)
+	7	72006	1	5 							-- Handschuhe des Diebes(3h)
+}
+
+Group	Prunk_Ebenholzkasten			
+{				
+	Vnum	50110		
+	1	50300	1	25							-- Fertigkeitsbuch 
+	2	25040	1	10							-- Segenschriftrolle 
+	3	71032	1	5							-- Schriftrolle des Drachen
+	4	70102	1	20							-- Zen-Bohne
+	5	72003	1	20 							-- Erfahrungsring(3h)
+	6	72006	1	20 							-- Handschuhe des Diebes(3h)
+	7	70003	1	15							-- Buch des Anführers(2h)
+}
+
+Group	Gelber_Ebenholzkasten			
+{				
+	Vnum	50111		
+	1	70048	1	5							-- Flüchtlingsumhang
+	2	70049	1	5							-- Lucys Ring
+	3	70050	1	5							-- Symbol d. weisen Kaisers
+	4	70051	1	5							-- Handschuh weiser Kaiser
+	5	70052	1	5							-- Karma-Zauber 1
+	6	50513	1	10							-- Seelenstein
+	7	50300	1	10 							-- Fertigkeitsbuch
+	8	70102	1	10 							-- Zen-Bohne
+	9	25040	1	5 							-- Segenschriftrolle
+	10	71032	1	5							-- Schriftrolle des Drachen
+	11	72003	1	15 							-- Erfahrungsring(3h)
+	12	72006	1	15 							-- Handschuhe des Diebes(3h)
+}
+
+Group	Hellgruener_Holzkasten			
+{				
+	Vnum	50112		
+	1	71085	1	5							-- Gegenstand verstärken
+	2	71084	1	5							-- Gegenstand verzaubern
+	3	50513	1	10							-- Seelenstein
+	5	70102	1	10 							-- Zen-Bohne
+	6	25040	1	5 							-- Segenschriftrolle
+	7	71032	1	5							-- Schriftrolle des Drachen
+	8	72003	1	30 							-- Erfahrungsring(3h)
+	9	72006	1	30 							-- Handschuhe des Diebes(3h)
+}
+
+Group	Gruener_Ebenholzkasten			
+{				
+	Vnum	50113		
+	1	71085	1	5							-- Gegenstand verstärken
+	2	71084	1	5							-- Gegenstand verzaubern
+	3	50513	1	10							-- Seelenstein
+	5	70102	1	10 							-- Zen-Bohne
+	6	25040	1	5							-- Segenschriftrolle 
+	7	71032	1	5							-- Schriftrolle des Drachen
+	8	71044	5	30							-- Kritischer Kampf 
+	9	71045	5	30							-- Durchbohrender Kampf 
+}
+
+Group	Blauer_Ebenholzkasten			
+{				
+	Vnum	50114		
+	1	71085	1	5							-- Gegenstand verstärken
+	2	71084	1	5							-- Gegenstand verzaubern
+	3	50513	1	10							-- Seelenstein
+	5	70102	1	10							-- Zen-Bohne 
+	6	25040	1	5 							-- Segenschriftrolle
+	7	71032	1	5							-- Schriftrolle des Drachen
+	8	71044	5	30							-- Kritischer Kampf 
+	9	71045	5	30							-- Durchbohrender Kampf 
+}
+
+Group	Purpur_Ebenholzkasten				
+{					
+	Vnum	50115			
+	1	71085	1	5							-- Gegenstand verstärken
+	2	71084	1	5							-- Gegenstand verzaubern
+	3	50513	1	10							-- Seelenstein
+	5	70102	1	10							-- Zen-Bohne 
+	6	25040	1	5 							-- Segenschriftrolle
+	7	71032	1	5							-- Schriftrolle des Drachen
+	8	71044	5	30							-- Kritischer Kampf 
+	9	71045	5	30							-- Durchbohrender Kampf 
+}
+
+Group	Schmuckkasten				
+{				
+	Vnum	50117		
+	1	72710	1	5							-- Drachenknochenohrring
+	2	72709	1	5							-- Tigerknochenohrring
+	3	71044	5	25							-- Kritischer Kampf
+	4	71045	5	25							-- Durchbohrender Kampf
+	5	70201	1	15							-- Zen-Bohne
+	6	25040	1	10							-- Segenschriftrolle
+	7	70038	10	15							-- Tapferkeitsumhänge
+}
+
+Group	Eisenkassette
+{
+	Vnum	50120
+	1	14082	1	15							-- Jadearmband+2
+	2	14102	1	15							-- Ebenholzarmband+2
+	3	14122	1	14							-- Perlenarmband+2
+	4	14142	1	14							-- Weißgoldarmband+2
+	5	14162	1	14							-- Kristallarmband+2
+	6	14182	1	14							-- Amethystarmband+2
+	7	14202	1	14							-- Himmelstränenarmband+2
+}
+
+Group	Eisenkiste
+{
+	Vnum	50121
+	1	16042	1	10							-- Silberhalskette+2
+	2	16062	1	10							-- Goldhalskette+2
+	3	16082	1	11							-- Jadehalskette+2
+	4	16102	1	11							-- Ebenholzhalskette+2
+	5	16122	1	11							-- Perlenhalskette+2
+	6	16142	1	11							-- Weißgoldhalskette+2
+	7	16162	1	11							-- Kristallhalskette+2
+	8	16182	1	11							-- Amethysthalskette+2
+	9	16202	1	11							-- Himmelstränenhalskette+2
+	10	25040	1	2							-- Segenschriftrolle
+	11	70024	1	1							-- Segenskugel
+	12	14182	1	14							-- Amethystarmband+2
+	13	17182	1	12							-- Amethystohrringe+2
+	14	30190	1	5							-- Blutstein
+	15	72006	1	30 							-- Handschuhe des Diebes(3h)
+	16	72003	1	30 							-- Erfahrungsring(3h)
+	17	71068	1	15							-- Feder der Liebenden
+	18	72015	1	10							-- Fischereibuch
+	19	27112	10	30							-- Grüner Trank(G)
+	20	14202	1	14							-- Himmelstränenarmband+2
+	21	17202	1	12							-- Himmelstränenohrringe+2
+	22	14082	1	15							-- Jadearmband+2
+	23	14162	1	14							-- Kristallarmband+2
+	24	17162	1	12							-- Kristallohrringe+2
+	25	71004	1	10							-- Medaille des Drachen
+	26	71017	1	10							-- Medaille des Glücks
+	27	71082	1	20							-- Metinstein (Schwer)
+	28	50124	1	30							-- Morsche Holzkiste
+	29	14122	1	14							-- Perlenarmband+2
+	30	27987	1	17							-- Muschel
+	31	50513	1	10							-- Seelenstein
+	32	71019	10	20							-- Segen der Magie
+	33	71018	5	20							-- Segen des Lebens
+	34	70024	1	40							-- Segenskugel
+	35	25040	1	30							-- Segenschriftrolle
+	36	71101	1	10							-- Trank der Hast 20%
+	37	14142	1	14							-- Weißgoldarmband+2
+}
+
+Group	Eisentruhe
+{
+	Vnum	50122
+	1	17082	1	15							-- Jadeohrringe+2
+	2	17102	1	15							-- Ebenholzohrringe+2
+	3	17122	1	14							-- Perlenohrringe+2
+	4	17142	1	14							-- Weißgoldohrringe+2
+	5	17162	1	14							-- Kristallohrringe+2
+	6	17182	1	14							-- Amethystohrringe+2
+	7	17202	1	14							-- Himmelstränenohrringe+2
+}
+
+Group	Amors_Truhe_(rosa)
+{
+	Vnum	71146
+	1	71107	1	10							-- Frucht des Lebens
+	2	25100	1	25							-- Geiststein-Schriftrolle
+	3	71085	1	5							-- Gegenstand verstärken
+	4	71084	1	5							-- Gegenstand verzaubern
+	5	71109	1	14							-- Rolle der Korrektur
+	6	70024	1	10							-- Segenskugel
+	7	70038	20	25							-- Tapferkeitsumhang
+	8	71101	5	10							-- Trank der Hast 20%
+}
+
+Group	Amors_Truhe_(blau)
+{
+	Vnum	71147
+	1	71107	1	10							-- Frucht des Lebens
+	2	25100	1	25							-- Geiststein-Schriftrolle
+	3	71085	1	5							-- Gegenstand verstärken
+	4	71084	1	5							-- Gegenstand verzaubern
+	5	71109	1	14							-- Rolle der Korrektur
+	6	70024	1	10							-- Segenskugel
+	7	70038	20	25							-- Tapferkeitsumhang
+	8	71101	5	10							-- Trank der Hast 20%
+}
+
+Group	Eisphoenix_Kaefig
+{
+	Vnum	53503
+	1	53003	1	100							-- Eisphönix-Siegel
+}
+
+Group	Fußball
+{
+	Vnum	50096
+	1	27005	20	40							-- Blauer Trank(M)
+	2	50300	1	20							-- Fertigkeitsbuch
+	3	27003	20	40							-- Roter Trank(M)
+	4	25040	1	30							-- Segenschriftrolle
+	5	80003	1	15							-- Silberbarren(50.000Yang)
+	6	80004	1	15							-- Silberbarren(100.000Yang)
+	7	70201	1	25							-- Zen-Bohne
+	8	80005	1	20							-- Goldbarren(500.000Yang)
+	9	80006	1	14							-- Goldbarren(1.000.000Yang)
+}
+
+Group	Halloween-Truhe
+{
+	Vnum	50215
+	1	70003	1	15							-- Buch des Anführers(2h)
+	2	27993	1	20							-- Blaue Perle
+	3	27994	1	15							-- Rote Perle
+	4	72723	1	20							-- Elixier der Sonne (K)
+	5	72727	1	20							-- Elixier des Mondes (K)
+	6	76000	15	30							-- Pfirsichblütenwein(15x)
+	7	71085	1	10							-- Gegenstand verstärken
+	8	71084	1	10							-- Gegenstand verzaubern
+	9	71108	15	30							-- Granatapfelsaft(15x)
+	10	71094	1	8							-- Konzentriertes Lesen
+	11	71026	1	18							-- Magisches Eisenerz
+	12	70035	1	25							-- Magisches Kupfererz
+	13	71004	5	10							-- Medaille des Drachen
+	14	70024	1	25							-- Segenskugel
+	15	70102	1	50							-- Zen-Bohne
+	16	27992	1	30							-- Weiße Perle
+	17	30323	1	30							-- Kürbismasken-Karte
+}
+
+Group	Korb_mit_Ostereiern
+{
+	Vnum	50181
+	1	27993	1	20							-- Blaue Perle
+	2	27994	1	15							-- Rote Perle
+	3	70003	1	15							-- Buch des Anführers(2h
+	4	71029	10	30							-- Drachengott-Intelligenz
+	5	70002	1	1							-- Dritte Hand
+	6	71113	20	20							-- Glas der Einsicht
+	7	27808	1	22							-- Graskrapfen
+	8	71094	1	10							-- Konzentriertes Lesen
+	9	70035	1	25							-- Magisches Kupfererz
+	10	71004	5	10							-- Medaille des Drachen
+	11	27987	1	17							-- Muschel
+	12	25040	1	14							-- Segenschriftrolle
+	13	70038	20	35							-- Tapferkeitsumhänge(20x)
+	14	27992	1	30							-- Weiße Perle
+	15	70102	1	50							-- Zen-Bohne
+}
+
+Group	Koenigstiger-Kristall
+{
+	Vnum	38051
+	1	71137	1	50							-- Königstiger-Siegel(blau)
+	2	71138	1	50							-- Königstiger-Siegel(rot)
+	3	71139	1	50							-- Königstiger-Siegel(gold)
+	4	71140	1	50							-- Königstiger-Siegel(grün)
+	5	71141	1	50							-- Königstiger-Siegel(grau)
+	6	71142	1	50							-- Königstiger-Siegel(weiß)
+}
+
+Group	mysterious_ticket_group
+{
+	Vnum	10036
+	1	70408	1	1 -- Mysterious Ticket
+	2	70407	1	1 -- Myst. Ticket (Premium)
+}
+Group	red_dragon_lair_ticket_group
+{
+	Vnum	10037
+	1	71201	1	1 -- Passage Ticket (Meley)
+	2	72342	1	1 -- Passage Ticket (Meley)
+}
+Group	dungeon_ticket_group
+{
+	Vnum	10034
+	1	71095	1	1 -- Passage Ticket
+	2	71130	1	1 -- Passage Ticket
+	3	76019	1	1 -- Passage Ticket
+}

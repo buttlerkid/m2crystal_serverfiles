@@ -1,0 +1,62 @@
+quest reward_check begin
+	state start begin
+	
+		-- JOB_WARRIOR,  0
+		-- JOB_ASSASSIN, 1
+		-- JOB_SURA,     2
+		-- JOB_SHAMAN,   3
+
+		-- REWARD_MAX_LV_WARRIOR = 1,
+		-- REWARD_MAX_LV_SURA = 2,
+		-- REWARD_MAX_LV_NINJA = 3,
+		-- REWARD_MAX_LV_SHAMAN = 4,
+		-- REWARD_WEAPON = 5,
+		-- REWARD_FULL_SKILLS = 6,
+		-- REWARD_FULL_BIOLOG = 7,
+		-- REWARD_DESTROY_METIN = 8,
+		-- REWARD_DESTROY_BOSS = 9,
+		-- REWARD_COMPLETE_JOTUN = 10,
+		-- REWARD_AURA = 11,
+		-- REWARD_COMPLETE_DRAGON_LAIR = 12,
+		-- REWARD_AVERAGE_DMG = 13,
+		-- REWARD_PLAYTIME = 14,
+		-- REWARD_FISHING = 15,
+		-- REWARD_SASH = 16,
+		-- REWARD_MINING = 17,
+		-- REWARD_PVP_KILLS = 18,
+		-- REWARD_YANGS = 19,
+		-- REWARD_ARMOR = 20,
+
+		when levelup with pc.get_level() == 120 begin
+			if pc.get_job() == 0 then -- Warrior
+				game.set_reward(1)
+			elseif pc.get_job() == 1 then --Ninja
+				game.set_reward(3)
+			elseif pc.get_job() == 2 then --Sura
+				game.set_reward(2)
+			elseif pc.get_job() == 3 then --Shaman
+				game.set_reward(4)
+			end
+		end
+
+			-- dragon_lair_access.quest
+			-- REWARD_SYSTEM_UPDATE
+			-- game.set_reward(12) 
+			-- REWARD_SYSTEM_UPDATE
+
+			-- erebus_dungeon.quest
+			-- REWARD_SYSTEM_UPDATE
+			-- game.set_reward(10) 
+			-- REWARD_SYSTEM_UPDATE
+
+		when login begin
+			-- PLAYTIME
+			playTimeReward = 60*250 -- 60 minutes * 250 hours
+			if pc.get_playtime() >= playTimeReward then
+				game.set_reward(14)
+			end
+			-- PLAYTIME
+		end
+
+	end
+end

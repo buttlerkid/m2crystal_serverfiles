@@ -1,0 +1,31 @@
+define MAP_INDEX 354
+define ENTRY_MAN 20408
+define PORTAL 20415
+define LEVEL_LIMIT 95
+
+quest mt_th_dungeon begin
+	state start begin
+		-- "Enter the Temple of the Ochao"
+		when ENTRY_MAN.chat.locale_quest(800) begin
+			-- "Do you want to move directly to the Temple of the Ochao?"
+			say(locale_quest(801))
+			if select(locale_quest(4473), locale_quest(3418)) == 1 then -- "Yes" / "No"
+				if pc.get_level() >= LEVEL_LIMIT then
+					pc.warp(854800, 1416500)
+				else
+					-- "Your level is not high enough to enter the dungeon."
+					say(locale_quest(802))
+				end
+			end
+		end
+
+		-- "Enter the Enchanted Forest"
+		when PORTAL.chat.locale_quest(804) with pc.get_map_index() == MAP_INDEX begin
+			-- "Do you wish to travel to the Enchanted Forest?"
+			say(locale_quest(803))
+			if select(locale_quest(4473), locale_quest(3418)) == 1 then -- "Yes" / "No"
+				pc.warp(817900, 1505000)
+			end
+		end
+	end
+end

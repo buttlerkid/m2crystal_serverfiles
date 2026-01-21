@@ -1,0 +1,122 @@
+quest dungeoninfo begin
+	state start begin
+		when login or enter begin
+			cmdchat("dungeon_info_qid "..q.getcurrentquestindex())
+		end
+
+		when button begin
+			cmdchat("getinputbegin")
+			local cmd = split(input(cmdchat("dungeon_info_cmd")), "#")
+			cmdchat("getinputend")
+
+			local mobIdx = tonumber(cmd[2])
+
+			if cmd[1] == "ENTER" then
+				if pc.get_gold() < 250000 then 
+					return chat(locale_quest(12088))
+				end
+				if mobIdx == 2092 then
+					if pc.get_level() < 50 then
+						return chat(locale_quest(2086))
+					end
+					if pc.get_level() > 80 then
+						return chat(locale_quest(14188))
+					end
+					if not pc.warp(69000, 611200) then
+						return
+					end
+					pc.change_gold(-250000)
+				elseif mobIdx == 1093 then
+					if pc.get_level() < 40 then
+						return chat(locale_quest(2086))
+					end
+					if pc.get_level() > 75 then
+						return chat(locale_quest(14188))
+					end
+					if not pc.warp(590800, 111100) then
+						return
+					end
+					pc.change_gold(-250000)
+				elseif mobIdx == 2598 then
+					if pc.get_level() < 75 then
+						return chat(locale_quest(2086))
+					end
+					if pc.get_level() > 90 then
+						return chat(locale_quest(14188))
+					end
+					if not pc.warp(591800,100200) then
+						return
+					end
+					pc.change_gold(-250000)
+				elseif mobIdx == 2493 then
+					if pc.get_level() < 75 then
+						return chat(locale_quest(2086))
+					end
+					if pc.get_level() > 100 then
+						return chat(locale_quest(14188))
+					end
+					if not pc.warp(180200, 1220200) then
+						return
+					end
+					pc.change_gold(-250000)
+				elseif mobIdx == 6091 then
+					if pc.get_level() < 10 then
+						return chat(locale_quest(2086))
+					end
+					if pc.get_level() > 120 then
+						return chat(locale_quest(14188))
+					end
+					if not pc.warp(614100, 707100) then
+						return
+					end
+					pc.change_gold(-250000)
+				elseif mobIdx == 6191 then
+					if pc.get_level() < 100 then
+						return chat(locale_quest(2086))
+					end
+					if pc.get_level() > 120 then
+						return chat(locale_quest(14188))
+					end
+					if not pc.warp(432200, 164600) then
+						return
+					end
+					pc.change_gold(-250000)
+				elseif mobIdx == 6192 then
+					if pc.get_level() < 100 then
+						return chat(locale_quest(2086))
+					end
+					if pc.get_level() > 120 then
+						return chat(locale_quest(14188))
+					end
+					if not pc.warp(828900, 1418500) then
+						return
+					end
+					pc.change_gold(-250000)
+				elseif mobIdx == 3962 then
+					if pc.get_level() < 100 then
+						return chat(locale_quest(2086))
+					end
+					if pc.get_level() > 120 then
+						return chat(locale_quest(14188))
+					end
+					if not pc.warp(1107700, 1782400) then
+						return
+					end
+					pc.change_gold(-250000)
+				elseif mobIdx == 6193 then
+					if pc.get_level() < 100 then
+						return chat(locale_quest(2086))
+					end
+					if pc.get_level() > 120 then
+						return chat(locale_quest(14188))
+					end
+					if not pc.warp(597400, 700600) then
+						return
+					end
+					pc.change_gold(-250000)
+				end
+			end
+		end
+	end
+end
+

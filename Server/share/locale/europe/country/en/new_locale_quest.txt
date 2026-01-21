@@ -1,0 +1,442 @@
+91614	I'm just the Land Agent and therefore I can't[ENTER]lower the price. You need more Yang.
+91615	The guild has purchased the land!
+91613	Land Agent:
+91616	Come again when you have decided what to do.[ENTER]First come, first serve.
+91617	I'm the Land Agent and responsible for selling[ENTER]land. Before the monsters occupied the region in[ENTER]the middle of the continent, we did not have[ENTER]shortage of land and everyone was happy. So now[ENTER]I'm only selling land to guild leaders, who use[ENTER]it as land for their guilds. Do you want to buy[ENTER]some land?
+91618	I already told you, I can't sell land to[ENTER]everybody. I hope you understand.
+91619	A guild that already owns land cannot buy another[ENTER]piece of ground.
+91620	An error occurred during the processing of this[ENTER]order.
+91621	To buy this estate, the guild's level has to be[ENTER]over %s. The price is %s.
+91622	Your guild hasn't reached the required level yet.[ENTER]I'm sorry.
+91623	Do you want to purchase this land?
+91624	This piece of land has already been sold to[ENTER]another guild. I'm sorry.
+
+-------------------------- Biolog system --------------------------
+15200	Movement speed +%d
+15201	Attack speed +%d
+15202	Defence +%d
+15203	Attack Value +%d
+15204	Defence chance against warrior attacks: %d%%
+15205	Defence chance against assassin attacks: %d%%
+15206	Defence chance against sura attacks: %d%%
+15207	Defence chance against shaman attacks: %d%%
+15208	Strong against Warrior %d%%
+15209	Strong against Assassin %d%%
+15210	Strong against Sura %d%%
+15211	Strong against Shaman %d%%
+15212	Max. HP +%d
+15213	None Bonus: %d
+15214	You don't have any task that you can change.
+15215	Click on the task for which you want to change the bonus.
+15216	Cancel
+15217	Your obtain a bonus in this task: %s
+15218	You cannot choose the same bonus!
+15219	%s committed to your character.
+15220	Your Shaman support already summoned.
+15221	Strong against monsters %d%%
+15222	Strong against stones %d%%
+15223	Strong against bosses %d%%
+15224	Attack Value +%d
+15225	Defence +%d%%
+15226	Skill Damage %d%%
+15227	Resistance against Skill Damage %d%%
+15228	Defence +%d
+
+-------------------------- Auto Pick UP --------------------------
+40300	Your auto pickup is still active.
+40301	You already have permanent auto pickup activated.
+40302	It will be expired in:
+40303	Do you want to permanently activate auto pickup?
+40304	Do you want to activate auto pickup for
+40305	Auto pickup was successfully activated (permanently).
+40306	Auto pickup was successfully activated for:
+40250	Equipment
+
+92000	The group of %s has killed Spider King in %d minutes and %d seconds !
+92001	%s has killed Spider King in %d minutes and %d seconds !
+92002	The group of %s attempts to kill the Spider King.
+92003	The player %s attempts to kill the Spider King.
+92004	Spider Queen
+92005	You can not get in! The minimum level is 50 and the maximum 80
+92006	You cannot enter yet. Time remaining:
+92007	Do you want to enter the dungeon?
+92008	Are you sure you want to face the Spider King alone ?
+92009	Just me
+92010	With group
+92011	Cancel
+92012	Yes
+92013	You don't have the key to enter!
+92014	You are not in a group!
+92015	Do you want to enter group?
+92016	You don't have the key to enter!
+92017	The player has the low level:
+92018	The player has to wait:
+92019	The next player does not have the key:
+92020	You are not in a group!
+92021	Reduce the effects of the baroness destroying its eggs!
+92022	Be careful, you have angry at the baroness!
+92023	Your damage is increasing, but your defense is decreasing.
+92024	Go to where I was ...
+92025	You just had 5 minutes to re -enter. You can't!
+92026	Not available room, you can re -enter from the beginning.
+92027	The dungeon has not been opened in this ch.
+92028	In order to enter, change the CH: %d
+92029	Dungeon completed successfully! You will be expelled out.
+
+92040	The group of %s has killed Azrael in %d minutes and %d seconds !
+92041	The player %s has killed Azrael in %d minutes and %d seconds !
+92080	Defeat all monsters.
+92081	Mission completed!
+92082	Destroy the Metin stone.
+92083	Find the correct method and destroy it.
+92084	Get a key to unlock the pillars.
+92085	Defeat the demon superb
+92086	Destroy all death metines (%d/%d)
+92087	Find the Zin Sa Gui key and crack it to the Pilar.
+92089	You have destroyed the correct method.
+92090	The false Metin stone has disappeared.
+1036	You still lack old stamps, keep it up.
+92091	You will be teleported to the next floor.
+92092	Destroy the murderer until you get the parchment. (%d)
+92088	Kill the death session!
+1040	This method did not contain any parchment.
+92093	You have found the correct parchment. You will be teleported
+92094	Informed error to authorized people!
+92093	You have destroyed a Metin stone (%d/4)
+
+40200	You cannot change your name if you are married.
+40201	You cannot change your name if you are transformed.
+40202	You cannot change your name if you are in a guild.
+40203	You cannot change your name if you are in a party.
+40204	You need to wait because you changed your name recently.
+40205	Please enter your new name:
+40206	Your new name will be:
+40207	Do you want to continue?
+40208	You didn't log in after you have changed your name.[ENTER]Please re-log in.
+40209	You can't use this name.[ENTER]Please choose another one.
+40210	This name is already used.
+40211	Your name was successfully changed.[ENTER]Please log in again.
+
+80040	Reset conqueror status
+80310	Your Sung Ma's will (STR)
+80320	Continue
+80330	Cancel
+80340	Reset is completed.
+80350	Reset has failed!
+80360	Your Sung Ma's will (VIT)
+80370	Your Sung Ma's will (RES)
+80380	Your Sung Ma's will (INT)
+80390	currently has a value of 1.
+80400	cannot be reset.
+80410	is being reset to 1.
+80420	Your remaining points will be reimbursed as[ENTER]training points.
+80430	Do you want to continue?
+80440	Your level is too low!
+
+----- Monkey Lair -----
+19000	Kill all the monkeys until you get %s
+19001	You have managed to find the %s. Hurry up and place it on the Pillar.
+19002	You have succeeded in the first step, prepare yourself for the next one.
+19003	Destroy all the %s
+19004	You have succeeded in the second step, prepare yourself for the next one. 
+19005	You have succeeded in the third step, prepare yourself for the next one.
+19006	You have succeeded in the fifth step, prepare yourself for the next one.
+19007	Destroy the %s
+19008	Kill all the monkeys and look for the %s, then use it.
+19009	You have succeeded in the fourth step, prepare yourself for the next one.
+19010	Kill the %s
+19011	Congratulations. You have completed the Monkey Lair!
+19012	The group of %s has completed the Monkey Labyrinth in %d minutes and %d seconds !
+19013	%s has completed the Monkey Labyrinth (%dx) in %d minutes and %d seconds !
+19014	Monkey Lair
+19015	The king of the monkeys is somewhere inside this dungeon.[ENTER]It is said that all those who entered the dungeon[ENTER] never returned.[ENTER]
+19016	This is not the right map!
+
+19050	Guild: Monkey Lair
+19057	The guild %s has completed the Monkey Labyrinth in %d minutes and %d seconds !
+19058	The guild %s took control of the Monkey Lair dungeon with a time of %d minutes and %d seconds !
+19059	The guild %s took control of the Monkey Lair dungeon over guild %s with a time of %d minutes and %d seconds !
+
+----- Orc Maze Dungeon -----
+20000	The Orc Maze
+20001	Years earlier, before the war raged, the Orcs of the valley[ENTER]had taken control, but the humans finally managed to regain[ENTER]control. The story goes that their leader, wounded in battle,[ENTER]took refuge deep in the valley, in the labyrinth.[ENTER]I can take you there but you will have to be brave,[ENTER]Azog was once one of the most powerful Orcs in the valley.[ENTER]It is even said that he had two heads and that his complexion[ENTER]was affected by the number of people he devoured.[ENTER]
+20002	The portals were opened. Find the correct portal and repeat the process.
+20003	You killed the last monster in the labyrinth. Go to the last portals and kill %s.
+20004	You have 30 minutes to kill the Orc King - Azog.
+20005	Start by teleporting through the middle portal and kill all monsters.
+20006	You have 20 minutes left!
+20007	You have 10 minutes left!
+20008	You have 5 minutes left!
+20009	Unfortunately, you didn't make it on time.
+20010	Kill %s the profaner
+20011	Congratulations, you managed to kill the %s! Pull your keys on the seals.
+20012	A %s was found by %s
+20013	A %s has appeared. Kill him!
+20014	Congratulations, you managed to kill the %s!
+20015	You'll be teleported in 15 seconds.
+20016	You will be teleported out in 60 seconds.
+20017	The group of %s has completed the Orc Maze in %d minutes and %d seconds !
+20018	%s has completed the the Orc Maze (%dx) in %d minutes and %d seconds !
+20019	Next round
+20020	Destroy the metins to attract %s
+20021	Congratulations. You have completed the Orc Maze!
+
+20050	Guild: The Orc Maze
+20051	The guild %s has completed the The Orc Maze in %d minutes and %d seconds !
+20052	The guild %s took control of the The Orc Maze dungeon with a time of %d minutes and %d seconds !
+20053	The guild %s took control of the The Orc Maze dungeon over guild %s with a time of %d minutes and %d seconds !
+
+----- Devil Tower Zone -----
+21000	Kill all monsters to move on to the next floor.
+21001	The Demon King has appeared. Kill him and all the monsters to move on to the next floor.
+21002	Destroy the correct Metin of Demons to move on to the next floor.
+21003	You have destroyed the right Metin, you will be teleported to move on to the next floor.
+21004	Kill the monsters to get %s. Then place them on the %s
+21005	All the doors have been destroyed, Find and kill the %s
+21006	You will be teleported to move on to the next floor.
+21007	Destroy all %s to move on to the next floor
+21008	This map teleports you to the 7th floor of the Demon Tower.
+21009	Find the right key to enter the next floor. You need the %s to open %s.
+21010	Congratulations. You have completed the Demon Tower!
+21011	The group of %s has completed the Devil Tower in %d minutes and %d seconds !
+21012	%s has completed the Devil Tower (%dx) in %d minutes and %d seconds !
+21013	Destroy the stone to reveal the others
+
+21050	Guild: Into the Demon Tower
+21051	The guild %s has completed the Devil Tower in %d minutes and %d seconds !
+21052	The guild %s took control of the Devil Tower dungeon with a time of %d minutes and %d seconds !
+21053	The guild %s took control of the Devil Tower dungeon over guild %s with a time of %d minutes and %d seconds !
+
+----- Spider Dungeon -----
+22000	Find and destroy the %s
+22001	The %s has just appeared. Go to the red room and kill him.
+22002	Eggs remaining to be destroyed: %d.
+22003	The %s has just appeared, kill her.
+22004	You will be teleported to the nest in 5 seconds.
+22005	The group of %s has completed the Spider Queen's Nest in %d minutes and %d seconds !
+22006	%s has completed the the Spider Queen's Nest (%dx) in %d minutes and %d seconds !
+22007	Destroy the %s to attract the Spider Baroness.
+22008	In the Spider Queen's Nest
+22009	It seems that you have the tombstone of the last cellar.[ENTER]It is said and rumoured that there is a room where abominable[ENTER]creatures from the time of the first men.[ENTER]There would be drawings in the books illustrating spider monstrous.[ENTER]The trap door is underneath but it is locked.[ENTER]
+22010	Congratulations. You have completed the Spider Queen's Nest!	
+22011	You have 15 minutes left!
+
+22050	Guild: In the Spider Queen's Nest
+22051	The guild %s has completed the Spider Queen's Nest in %d minutes and %d seconds !
+22052	The guild %s took control of the Spider Queen's Nest dungeon with a time of %d minutes and %d seconds !
+22053	The guild %s took control of the Spider Queen's Nest dungeon over guild %s with a time of %d minutes and %d seconds !
+
+----- Devil Catacomb -----
+23000	In the Devil's Catacomb	
+23001	The history of the Catacomb of the Devils is terrifying.[ENTER]Thousands of years ago, men stopped worshipping God[ENTER]and began to idolise the Devil. The one you all know, Azrael.[ENTER]The more people idolised him, the more powerful Azrael became.[ENTER]God then decided to punish the human people[ENTER]with a heavy punishment. He locked them up in the [ENTER]Catacombs and transformed them into monsters.[ENTER][ENTER]One can hear terrifying screams, some of them saying that[ENTER]on the day of the end of time, the Catacombs[ENTER]will be open and Azrael will be free again.[ENTER]
+23002	Search and destroy all %s to move on to the next floor.
+23003	You have destroyed all %s, you will be teleported to the next floor.
+23004	Defeat Tartaros and take the Grimace Totem at the top!
+23005	A blood-curdling cry echoes out from the depths of the Devil's Catacomb. Charon has awoken!
+23006	You have defeated %s! Now you will be teleported to the last floor of the Devil's Catacomb.
+23007	Congratulations. You have completed the Devil's Catacomb!	
+23008	The group of %s has completed the Devil's Catacomb in %d minutes and %d seconds !
+23009	%s has completed the Devil's Catacomb (%dx) in %d minutes and %d seconds !
+23010	All Gates of Perdition have been destroyed, find %s to move on to the next floor
+23011	Destroy all of the Gates of Perdition and find your way to Tortoise Rock
+
+23050	Guild: In the Devil's Catacomb	
+23051	The guild %s has completed the Devil's Catacomb in %d minutes and %d seconds !
+23052	The guild %s took control of the Devil's Catacomb dungeon with a time of %d minutes and %d seconds !
+23053	The guild %s took control of the Devil's Catacomb dungeon over guild %s with a time of %d minutes and %d seconds !
+
+----- Beran-Setaou -----
+24000	Beran-Setaou
+24001	Taking on the appearance of a great ice-blue dragon,[ENTER]Beran-Setaou is considered the oldest and most[ENTER]powerful of the dragons, both by humans and by[ENTER]the dragons themselves.[ENTER][ENTER]In the traditional Nordic religion, Beran-Setaou is,[ENTER]as the destroyer of the Old World and creator of the new,[ENTER]the source of all the other gods.[ENTER][ENTER]He appears in many Norse legends where he is in conflict with Meley,[ENTER]who is said to have tried to kill him through indigestion[ENTER]by hiding and accumulating pieces of previous worlds.[ENTER]
+24002	Kill all monsters to move on to the next step.
+24003	The 4 %s protect the seals. Eliminate them and use %s to free them.
+24004	You have broken the curse of the seals.
+24005	Remaining statue: %d
+24006	Get ready to face %s !
+24007	Defeat %s !
+24008	Congratulations. You have completed the Dragon Lair!	
+24009	The group of %s has completed the Dragon Lair in %d minutes and %d seconds !
+24010	%s has completed the Dragon Lair (%dx) in %d minutes and %d seconds !
+24011	Destroy all stones to move on to the next step.
+
+24050	Guild: Beran-Setaou
+24051	The guild %s has completed the Dragon Lair in %d minutes and %d seconds !
+24052	The guild %s took control of the Dragon Lair dungeon with a time of %d minutes and %d seconds !
+24053	The guild %s took control of the Dragon Lair dungeon over guild %s with a time of %d minutes and %d seconds !
+
+
+----- Razador Dungeon -----
+25000	Razador is described as a large humanoid creature,[ENTER]able of enveloping itself in flames or darkness and shadows,[ENTER]and inspiring great fear.[ENTER][ENTER]He appears armed with a huge Massu and sometimes[ENTER]wielding long swords with flaming blades.[ENTER]Only dragons rivalled his capacity for ferocity and destruction.[ENTER]During the First Age, Razador was the most feared of the evil forces.[ENTER][ENTER]Razador was once a feared warrior of human appearance[ENTER]who succumbed to the forces of evil.[ENTER]His arrogance and hatred consumed him and dragged[ENTER]him to the Purgatory.
+25001	Visit the Am-heh Gorge to open a further Destiny Lock.
+25002	The Isfet Stele has been destroyed.
+25003	Get closer to the pillar!
+25004	This Golden Cog Wheel was fake and has been destroyed. Find the original.
+25005	Congratulations. You have completed the Red Dragon Fortress!
+25006	The group of %s has completed the Red Dragon Fortress in %d minutes and %d seconds !
+25007	%s has completed the Red Dragon Fortress (%dx) in %d minutes and %d seconds !
+25008	Task: Only those who don't fear the singing heat will be able to defeat the Purgatory Fire Metin.
+25009	Task: Search for the Maat Stones and place them on the seven Isfet Steles.
+25010	Task: Defeat Ignitor, Guardian of the Ember.
+25011	Task: Venture into the Demon's Ring and emerge the victor.
+25012	Task: Find the Golden Cog Wheel and use it to trigger the hidden mechanism in the Isfet Stele.
+25013	Defeat %s !
+
+25050	Guild: Red Dragon Fortress
+25051	The guild %s has completed the Red Dragon Fortress in %d minutes and %d seconds !
+25052	The guild %s took control of the Red Dragon Fortress dungeon with a time of %d minutes and %d seconds !
+25053	The guild %s took control of the Red Dragon Fortress dungeon over guild %s with a time of %d minutes and %d seconds !
+
+----- Nemere Dungeon -----
+26000	When the First Men arrived, the Wizards captured one of them[ENTER]and made him what he is today. A huge, frightening creature[ENTER]that inspires despair and fear armed with a Scythe of War.[ENTER][ENTER]They thought that by creating a monster of ice, they could[ENTER]dominate the world, but they did not foresee that it would[ENTER]turn against them.[ENTER][ENTER]Possessed by a soulless demonic force, Nemere destroyed[ENTER]everything in its path until it crossed paths with Razador.[ENTER]It was a monster battle so bloody, that even the Devil himself[ENTER]decided not to get involved.[ENTER]
+26001	It was necessary to gather the greatest Mage and Priest in order[ENTER]to concoct a spell that sent Nemere back to[ENTER]his temple of Ice and Razador to Purgatory.[ENTER]
+26002	Open the seals on the Arctic Cube in the correct order to get to the next floor.
+26003	Find the correct %s and drop it on the %s
+26004	%s Remaining: %d  
+26005	You managed to destroy all the Metins of Cold. %s has appeared. Destroy it!
+26006	You have found the right keys. You will be teleported to the next floor.
+26007	This is not the right %s.
+26008	Start killing all the monster until you will be moved to the next floor!
+26009	Find and defeat Szel, the Lord of Ice and Cold.
+26010	Congratulations. You have completed the Nemere's Watchtower!
+26011	The group of %s has completed the Nemere's Watchtower in %d minutes and %d seconds !
+26012	%s has completed the Nemere's Watchtower (%dx) in %d minutes and %d seconds !
+26013	Pay attention to the correct sequence! Try a different cube.
+
+26050	Guild: Nemere's Watchtower
+26051	The guild %s has completed the Nemere's Watchtower in %d minutes and %d seconds !
+26052	The guild %s took control of the Nemere's Watchtower dungeon with a time of %d minutes and %d seconds !
+26053	The guild %s took control of the Nemere's Watchtower dungeon over guild %s with a time of %d minutes and %d seconds !
+
+----- Erebus Dungeon -----
+27000	The world that existed is suddenly nothing[ENTER]
+27001	According to the ancient scriptures, Jotun and Bagjanamu will[ENTER]be under the orders of the one who cannot be named and[ENTER]will form the army that God's chosen ones will have to face,[ENTER]following a terrible crisis at the end of time.[ENTER][ENTER]Do you hear the trees moving? Do you hear the lightning strike?[ENTER]They are coming, they are here. [ENTER]The world that existed is suddenly nothing![ENTER]
+27002	Defeat %s !
+27003	You have unleashed the wrath of the great %s, prepare for the confrontation.
+27004	Defeat %s !
+27005	Congratulations. You have completed the Erebus!
+27006	The group of %s has completed the Erebus in %d minutes and %d seconds !
+27007	%s has completed the Erebus (%dx) in %d minutes and %d seconds !
+
+27050	Guild: Erebus
+27051	The guild %s has completed the Erebus in %d minutes and %d seconds !
+27052	The guild %s took control of the Erebus dungeon with a time of %d minutes and %d seconds !
+27053	The guild %s took control of the Erebus dungeon over guild %s with a time of %d minutes and %d seconds !
+
+----- Defence Ship -----
+30000	The sea battle starts in %d sec.
+30001	If you don't start the sea battle within 1 minute, you will have to leave the ship.
+30002	Wave %d: You must protect the %s for 3 minutes with all your strength.
+30003	You have successfully protected the mast. Keep it up! Get ready for the next wave.
+30004	The next wave begins in %d sec.
+30005	SOS! The mast has been smashed and your ship is sinking. You will now be teleported to Cape Dragon Fire.
+30006	Congratulations. You have completed the Ship Defence! You have five minutes to destroy Hydra's Treasure.
+30007	Wave %d: While protecting the %s, defeat Hydra.
+30008	The Hydra of Lern[ENTER]
+30009	The Hydra takes the form of a gigantic, watery[ENTER]serpent with three heads, one of which remains immortal.[ENTER]In the land of Cape Dragon Fire, the dark, foggy,[ENTER]foul-smelling swamps of Lerna are its lair.[ENTER][ENTER]Many have tried to hunt the beast, but it has a special power.[ENTER]Every time one of its heads is cut off, two new ones grow![ENTER]Anyone who breathes its stinking breath will immediately die.[ENTER]
+30010	Do you really want to set sail to conquer the Hydra?
+30011	The group of %s has completed the Ship Defence in %d minutes and %d seconds !
+30012	%s has completed the Ship Defence (%dx) in %d minutes and %d seconds !
+30013	You have destroyed all the %s. Keep it up! Get ready for the next wave.
+30014	Wave %d: You must destroy all the %s.
+
+30050	Guild: All Aboard!
+30051	The guild %s has completed the Ship Defence in %d minutes and %d seconds !
+30052	The guild %s took control of the Ship Defence dungeon with a time of %d minutes and %d seconds !
+30053	The guild %s took control of the Ship Defence dungeon over guild %s with a time of %d minutes and %d seconds !
+
+----- Zodiac Dungeon -----
+32000	Level: %d | Step %d: Kill all the monsters in the arena
+32001	Level: %d | Step %d: Destroy all stones
+32002	Level: %d | Step %d: Kill all the monsters until you get the Key
+32003	Level: %d | Step %d: You have managed to find the Key. Hurry up and place it on the Pillar.
+32004	Level: %d | Step %d: Destroy the status
+32005	Level: %d | Step %d: Kill the Zodiac Boss !
+32006	Kill the General Zodiac Boss !
+32007	Level: %d | Step %d: Get ready for the Final Step
+32008	You have succeeded in this step, get ready for the next one
+32009	Congratulations. You have completed the Zodiac Temple!
+32010	The level time is up. You will be downgraded one level.
+32011	Guild: Zodiac Temple
+32012	Level: %d | Step %d: You've mastered one level, get ready for the next
+32013	Life remain: %d
+32014	The group of %s has completed the Zodiac Temple in %d minutes and %d seconds !
+32050	The guild %s has completed the Zodiac Temple in %d minutes and %d seconds !
+32051	The guild %s took control of the Zodiac Temple with a time of %d minutes and %d seconds !
+32052	The guild %s took control of the Zodiac Temple over guild %s with a time of %d minutes and %d seconds !
+32053	%s has completed the Zodiac Temple (%dx) in %d minutes and %d seconds !
+32054	You have just enjoyed an extra life!	
+32055	You have the maximum number of life!
+32056	This item can only be used once
+32057	You need at least 9 points to enter the dungeon.[ENTER]Your animasphere does not have enough points.[ENTER]
+32058	The following members do not have enought animasphere points:
+32059	You have received 3 points on your animasphere.
+32060	Some of your members doesnt have enough (9) animsphere.
+32061	Element of the day: %s
+32062	Fire
+32063	Earth
+32064	Ice
+32065	Wind
+32066	Lightning
+32067	Dark
+
+----- General Dungeon Text -----
+40000	Do you really want to enter the dungeon?
+40001	Only the group leader can start the dungeon.
+40002	The following members do not have the required level:
+40003	All the members of the group must be nearby.
+40004	To enter in the dungeon, you must have %s.
+40005	The following members do not have the required passage ticket:
+40006	You do not have the required level. The minimum level is %d[ENTER]
+40007	You do not have the required level. The maximum level is %d[ENTER]
+40009	Return to the dungeon
+40010	No active dungeon is started.
+40011	This phase of the dungeon is already over.
+40012	You or your party had already completed the dungeon.
+40013	Would you like to return to the dungeon?
+40014	The cooldown time for re-entry into the dungeon has not yet expired.[ENTER]Time Remaining:
+40015	Some members still have to wait until they can join the dungeon again.
+40016	You are not allowed to start a guild dungeon control.
+40017	To start controlling a dungeon, you need at least 2 members.
+40018	Info: Members need to be in the same map as you.[ENTER]
+40019	Your group must not exceed 6 members.
+40020	In order to enter, only the participating members must be in the map.[ENTER]
+
+40021	You have selected the guild control option.
+40022	The advantages of controlling a dungeon:[ENTER]
+40023	- Access that does not require an entry ticket.
+40024	- Points which you can spend in the guild shop for valuable items.
+40025	- 2 guild banners are also set up in front of the dungeon entrance
+40026	Attention: All guild members in the map will be teleported.
+40027	Some members doesn't have enough Animasphere.
+
+40100	You must unequip marriage items first.
+40101	Your partner must unequip marriage items first.
+
+40200	You cannot change your name if you are married.
+40201	You cannot change your name if you are transformed.
+40202	You cannot change your name if you are in a guild.
+40203	You cannot change your name if you are in a party.
+40204	You need to wait because you changed your name recently.
+40205	Please enter your new name:
+40206	Your new name will be:
+40207	Do you want to continue?
+40208	You didn't log in after you have changed your name.[ENTER]Please re-log in.
+40209	You can't use this name.[ENTER]Please choose another one.
+40210	This name is already used.
+40211	Your name was successfully changed.[ENTER]Please log in again.
+
+40250	Equipment
+
+40300	Your auto pickup is still active.
+40301	You already have permanent auto pickup activated.
+40302	It will be expired in:
+40303	Do you want to permanently activate auto pickup?
+40304	Do you want to activate auto pickup for
+40305	Auto pickup was successfully activated (permanently).
+40306	Auto pickup was successfully activated for:
+
+14936	Fishing Area I
+14937	Fishing Area II
+14938	Fishing Area III
+14939	Mining Area I
+14940	Bengpa Bay

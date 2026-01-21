@@ -1,0 +1,37 @@
+if get_global_time ( ) > pc . getf ( "dragonlair" , "time" ) then 
+say_title ( mob_name ( 30121 ) ) 
+say ( "" ) 
+say ( "You just had 5 minutes to re -enter. You can't!" ) 
+pc . setf ( "dragonlair" , "map" , 0 ) 
+pc . setf ( "dragonlair" , "time" , 0 ) 
+pc . setf ( "dragonlair" , "channel" , 0 ) 
+return 
+end 
+local dungeonChannel = pc . getf ( "dragonlair" , "channel" ) 
+if dungeonChannel == pc . get_channel_id ( ) then 
+local dungeonMap = pc . getf ( "dragonlair" , "map" ) 
+if d . select ( dungeonMap ) then 
+say_title ( mob_name ( 30121 ) ) 
+say ( "" ) 
+say ( "Do you want to enter where you were?" ) 
+local x = select ( "Yes" , "Cancel" ) 
+if x == 1 then 
+pc . warp ( 8436 * 100 , 10669 * 100 , dungeonMap ) 
+else 
+return 
+end 
+else 
+say_title ( mob_name ( 30121 ) ) 
+say ( "" ) 
+say ( "Not available room, you can re -enter from the beginning." ) 
+pc . setf ( "dragonlair" , "map" , 0 ) 
+pc . setf ( "dragonlair" , "time" , 0 ) 
+pc . setf ( "dragonlair" , "channel" , 0 ) 
+return 
+end 
+else 
+say_title ( mob_name ( 30121 ) ) 
+say ( "" ) 
+say ( locale_quest ( 92027 ) ) 
+say ( string . format ( locale_quest ( 92028 ) , dungeonChannel ) ) 
+end 

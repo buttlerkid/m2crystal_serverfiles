@@ -1,0 +1,7 @@
+quest notify_test_server begin
+	state start begin
+		when login with is_test_server() begin
+			notice("You are on test server mode")
+		end
+	end
+end

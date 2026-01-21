@@ -1,0 +1,4 @@
+playTimeReward = 60 * 250 
+if pc . get_playtime ( ) >= playTimeReward then 
+game . set_reward ( 14 ) 
+end 

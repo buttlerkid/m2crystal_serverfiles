@@ -1,0 +1,461 @@
+quest spider_dungeon begin
+	state start begin
+		function base_setting()
+			return {
+				["map_index"] 		= 	217,
+				["base_coords"]		=	{512, 5632},
+				["out_coords"]		= 	{217, 691, 6108},
+				["level_min"] 		= 	60,
+				["level_max"] 		= 	74,
+				["passage_ticket"]	= 	30324, 
+			}
+		end	
+
+		function dungeon_setting()
+			return {
+				["time_complete"] 		= 	3600,
+				["egg_complete"] 		= 	900,
+						
+				["egg_vnum"] 			= 2095,
+				["egg_spawn_count"] 	= 4,				
+
+				["baron_vnum"] 			= 2094,
+				["baron_coords"] 		= {177, 477},
+
+				["second_egg_position"] = {{392, 573}, {390, 584}, {383, 596}, {351, 562}, {351, 583}, {342, 599}},
+
+				["barones_vnum"] 		= 2092,
+				["barones_coords"] 		= {366, 585},
+		
+				["dungeon_floor2"] 		= {880, 6144},
+
+			}
+		end	
+
+		function GetFloorXY(floorNumber)
+			local array = {
+				[1] = {["x"] = 512, 	["y"] = 5632},
+				[2] = {["x"] = 881, 	["y"] = 6148},
+			}
+
+			return array[floorNumber]
+		end	
+
+		function isInDungeon()
+			local data = spider_dungeon.base_setting();
+			
+			local playerMapIndex = pc.get_map_index();
+			local dungeonMapIndex = data["map_index"];
+
+			return (pc.in_dungeon() and (playerMapIndex >= dungeonMapIndex*10000) and (playerMapIndex < (dungeonMapIndex+1)*10000));
+		end		
+
+		function ResetDungeonData()
+			d.setf("dungeon_status", 0)
+			d.setf("spider_finished", 0)
+			d.setf("first_egg_count", 0)
+			d.setf("second_egg_count", 0)
+			d.setf("dungeon_status", 0)
+		end
+
+		function ClearDungeon(revivedBoolean)
+			if (pc.in_dungeon()) then
+				d.clear_regen();
+				d.kill_all();
+
+				if (revivedBoolean) then
+					d.kill_all();
+				end
+			end
+		end
+
+		when login with (spider_dungeon.isInDungeon()) begin
+			local data = spider_dungeon.base_setting();
+			local dungeon_data = spider_dungeon.dungeon_setting();
+
+			d.set_warp_location(data["out_coords"][1], data["out_coords"][2], data["out_coords"][3]);
+			if (party.is_party() or not party.is_party()) then
+				if d.getf("dungeon_first_login") == 1 then
+					d.setf("dungeon_first_login", 2)	
+					server_timer("spider_dungeon_egg_time_fail", dungeon_data["egg_complete"], d.get_map_index());
+
+					local eggCoords = {{276, 178}, {179, 280}, {377, 278}, {376, 379}, {277, 378}, {178, 379}, {78, 378}, {78, 227}, {78, 80}, {178, 179}, {178, 227}, {78, 227}, {78, 178}, {177, 78}, {279, 279}};
+					for index = 1, dungeon_data["egg_spawn_count"], 1 do
+						local randomEggPos = math.random(1, table.getn(eggCoords));
+						d.spawn_mob(dungeon_data["egg_vnum"], eggCoords[randomEggPos][1], eggCoords[randomEggPos][2]);
+						table.remove(eggCoords, randomEggPos);
+					end
+
+					d.regen_file("data/dungeon/spider_dungeon/regen.txt");
+					d.setf("dungeon_status", d.getf("dungeon_status") + 1);
+					d.notice(20007);
+					d.zodiac_notice_clear()
+					d.zodiac_notice(22000, mob_name(2095));
+				end
+			end
+		end
+
+		when kill with (spider_dungeon.isInDungeon()) begin
+			local dungeon_data = spider_dungeon.dungeon_setting();
+			local data = spider_dungeon.base_setting();
+			
+			local npcRace = npc.get_race();
+
+			if (npcRace == dungeon_data["egg_vnum"]) then
+				if (d.getf("dungeon_status") < 2) then
+					d.setf("first_egg_count", d.getf("first_egg_count") + 1);
+					if (d.getf("first_egg_count") > (dungeon_data["egg_spawn_count"] - 1)) then
+						d.spawn_mob(dungeon_data["baron_vnum"], dungeon_data["baron_coords"][1], dungeon_data["baron_coords"][2]);
+						d.zodiac_notice_clear()
+						d.zodiac_notice(22001, mob_name(2094));
+						clear_server_timer("spider_dungeon_egg_time_fail", d.get_map_index());
+					else
+						d.notice(22002, dungeon_data["egg_spawn_count"] - d.getf("first_egg_count"))
+					end
+				else
+					d.setf("second_egg_count", d.getf("second_egg_count") + 1);
+					if (d.getf("second_egg_count") > (table.getn(dungeon_data["second_egg_position"]) - 1)) then
+						d.spawn_mob(dungeon_data["barones_vnum"], dungeon_data["barones_coords"][1], dungeon_data["barones_coords"][2]);
+						d.zodiac_notice_clear()
+						d.zodiac_notice(22003, mob_name(2092))
+					else
+						d.notice(22002, table.getn(dungeon_data["second_egg_position"]) - d.getf("second_egg_count"))
+					end
+				end
+			end
+
+			if (npcRace == dungeon_data["baron_vnum"]) then
+				server_timer("spider_baroness_advance", 7, d.get_map_index());
+				d.zodiac_notice_clear()
+				d.zodiac_notice(22004)
+			end
+
+			if (npcRace == dungeon_data["barones_vnum"]) then
+				d.notice(20016)			
+				clear_server_timer("spiderDungeon_time_out", d.get_map_index());
+				server_timer("spiderDungeon_time_out", 60, d.get_map_index());	
+				
+				d.zodiac_notice_clear()		
+				d.zodiac_notice(22010)
+
+				if game.check_event(6) == true then
+					local pct = number(1, 3) -- 33.33%
+					if pct == 1 then
+						game.drop_item(data["passage_ticket"], 1)
+					end
+				end
+				
+				dungeon_duration = get_time() - d.getf("dungeon_duration")
+				sec = math.mod(dungeon_duration, 60)
+				min = (dungeon_duration - sec)/60	
+				
+				d.setf("spider_finished", 1)
+				
+				local killerVID = pc.get_vid()
+				local pids = {party.get_member_pids()}
+				local groupNames = ""
+				local time_passed = (get_global_time() - d.getf("dungeon_entered"))
+				
+				if party.is_party() then
+					for i, pid in next, pids, nil do
+						q.begin_other_pc_block(pid)
+						local test = pc.is_near_vid(killerVID, 400)
+						if test == true then
+							groupNames = groupNames .. pc.get_name() .. ","
+						end
+						q.end_other_pc_block()
+					end				
+					notice_all(22005, pc.get_name(), min, sec)
+
+					party.setf_with_questname_plus("dungeons_finished." .. tostring(data["map_index"]))
+
+				else
+					groupNames = ""
+
+					curCount = pc.getf("dungeons_finished", tostring(data["map_index"]))
+					pc.setf("dungeons_finished", tostring(data["map_index"]), curCount + 1)
+
+					notice_all(22006, pc.get_name(), curCount + 1, min, sec)
+				end
+
+				spider_dungeon.ClearDungeon(true);
+			end
+		end
+
+		when spider_baroness_advance.server_timer begin
+			if (d.select(get_server_timer_arg())) then
+				local dungeon_data = spider_dungeon.dungeon_setting();
+
+				local eggCoords = dungeon_data["second_egg_position"];
+				for index = 1, table.getn(eggCoords), 1 do
+					d.spawn_mob(dungeon_data["egg_vnum"], eggCoords[index][1], eggCoords[index][2]);
+				end
+
+				d.jump_all(dungeon_data["dungeon_floor2"][1], dungeon_data["dungeon_floor2"][2]);			
+				d.setf("dungeon_status", d.getf("dungeon_status") + 1);
+				d.zodiac_notice_clear()
+				d.zodiac_notice(22007, mob_name(2095))
+				d.setf("dungeon_floor", 2)
+			end
+		end
+
+		when spider_dungeon_egg_time_fail.server_timer begin
+			if (d.select(get_server_timer_arg())) then
+				d.zodiac_notice_clear()
+				d.setf("dungeon_finished", 1)
+				d.exit_all();
+			end
+		end
+
+		when spiderDungeon_time_out.server_timer begin
+			if (d.select(get_server_timer_arg())) then
+				d.zodiac_notice_clear()
+				d.notice(11503)
+				d.setf("dungeon_finished", 1)
+				d.exit_all();
+			end
+		end
+
+		when 30130.chat.locale_quest(40009) with not spider_dungeon.isInDungeon() and pc.get_map_index() == 217 begin
+			if party.is_party() then
+				idx = party.getf("dungeon_idx")
+			else
+				idx = pc.getf("system", "dungeon_idx")
+			end
+
+			if idx == nil or idx < 10000 then
+				say(locale_quest(40010))
+				return
+			end
+
+			if d.find(idx) == false then
+				say(locale_quest(40011))
+				return
+			end
+
+			if party.is_party() then
+				searchForLeader = party.get_leader_pid()
+			else
+				searchForLeader = pc.getf("system", "dungeon_leader")
+			end
+
+			if d.getf_from_map_index("dungeon_leader", idx) != searchForLeader then
+				return
+			end
+			
+			if d.getf_from_map_index("monkey_finished", idx) == 1 then
+				say(locale_quest(40012))
+				return
+			end
+
+			if party.is_party() then
+				say(locale_quest(40013))
+				local s = select(locale_quest(878), locale_quest(879))
+				if s == 2 then return end
+				if d.find(idx) == false then return end
+				local xy = spider_dungeon.GetFloorXY(d.getf_from_map_index("dungeon_floor", idx))
+				pc.save_exit_location()
+				pc.warp(xy["x"] * 100, xy["y"] * 100, idx)
+			else
+				--PARTY
+				say(locale_quest(40013))
+				local s = select(locale_quest(878), locale_quest(879))
+				if s == 2 then return end
+				if d.find(idx) == false then return end
+				local xy = spider_dungeon.GetFloorXY(d.getf_from_map_index("dungeon_floor", idx))
+				pc.save_exit_location()
+				pc.warp(xy["x"] * 100, xy["y"] * 100, idx)
+			end			
+		end
+
+		when logout with spider_dungeon.isInDungeon() begin
+			local dungeon_data = spider_dungeon.dungeon_setting();
+			
+			if d.getf("dungeon_enter") == 1 then 
+				if game.check_event(5) == true then
+					pc.setf("dungeon_cooldown", "spider_dungeon", get_global_time() + 2700)
+				else	
+					pc.setf("dungeon_cooldown", "spider_dungeon", get_global_time() + 3600)
+				end
+			end
+		end
+
+		when 30130.chat."GM : Init time limit init" with pc.getf("dungeon_cooldown","spider_dungeon") >= get_global_time() and pc.is_gm() begin
+			local dungeon_data = spider_dungeon.dungeon_setting();
+			
+			pc.setf("dungeon_cooldown", "spider_dungeon", get_global_time() - dungeon_data["time_complete"]) 
+			say("Your waiting time has been removed with sucess!")
+		end
+
+		when 30130.chat.locale_quest(22008) with pc.get_map_index() == 217 begin
+			local data = spider_dungeon.base_setting();
+			local dungeon_data = spider_dungeon.dungeon_setting();
+			local EntranceCoords = data["base_coords"];
+			
+			say_title(string.format("%s:[ENTER]", mob_name(npc.get_race())))	
+			if pc.get_locale() == 1 or pc.get_locale() == 9 then say(locale_quest(22009)) end			
+			say_reward(locale_quest(40000))
+
+			local x = select(locale_quest(2699), locale_quest(2702))
+			if x == 1 then
+				if (party.is_party()) then
+					local pids = {party.get_member_pids()}
+					local noTicketMembers = {}
+					local ticketCheck = true
+					local infoTable = {["minimumLevel"] = {}, ["maximumLevel"] = {}};
+					local partyIds = {party.get_member_pids()};	
+					local keyNeeded = data["passage_ticket"]
+
+					if (not party.is_leader()) then
+						say_title(string.format("%s:[ENTER]", mob_name(npc.get_race())))
+						say(locale_quest(40001))
+						return;
+					end
+	
+					for i, pid in next, partyIds, nil do
+						q.begin_other_pc_block(pid)
+	
+						local playerLevel = pc.get_level();
+						if (playerLevel < data["level_min"]) then
+							table.insert(infoTable["minimumLevel"], {pc.get_name(), playerLevel});
+						end
+	
+						if (playerLevel > data["level_max"]) then
+							table.insert(infoTable["maximumLevel"], {pc.get_name(), playerLevel});
+						end
+	
+						q.end_other_pc_block()
+					end
+	
+					if (table.getn(infoTable["minimumLevel"]) > 0) then
+						say_title(string.format("%s:[ENTER]", mob_name(npc.get_race())))
+						say(locale_quest(40002))
+						for index, value in ipairs(infoTable["minimumLevel"]) do
+							say(string.format("%s - %d", value[1], value[2]))
+						end return;
+					end				
+
+					if (table.getn(infoTable["maximumLevel"]) > 0) then
+						say_title(string.format("%s:[ENTER]", mob_name(npc.get_race())))
+						say(locale_quest(40002))
+						for index, value in ipairs(infoTable["maximumLevel"]) do
+							say(string.format("%s - %d", value[1], value[2]))
+						end return;
+					end	
+
+					if (not party.check_dungeon_player()) then
+						say_title(mob_name(npc.get_race()))
+						say(locale_quest(40003))
+						return;
+					end
+	
+					if (party.is_map_member_flag_lt2("dungeon_cooldown.spider_dungeon", get_global_time())) == false then
+						say_title(string.format("%s:", mob_name(npc.get_race())))
+						say(locale_quest(40015))
+						return;
+					end	
+	
+					for i, pid in next, pids, nil do
+						q.begin_other_pc_block(pid)
+						local canPass = false
+	
+						local keyNeeded = data["passage_ticket"];
+						if (pc.count_item(keyNeeded) >= 1) then
+							canPass = true
+						end
+	
+						if not canPass then
+							table.insert(noTicketMembers, pc.get_name())
+							ticketCheck = false
+						end
+	
+						q.end_other_pc_block()
+					end
+	
+					if not ticketCheck then
+						say_title(mob_name(npc.get_race()))
+						say(string.format(locale_quest(40004), item_name(keyNeeded)));
+						say_item_vnum(data["passage_ticket"]);
+						say(locale_quest(40005))
+						for i, name in next, noTicketMembers, nil do
+							say(color(1, 1, 0), "-" .. " " .. name)
+						end return
+					end				
+				
+					for i, pid in next, pids, nil do
+						q.begin_other_pc_block(pid)
+						pc.remove_item(keyNeeded, 1);
+						q.end_other_pc_block()
+					end				
+					
+					d.new_jump_party(data["map_index"], EntranceCoords[1], EntranceCoords[2]);
+					server_timer("spiderDungeon_time_out", data["time_complete"], d.get_map_index());		
+
+					-- Dungeon Info Cooldown -- 
+					d.setf("dungeon_enter", 1)
+					
+					--- Dungeon Ranking ---
+					d.setf("dungeon_entered", get_global_time())
+	
+					--- Dungeon Duration ---
+					d.setf("dungeon_duration", get_time())
+					
+					--- Dungeon Return ---
+					d.setf("dungeon_leader", party.get_leader_pid())
+					d.setf("dungeon_floor", 1)
+					party.setf("dungeon_idx", d.get_map_index())					
+					d.setf("dungeon_first_login", 1)
+			
+					spider_dungeon.ResetDungeonData()
+					d.setf("dungeon_time_remaining", get_global_time() + dungeon_data["time_complete"])
+					
+				else
+					time_remaining = time_duration(pc.getf("dungeon_cooldown", "spider_dungeon") - get_time())
+					if pc.getf("dungeon_cooldown","spider_dungeon") >= get_global_time() then
+						say_title(string.format("%s:[ENTER]", mob_name(npc.get_race())))
+						say(locale_quest(40014), time_remaining)
+						return
+					end					
+					local playerLevel = pc.get_level()
+					if (playerLevel < data["level_min"]) then
+						say(string.format(locale_quest(40006), data["level_min"]))
+						return;
+					end
+					if (playerLevel > data["level_max"]) then
+						say(string.format(locale_quest(40007), data["level_max"]))
+						return;
+					end
+					local keyNeeded = data[string.format("passage_ticket")];
+					if (pc.count_item(keyNeeded) < 1) then
+						say(string.format(locale_quest(40004), item_name(keyNeeded)))	
+						say_item_vnum(data["passage_ticket"]);
+						return;
+					end
+					
+					d.new_jump(data["map_index"], EntranceCoords[1]*100, EntranceCoords[2]*100);
+					server_timer("spiderDungeon_time_out", data["time_complete"], d.get_map_index());
+
+					-- Dungeon Info Cooldown -- 
+					d.setf("dungeon_enter", 1)
+	
+					--- Dungeon Ranking ---
+					d.setf("dungeon_entered", get_global_time())
+	
+					--- Dungeon Notice Duration ---
+					d.setf("dungeon_duration", get_time())
+					
+					--- Dungeon Return ---
+					d.setf("dungeon_floor", 1)
+					d.setf("dungeon_leader", pc.get_player_id())
+					pc.setf("system", "dungeon_leader", pc.get_player_id())
+					pc.setf("system", "dungeon_idx", d.get_map_index())
+					
+					d.setf("dungeon_first_login", 1)
+					pc.remove_item(keyNeeded, 1);
+					spider_dungeon.ResetDungeonData()
+					d.setf("dungeon_time_remaining", get_global_time() + dungeon_data["time_complete"])
+				end	
+			end
+		end
+	end	
+end

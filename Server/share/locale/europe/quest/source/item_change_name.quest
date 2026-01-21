@@ -1,0 +1,100 @@
+quest change_name begin
+	state start begin
+		when 71055.use begin
+			say_title(item_name(71055))
+			say("")
+			
+			if pc.is_married() or pc.is_engaged() then
+				say(locale_quest(40200))
+				return
+			end
+
+			if pc.is_polymorphed() then
+				say(locale_quest(40201))
+				return
+			end
+
+			if pc.has_guild() then
+				say(locale_quest(40202))
+				return
+			end
+
+			if party.is_party() then
+				say(locale_quest(40203))
+				return
+			end
+
+			if get_time() < pc.getqf("next_time") then
+				say(locale_quest(40204))
+				say("")
+				local remainTime = pc.getqf("next_time") - get_time()
+				
+				say(locale_quest(10))
+				say(time_duration(remainTime))
+
+				if is_test_server() == true then
+					say("")
+					say("Since it's test server, you can go")
+					say("")
+				else
+					return
+				end
+			end
+
+			say(locale_quest(40205))
+
+			local name = pc.name ;
+			local str = input() ;
+			if string.len(str) > 16 then
+				say(locale_quest(2160))
+				say("")
+				return
+				
+			end
+			
+			
+			say_title(item_name(71055))
+			say("")
+			
+			say(locale_quest(40206))
+			say_reward(str)
+			say("")
+			say(locale_quest(40207))
+			local confirm = select(locale_quest(11792), locale_quest(11799))
+			if confirm == 2 then
+				return
+			end
+
+			
+			local ret = pc.change_name(str) ;
+			
+			say_title(item_name(71055))
+			say("")
+			
+
+			if ret == 0 then
+				say(locale_quest(40208))
+			elseif ret == 1 then
+				say(locale_quest(40209))
+			elseif ret == 2 then
+				say(locale_quest(40209))
+			elseif ret == 3 then
+				say(locale_quest(40210))
+			elseif ret == 4 then
+				say(locale_quest(40211))
+
+				pc.remove_item(71055, 1)
+
+				pc.setqf("next_time", get_time() + 60*60*24*7) -- 7 days cooldown
+
+				char_log(0, "CHANGE_NAME", "SUCCESS: from "..name.." to "..str)
+			else
+				say("Unknown error occured.")
+				say("")
+
+				char_log(0, "CHANGE_NAME", "UNKNOWN ERROR")
+			end
+		end
+	end
+end
+

@@ -1,0 +1,10 @@
+local dungeon_data = monkey_dungeon . dungeon_setting ( ) ; 
+if ( d . select ( get_server_timer_arg ( ) ) ) then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( 19003 , mob_name ( 8210 ) ) 
+d . set_regen_file ( "data/dungeon/monkey_dungeon/monkey_dungeon_1.txt" ) 
+d . spawn_mob ( dungeon_data [ "monkey_stone_1" ] , dungeon_data [ "monkey_stone_pos_1" ] [ 1 ] , dungeon_data [ "monkey_stone_pos_1" ] [ 2 ] ) 
+d . spawn_mob ( dungeon_data [ "monkey_stone_1" ] , dungeon_data [ "monkey_stone_pos_2" ] [ 1 ] , dungeon_data [ "monkey_stone_pos_2" ] [ 2 ] ) 
+d . spawn_mob ( dungeon_data [ "monkey_stone_1" ] , dungeon_data [ "monkey_stone_pos_3" ] [ 1 ] , dungeon_data [ "monkey_stone_pos_3" ] [ 2 ] ) 
+d . spawn_mob ( dungeon_data [ "monkey_stone_1" ] , dungeon_data [ "monkey_stone_pos_4" ] [ 1 ] , dungeon_data [ "monkey_stone_pos_4" ] [ 2 ] ) 
+end 

@@ -1,0 +1,61 @@
+local data = monkey_dungeon . base_setting ( ) ; 
+local dungeon_data = monkey_dungeon . dungeon_setting ( ) ; 
+local EntranceCoords = data [ "base_coords" ] ; 
+say_title ( string . format ( "%s:[ENTER]" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( locale_quest ( 19015 ) ) 
+wait ( ) 
+say_title ( string . format ( "%s:[ENTER]" , mob_name ( npc . get_race ( ) ) ) ) 
+say_reward ( locale_quest ( 40026 ) ) 
+say_reward ( locale_quest ( 40000 ) ) 
+local x = select ( locale_quest ( 878 ) , locale_quest ( 879 ) ) 
+if x == 1 then 
+if pc . has_guild ( ) == false then return end 
+if guild . get_member_near ( pc . get_map_index ( ) ) < 2 then 
+say_title ( string . format ( "%s:[ENTER]" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( locale_quest ( 40017 ) ) 
+say_reward ( locale_quest ( 40018 ) ) 
+return 
+end 
+if guild . get_member_near ( pc . get_map_index ( ) ) > 6 then 
+say_title ( string . format ( "%s:[ENTER]" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( locale_quest ( 40019 ) ) 
+say_reward ( locale_quest ( 40020 ) ) 
+return 
+end 
+local keyNeeded = data [ "passage_ticket" ] 
+checkItem , badPlayerItem = guild . is_ok_pass_item ( pc . get_map_index ( ) , keyNeeded , 1 ) ; 
+if checkItem == false then 
+say_title ( string . format ( "%s:[ENTER]" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( string . format ( locale_quest ( 40004 ) , item_name ( keyNeeded ) ) ) ; 
+say_item_vnum ( data [ "passage_ticket" ] ) ; 
+say ( locale_quest ( 40005 ) ) 
+say_reward ( "- " .. badPlayerItem .. ".[ENTER]" ) 
+return 
+end 
+checkLevel , badPlayerLevel = guild . is_ok_level ( pc . get_map_index ( ) , data [ "level_min" ] , data [ "level_max" ] ) ; 
+if checkLevel == false then 
+say_title ( string . format ( "%s:[ENTER]" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( locale_quest ( 40002 ) ) 
+say_reward ( "- " .. badPlayerLevel .. ".[ENTER]" ) 
+return 
+end 
+checkCooldown , badPlayerCooldown = guild . is_ok_cooldown ( pc . get_map_index ( ) , "dungeon_cooldown.monkey_dungeon" ) 
+if checkCooldown == false then 
+say_title ( string . format ( "%s:[ENTER]" , mob_name ( npc . get_race ( ) ) ) ) 
+say ( locale_quest ( 40015 ) ) 
+say_reward ( "- " .. badPlayerCooldown .. ".[ENTER]" ) 
+return 
+end 
+guild . remove_key_item ( pc . get_map_index ( ) , keyNeeded , 1 ) 
+d . new_jump_guild ( data [ "map_index" ] , EntranceCoords [ 1 ] , EntranceCoords [ 2 ] ) ; 
+server_timer ( "monkeyDungeon_time_out" , dungeon_data [ "time_complete" ] , d . get_map_index ( ) ) ; 
+d . setf ( "guild_id" , pc . get_guild ( ) ) 
+d . setf ( "dungeon_enter" , 1 ) 
+d . setf ( "dungeon_entered" , get_global_time ( ) ) 
+d . setf ( "dungeon_duration" , get_time ( ) ) 
+d . setf ( "dungeon_floor" , 1 ) 
+d . setf ( "dungeon_leader" , pc . get_player_id ( ) ) 
+d . setf ( "dungeon_time_remaining" , get_global_time ( ) + dungeon_data [ "time_complete" ] ) 
+d . setf ( "dungeon_first_login" , 1 ) 
+monkey_dungeon . ResetDungeonData ( ) 
+end 

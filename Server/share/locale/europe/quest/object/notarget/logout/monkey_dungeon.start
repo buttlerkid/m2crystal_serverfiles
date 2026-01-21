@@ -1,0 +1,9 @@
+if monkey_dungeon . isInDungeon ( ) then local dungeon_data = monkey_dungeon . dungeon_setting ( ) ; 
+if d . getf ( "dungeon_enter" ) == 1 then 
+if game . check_event ( 5 ) == true then 
+pc . setf ( "dungeon_cooldown" , "monkey_dungeon" , get_global_time ( ) + dungeon_data [ "time_complete" ] - 300 ) 
+else 
+pc . setf ( "dungeon_cooldown" , "monkey_dungeon" , get_global_time ( ) + dungeon_data [ "time_complete" ] ) 
+end 
+end 
+ return end 

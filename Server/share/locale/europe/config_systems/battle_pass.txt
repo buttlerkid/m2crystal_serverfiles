@@ -1,0 +1,699 @@
+// category 0 = Daily(1d)
+// category 1 = Weekly(7d)
+// category 2 = Monthly(30d)
+
+// mission_id = Must be unique (is like an index) for the current bpass config
+
+Group Mission1
+{
+	mission_id	1
+	category	0
+	is_premium	0
+	type	1
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission2
+{
+	mission_id	2
+	category	1
+	is_premium	0
+	type	1
+	vnum	0
+	count	100
+	exp	60
+}
+
+Group Mission3
+{
+	mission_id	3
+	category	2
+	is_premium	0
+	type	1
+	vnum	0
+	count	500
+	exp	121
+}
+
+Group Mission4
+{
+	mission_id	4
+	category	0
+	is_premium	0
+	type	2
+	vnum	0
+	count	500
+	exp	30
+}
+
+Group Mission5
+{
+	mission_id	5
+	category	1
+	is_premium	0
+	type	2
+	vnum	0
+	count	1000
+	exp	60
+}
+
+Group Mission6
+{
+	mission_id	6
+	category	2
+	is_premium	0
+	type	2
+	vnum	0
+	count	10000
+	exp	121
+}
+
+Group Mission7
+{
+	mission_id	7
+	category	0
+	is_premium	0
+	type	3
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission8
+{
+	mission_id	8
+	category	1
+	is_premium	0
+	type	3
+	vnum	0
+	count	100
+	exp	60
+}
+
+Group Mission9
+{
+	mission_id	9
+	category	2
+	is_premium	0
+	type	3
+	vnum	0
+	count	200
+	exp	121
+}
+
+Group Mission10
+{
+	mission_id	10
+	category	0
+	is_premium	0
+	type	4
+	vnum	71084
+	count	5000
+	exp	30
+}
+
+Group Mission11
+{
+	mission_id	11
+	category	1
+	is_premium	0
+	type	4
+	vnum	71084
+	count	10000
+	exp	60
+}
+
+Group Mission12
+{
+	mission_id	12
+	category	2
+	is_premium	0
+	type	4
+	vnum	71084
+	count	25000
+	exp	121
+}
+
+Group Mission13
+{
+	mission_id	13
+	category	0
+	is_premium	0
+	type	5
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission14
+{
+	mission_id	14
+	category	1
+	is_premium	0
+	type	5
+	vnum	0
+	count	100
+	exp	60
+}
+
+Group Mission15
+{
+	mission_id	15
+	category	2
+	is_premium	0
+	type	5
+	vnum	0
+	count	200
+	exp	121
+}
+
+Group Mission16
+{
+	mission_id	16
+	category	0
+	is_premium	0
+	type	6
+	vnum	0
+	count	10
+	exp	30
+}
+
+Group Mission17
+{
+	mission_id	17
+	category	1
+	is_premium	0
+	type	6
+	vnum	0
+	count	20
+	exp	60
+}
+
+Group Mission18
+{
+	mission_id	18
+	category	2
+	is_premium	0
+	type	6
+	vnum	0
+	count	50
+	exp	120
+}
+
+Group Mission19
+{
+	mission_id	19
+	category	0
+	is_premium	0
+	type	7
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission20
+{
+	mission_id	20
+	category	1
+	is_premium	0
+	type	7
+	vnum	0
+	count	200
+	exp	60
+}
+
+Group Mission21
+{
+	mission_id	21
+	category	2
+	is_premium	0
+	type	7
+	vnum	0
+	count	500
+	exp	120
+}
+
+Group Mission22
+{
+	mission_id	22
+	category	0
+	is_premium	0
+	type	8
+	vnum	0
+	count	20
+	exp	30
+}
+
+Group Mission23
+{
+	mission_id	23
+	category	1
+	is_premium	0
+	type	8
+	vnum	0
+	count	50
+	exp	60
+}
+
+Group Mission24
+{
+	mission_id	24
+	category	2
+	is_premium	0
+	type	8
+	vnum	0
+	count	200
+	exp	120
+}
+
+Group Mission25
+{
+	mission_id	25
+	category	0
+	is_premium	0
+	type	9
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission26
+{
+	mission_id	26
+	category	1
+	is_premium	0
+	type	9
+	vnum	0
+	count	100
+	exp	60
+}
+
+Group Mission27
+{
+	mission_id	27
+	category	2
+	is_premium	0
+	type	9
+	vnum	0
+	count	500
+	exp	120
+}
+
+Group Mission28
+{
+	mission_id	28
+	category	0
+	is_premium	0
+	type	10
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission29
+{
+	mission_id	29
+	category	1
+	is_premium	0
+	type	10
+	vnum	0
+	count	100
+	exp	60
+}
+
+Group Mission30
+{
+	mission_id	30
+	category	2
+	is_premium	0
+	type	10
+	vnum	0
+	count	500
+	exp	120
+}
+
+Group Mission31
+{
+	mission_id	31
+	category	0
+	is_premium	0
+	type	11
+	vnum	0
+	count	1000000
+	exp	30
+}
+
+Group Mission32
+{
+	mission_id	32
+	category	1
+	is_premium	0
+	type	11
+	vnum	0
+	count	10000000
+	exp	60
+}
+
+Group Mission33
+{
+	mission_id	33
+	category	2
+	is_premium	0
+	type	11
+	vnum	0
+	count	100000000
+	exp	120
+}
+
+Group Mission34
+{
+	mission_id	34
+	category	0
+	is_premium	0
+	type	12
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission35
+{
+	mission_id	35
+	category	1
+	is_premium	0
+	type	12
+	vnum	0
+	count	100
+	exp	60
+}
+
+Group Mission36
+{
+	mission_id	36
+	category	2
+	is_premium	0
+	type	12
+	vnum	0
+	count	500
+	exp	120
+}
+
+Group Mission37
+{
+	mission_id	37
+	category	0
+	is_premium	0
+	type	13
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission38
+{
+	mission_id	38
+	category	1
+	is_premium	0
+	type	13
+	vnum	0
+	count	100
+	exp	60
+}
+
+Group Mission39
+{
+	mission_id	39
+	category	2
+	is_premium	0
+	type	13
+	vnum	0
+	count	500
+	exp	120
+}
+
+Group Mission40
+{
+	mission_id	40
+	category	0
+	is_premium	0
+	type	14
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission41
+{
+	mission_id	41
+	category	1
+	is_premium	0
+	type	14
+	vnum	0
+	count	100
+	exp	60
+}
+
+Group Mission42
+{
+	mission_id	42
+	category	2
+	is_premium	0
+	type	14
+	vnum	0
+	count	500
+	exp	120
+}
+
+Group Mission43
+{
+	mission_id	43
+	category	0
+	is_premium	0
+	type	15
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission44
+{
+	mission_id	44
+	category	1
+	is_premium	0
+	type	15
+	vnum	0
+	count	100
+	exp	60
+}
+
+Group Mission45
+{
+	mission_id	45
+	category	2
+	is_premium	0
+	type	15
+	vnum	0
+	count	500
+	exp	120
+}
+
+Group Mission46
+{
+	mission_id	46
+	category	0
+	is_premium	0
+	type	16
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission47
+{
+	mission_id	47
+	category	1
+	is_premium	0
+	type	16
+	vnum	0
+	count	100
+	exp	60
+}
+
+Group Mission48
+{
+	mission_id	48
+	category	2
+	is_premium	0
+	type	16
+	vnum	0
+	count	500
+	exp	120
+}
+
+Group Mission49
+{
+	mission_id	49
+	category	0
+	is_premium	0
+	type	17
+	vnum	0
+	count	1000000
+	exp	30
+}
+
+Group Mission50
+{
+	mission_id	50
+	category	1
+	is_premium	0
+	type	17
+	vnum	0
+	count	10000000
+	exp	60
+}
+
+Group Mission51
+{
+	mission_id	51
+	category	2
+	is_premium	0
+	type	17
+	vnum	0
+	count	100000000
+	exp	120
+}
+
+Group Mission52
+{
+	mission_id	52
+	category	0
+	is_premium	0
+	type	18
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission53
+{
+	mission_id	53
+	category	1
+	is_premium	0
+	type	18
+	vnum	0
+	count	100
+	exp	60
+}
+
+Group Mission54
+{
+	mission_id	54
+	category	2
+	is_premium	0
+	type	18
+	vnum	0
+	count	500
+	exp	120
+}
+
+Group Mission55
+{
+	mission_id	55
+	category	0
+	is_premium	0
+	type	19
+	vnum	0
+	count	50
+	exp	30
+}
+
+Group Mission56
+{
+	mission_id	56
+	category	1
+	is_premium	0
+	type	19
+	vnum	0
+	count	100
+	exp	60
+}
+
+Group Mission57
+{
+	mission_id	57
+	category	2
+	is_premium	0
+	type	19
+	vnum	0
+	count	500
+	exp	120
+}
+Group ConfigBattlePass
+{
+	is_config	1
+	
+	free_1	71035	2	1
+	free_2	50621	2	2
+	free_3	50622	2	3
+	free_4	50623	2	4
+	free_5	50624	2	5
+	free_6	50625	1	6
+	free_7	50626	1	7
+	free_8	50627	1	8
+	free_9	50628	1	9
+	free_10	50629	1	10
+	free_11	71035	2	11
+	free_12	50621	2	12
+	free_13	50622	2	13
+	free_14	50623	2	14
+	free_15	50624	2	15
+	free_16	50625	1	16
+	free_17	50626	1	17
+	free_18	50627	1	18
+	free_19	50628	1	19
+	free_20	50629	1	20
+
+	premium_1	50630	3	1
+	premium_2	50631	3	2
+	premium_3	50632	4	3
+	premium_4	50633	5	4
+	premium_5	50634	7	5
+	premium_6	50635	7	6
+	premium_7	50636	8	7
+	premium_8	50637	9	8
+	premium_9	50638	14	9
+	premium_10	50639	16	10
+	premium_11	50630	3	11
+	premium_12	50631	3	12
+	premium_13	50632	4	13
+	premium_14	50633	5	14
+	premium_15	50634	7	15
+	premium_16	50635	7	16
+	premium_17	50636	8	17
+	premium_18	50637	9	18
+	premium_19	50638	14	19
+	premium_20	50639	16	20
+	
+	max_exp_lv_1	200
+	max_exp_lv_2	200
+	max_exp_lv_3	200
+	max_exp_lv_4	200
+	max_exp_lv_5	200
+	max_exp_lv_6	200
+	max_exp_lv_7	200
+	max_exp_lv_8	200
+	max_exp_lv_9	200
+	max_exp_lv_10	200
+	max_exp_lv_11	200
+	max_exp_lv_12	200
+	max_exp_lv_13	200
+	max_exp_lv_14	200
+	max_exp_lv_15	200
+	max_exp_lv_16	200
+	max_exp_lv_17	200
+	max_exp_lv_18	200
+	max_exp_lv_19	200
+	max_exp_lv_20	200
+}
