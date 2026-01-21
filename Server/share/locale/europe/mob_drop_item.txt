@@ -132,9 +132,8 @@ Group	Cung-Mok
 	3	11403	1	4 -- Azure Suit+3
 	4	16023	1	4 -- Copper Necklace+3
 	5	1014	1	4 -- Cobra Dagger+4
-	6	4014	1	4 -- Nine Blades+4
-	7	11404	1	4 -- Azure Suit+4
-	8	16024	1	4 -- Copper Necklace+4
+	6	11404	1	4 -- Azure Suit+4
+	7	16024	1	4 -- Copper Necklace+4
 }
 Group	Mu-Rang
 {
